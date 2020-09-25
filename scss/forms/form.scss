@@ -1,0 +1,9 @@
+$form-gap: $gap !default;
+$form-color: $color !default;
+
+form,
+.form {
+    display: grid;
+    grid-gap: $form-gap;
+    grid-template-columns: 1fr;
+}

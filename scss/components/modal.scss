@@ -1,0 +1,72 @@
+$modal-background: black !default;
+$modal-padding: $gap !default;
+$modal-radius: $radius-large !default;
+$modal-shadow:  0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba($modal-background, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    visibility: hidden;
+    z-index: 20;
+    
+    &.is-active,
+    &[aria-modal=true] {
+        visibility: visible;
+    }
+
+    %modal-body {
+        background: white;
+        max-width: 90vw;
+        max-height: 90vh;
+        box-shadow: $modal-shadow;
+        border-radius: $modal-radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: $modal-padding;
+
+        @include gapped($gap);
+
+        &.is-small {
+            width: 25rem;
+            height: 15rem;
+        }
+
+        &,
+        &.is-normal {
+            width: 40rem;
+            height: 25rem;
+        }
+
+        &.is-large {
+            width: 60rem;
+            height: 35rem;
+        }
+
+        &.has-content {
+            justify-content: initial;
+            align-items: initial;
+            text-align: initial;
+        }
+    }
+
+    @media (max-width: $sm) {
+        align-items: flex-end;
+
+        %modal-body {
+            width: 100%;
+            min-width: 100%;
+            border-radius: $modal-radius $modal-radius 0 0;
+        }
+    }
+}

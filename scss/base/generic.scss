@@ -1,0 +1,84 @@
+$selection-background: rgba($primary, 0.2) !default;
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background: $selection-background;
+}
+
+body {
+    font-size: $size-normal;
+    font-family: $family-text;
+    color: $color;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-color: $background;
+    font-weight: $weight-text;
+}
+
+$code-radius: $radius-normal !default;
+$code-padding: 0.2rem 0.4rem;
+$code-background: rgba($mono1, 0.1);
+
+code {
+    font-family: monospace;
+    background: $code-background;
+    padding: $code-padding;
+    border-radius: $code-radius;
+    display: inline-block;
+    font-size: $size-small;
+}
+
+small {
+    font-size: $size-small;
+}
+
+p {
+    font-size: 1em;
+}
+
+abbr[title] {
+    text-decoration: underline solid $mono3;
+}
+
+a {
+    $margin: $gap / 3;
+
+    cursor: pointer;
+    text-decoration: underline solid;
+    color: $primary;
+    display: inline-flex;
+    align-items: center;
+
+    %icon {
+        fill: $primary;
+        font-size: 0.7em;
+
+        &:first-child {
+            margin-right: $margin;
+        }
+
+        &:last-child {
+            margin-left: $margin;
+        }
+
+        &:first-child:last-child {
+            margin: 0;
+        }
+    }
+}
+
+hr {
+    display: block;
+    height: $border-width;
+    border: none;
+    background-color: $border-color;
+}

@@ -1,0 +1,22 @@
+$content-gap: $gap !default;
+$content-padding: $gap !default;
+$content-width: $max-width !default;
+
+.content {
+    @include gapped($content-gap);
+    @extend %sizable;
+
+    &.is-centered {
+        max-width: $content-width;
+        margin: 0 auto;
+    }
+    
+    &.has-gap {
+        padding: $content-padding;
+
+        > section,
+        > section > article {
+            @include gapped($content-gap);
+        }
+    }
+}

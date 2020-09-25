@@ -1,0 +1,19 @@
+@keyframes loader-animation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loader {
+    &.is-small {
+        @include loader(1rem);
+    }
+    
+    &,
+    &.is-normal {
+        @include loader(3rem);
+    }
+    
+    &.is-large {
+        @include loader(8rem);
+    }
+}

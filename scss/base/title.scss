@@ -1,0 +1,36 @@
+%title {
+    font-family: $family-title;
+    font-weight: $weight-title;
+}
+
+.title, h1, h2, h3, h4, h5, h6 {
+    @extend %title;
+}
+
+.title {
+    font-size: 4em;
+}
+
+h1 {
+    font-size: 2.8em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}

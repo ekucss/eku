@@ -1,0 +1,7 @@
+.page {
+    position: relative;
+    
+    .sidebar.is-sticky {
+        top: $navbar-height;
+    }
+}

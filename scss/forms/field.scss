@@ -1,0 +1,36 @@
+$field-gap: $gap / 2 !default;
+
+.field {
+    display: flex;
+    
+    &:not(.is-inline) {
+        @include gapped($field-gap);
+
+        flex-direction: column;
+    }
+
+    &.is-inline {
+        @include gapped($field-gap, true);
+
+        align-items: center;
+        flex-direction: row;
+    }
+
+    label {
+        user-select: none;
+        
+        &[for] {
+            cursor: pointer;
+        }
+    }
+
+    small {
+        &.is-error {
+            color: $red;
+        }
+
+        &.is-success {
+            color: $green;
+        }
+    }
+}

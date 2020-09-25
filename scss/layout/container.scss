@@ -1,0 +1,17 @@
+$container-gap: 0.75rem !default;
+$container-padding: $padding !default;
+
+.container {
+    &.has-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    &.has-gap {
+        padding: $container-padding;
+    }
+    
+    &.has-content {
+        @include gapped($container-gap);
+    }
+}

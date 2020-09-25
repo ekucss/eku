@@ -1,0 +1,83 @@
+$tooltip-font-size: $size-small !default;
+$tooltip-color: $white !default;
+$tooltip-background: $primary !default;
+$tooltip-radius: $radius-small !default;
+$tooltip-margin: ($gap / 3) !default;
+$tooltip-padding: 0.2rem 0.4rem !default;
+
+$tooltip-size-small: 4rem !default;
+$tooltip-size-normal: 6rem !default;
+$tooltip-size-large: 8rem !default;
+
+.tooltip {
+    position: relative;
+
+    &::before {
+        content: attr(aria-label);
+        max-width: 10rem;
+        display: inline-flex;
+        justify-content: center;
+        font-size: $tooltip-font-size;
+        padding: $tooltip-padding;
+        background: $tooltip-background;
+        color: $tooltip-color;
+        border-radius: $tooltip-radius;
+        position: absolute;
+        visibility: hidden;
+        text-align: center;
+        z-index: 2;
+    }
+
+    &:hover,
+    &:focus,
+    &.is-active {
+        @keyframes animation {
+            from { opacity: 0%; }
+            to { opacity: 100%; }
+        }
+        
+        &::before {
+            visibility: visible;
+            animation: animation ease-in $transition-duration;
+        }
+    }
+
+    // position
+
+    $position: calc(100% + #{$tooltip-margin});
+
+    &.in-left::before,
+    &.in-right::before {
+        min-width: $tooltip-size-small;
+    }
+
+    &.in-left::before {
+        right: $position;
+    }
+
+    &.in-right::before {
+        left: $position;
+    }
+
+    &.in-top::before {
+        bottom: $position;
+    }
+
+    &.in-bottom::before {
+        top: $position;
+    }
+
+    // sizes
+
+    &.is-small::before {
+        width: $tooltip-size-small;
+    }
+
+    &.is-normal::before {
+        width: $tooltip-size-normal;
+    }
+
+    &.is-large::before {
+        width: $tooltip-size-large;
+    }
+}

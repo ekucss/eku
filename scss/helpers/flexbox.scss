@@ -1,0 +1,7 @@
+.flexbox {
+    display: flex;
+
+    &.is-spaced {
+        justify-content: space-between;
+    }
+}

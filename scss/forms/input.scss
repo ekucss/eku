@@ -1,0 +1,65 @@
+$input-radius: $radius-normal !default;
+$input-transition: box-shadow ease $transition-duration, border ease $transition-duration !default;
+$input-placeholder-color: rgba($color, 0.4) !default;
+
+$input-focus-shadow: $shadow !default;
+$input-focus-border-color: $mono3 !default;
+
+$input-hover-border-color: $mono2 !default;
+
+@mixin input-status($color, $hover: false) {
+    @if $hover {
+        border-color: rgba($color, 0.8);
+        box-shadow: 0 0 0 0.2rem rgba($color, 0.2);
+    }
+
+    @else {
+        border-color: rgba($color, 0.5);
+        box-shadow: 0 0 0 0.15rem rgba($color, 0.1);
+    }
+}
+
+.input {
+    @extend %control;
+
+    width: 100%;
+    transition: $input-transition;
+
+    &::placeholder {
+        color: $input-placeholder-color;
+        user-select: none;
+    }
+
+    &.is-error {
+        @include input-status($red, false); 
+    }
+
+    &.is-success {
+        @include input-status($green, false);
+    }
+
+    &:focus,
+    &:active {
+        border-color: $input-focus-border-color;
+        box-shadow: $input-focus-shadow;
+        z-index: 2;
+
+        &.is-error {
+            @include input-status($red, true);
+        }
+
+        &.is-success {
+            @include input-status($green, true);
+        }
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+        @include disabled;
+    }
+}
+
+textarea {
+    min-height: $height * 3;
+    resize: vertical;
+}

@@ -1,0 +1,51 @@
+$chip-height: 1rem !default;
+$chip-color: $color !default;
+$chip-border-color: $border-color !default;
+$chip-padding: 0.2rem 0.6rem !default;
+$chip-margin: 0.2rem !default;
+
+$chip-active-background: $primary !default;
+$chip-active-border-color: none !default;
+$chip-active-color: contrast-color($chip-active-background) !default;
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    border: solid $border-width;
+    border-color: $chip-border-color;
+    border-radius: $chip-height;
+    padding: $chip-padding;
+    font-size: $size-small;
+    transition: box-shadow ease $transition-duration;
+    user-select: none;
+
+    %icon {
+        fill: $chip-color;
+
+        &:first-child {
+            margin-right: $chip-margin;
+        }
+
+        &:last-child {
+            margin-left: $chip-margin;
+        }
+
+        &:first-child:last-child {
+            margin: 0;
+        }
+    }
+
+    &.is-active {
+        background: $chip-active-background;
+        border-color: $chip-active-border-color;
+        color: $chip-active-color;
+
+        %icon {
+            fill: $chip-active-color;
+        }
+    }
+}
+
+.chips {
+    @include grouped($gap / 4);
+}

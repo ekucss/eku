@@ -1,0 +1,23 @@
+%text {
+    @extend %sizable;
+    
+    &.is-uppercase {
+        text-transform: uppercase;
+    }
+
+    &.is-lowercase {
+        text-transform: lowercase;
+    }
+
+    &.is-capitalize {
+        text-transform: capitalize;
+    }
+
+    &.is-bold {
+        font-weight: bold;
+    }
+}
+
+.text, p, a, %button, %title {
+    @extend %text;
+}

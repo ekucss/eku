@@ -1,0 +1,52 @@
+@mixin disabled {
+    color: $mono3;
+    cursor: default;
+    user-select: none;
+    box-shadow: none;
+    pointer-events: none;
+    background: $mono0;
+}
+
+@mixin grouped($margin) {
+    @extend %grouper;
+
+    display: flex;
+    
+    &:not(.is-attached) {
+        margin: $margin * -1;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        > * {
+            margin: $margin;
+    
+            &.is-spread {
+                flex: 1;
+            }
+        }
+    }
+}
+
+@mixin gapped($margin, $vertical: false) {
+    > :not(:last-child) {
+        @if $vertical {
+            margin-right: $margin;
+        }
+        
+        @else {
+            margin-bottom: $margin;
+        }
+    }
+}
+
+@mixin loader($width, $color: $mono6) {
+    @extend %loader !optional;
+
+    width: $width;
+    height: $width;
+    display: inline-flex;
+    border: solid ($width / 9) rgba(black, 0.2);
+    border-left-color: $color;
+    border-radius: 50%;
+    animation: loader-animation linear 0.9s infinite;
+}

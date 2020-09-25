@@ -1,0 +1,18 @@
+{
+  "name": "eku",
+  "version": "0.1.0",
+  "description": "A friendly, light and simple style library",
+  "main": "src/all.sass",
+  "repository": "https://github.com/geteku/eku",
+  "author": "Andres Celis <adwher@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "sass eku.scss css/eku.css",
+    "compress": "sass eku.scss css/eku.min.css --no-source-map -s compressed",
+    "build": "npm run compile && npm run compress",
+    "watch": "npm run compile -- --watch"
+  },
+  "dependencies": {
+    "sass": "^1.26.10"
+  }
+}

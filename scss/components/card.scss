@@ -1,0 +1,51 @@
+$card-height: 16rem !default;
+$card-radius: $radius-large !default;
+$card-shadow: 0 0.3rem 0.8rem rgba(black, 0.08) !default;
+$card-padding: 1.4rem !default;
+$card-border: $border !default;
+$card-gap: 1rem !default;
+
+.card {
+    @include gapped($card-gap);
+
+    min-height: $card-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: $card-border;
+    border-radius: $card-radius;
+    padding: $card-padding;
+    box-shadow: $card-shadow;
+
+    &-header,
+    > header {
+        @include gapped($card-gap);
+        flex: 1;
+    }
+
+    %card-body, article {
+        @include gapped(0.5rem);
+    }
+
+    &-footer,
+    > footer {
+        border-top: $card-border;
+
+        nav ul {
+            @include gapped($card-gap, true);
+
+            display: flex;
+            padding-top: $card-padding;
+            
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    user-select: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}

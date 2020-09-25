@@ -1,0 +1,123 @@
+$button-background: $background !default;
+$button-color: contrast-color($button-background) !default;
+$button-shadow: 0 0.1rem 0.5rem rgba($primary, 0.25) !default;
+$button-margin: $gap / 4 !default;
+
+$button-hover-shadow: 0 0.2rem 0.6rem rgba($primary, 0.3) !default;
+
+%button {
+    @extend %control;
+
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+    color: $color;
+    transition: background-color ease $transition-duration;
+
+    &[disabled] {
+        @include disabled;
+    }
+
+    &.is-spread {
+        justify-content: center;
+    }
+
+    %icon,
+    %loader {
+        &:first-child {
+            margin-right: $button-margin;
+        }
+
+        &:last-child {
+            margin-left: $button-margin;
+        }
+
+        &:first-child:last-child {
+            margin: 0;
+        }
+    }
+
+    %icon {
+        fill: $button-color;
+    }
+
+    // sizes
+
+    &.is-small,
+    &.is-large {
+        min-height: auto;
+    }
+
+    &.is-small {
+        font-size: $size-small;
+        border-radius: $radius-small;
+        padding: .3rem .5rem;
+    }
+
+    &.is-large {
+        font-size: $size-large;
+    }
+}
+
+@mixin make-button($background: $button-background) {
+    $color: contrast-color($background);
+
+    background: $background;
+    color: $color;
+    transition: box-shadow ease-in .15s;
+    border: none;
+    box-shadow: 0 0.2rem 0.4rem -0.1rem rgba($background, 0.35);
+
+    &:hover {
+        box-shadow: 0 0.3rem 0.6rem -0.1rem rgba($background, 0.45);
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+
+    %icon {
+        fill: $color;
+    }
+}
+
+button,
+.button {
+    @extend %button;
+
+    &:hover {
+        background: $mono0;
+    }
+
+    // themes
+
+    &.is-ghost {
+        border: none;
+    }
+
+    &.is-static {
+        background: $mono0;
+        cursor: default;
+        color: $color;
+        border: $border;
+    }
+
+    // colors
+
+    &.is-primary {
+        @include make-button($primary);
+    }
+
+    &.is-success {
+        @include make-button($green);
+    }
+
+    &.is-error {
+        @include make-button($red);
+    }
+}
+
+.buttons {
+    @include grouped($button-margin);
+}

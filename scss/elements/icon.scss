@@ -1,0 +1,15 @@
+.icon {
+    @extend %icon;
+}
+
+// boxicons
+
+box-icon {
+    @extend %icon;
+
+    font-size: 1em;
+}
+
+.bx {
+    @extend %icon;
+}

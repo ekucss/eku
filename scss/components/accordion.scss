@@ -1,0 +1,43 @@
+.accordion {
+    position: relative;
+    z-index: 2;
+
+    > :first-child {
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    %accordion-body {
+        width: 100%;
+        padding: 0 $padding-horizontal;
+        height: 0;
+        border-radius: 0 0 $radius-normal $radius-normal;
+        z-index: -1;
+        transition: height ease 0.2s;
+        overflow: hidden;
+    }
+
+    > ul {
+        @extend %accordion-body;
+        
+        display: flex;
+        flex-direction: column;
+
+        > li {
+            list-style: none;
+
+            &:not(:last-child) {
+                margin-bottom: $gap;
+            }
+        }
+    }
+
+    &.is-active,
+    &.is-hoverable:hover {
+        > %accordion-body {
+            padding: ($padding-vertical * 2) $padding-horizontal;
+            height: initial;
+        }
+    }
+}

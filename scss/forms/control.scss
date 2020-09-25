@@ -1,0 +1,12 @@
+$control-gap: 0.4rem !default;
+
+.control {
+    @include grouped($control-gap);
+
+    > .input + %icon {
+        position: absolute;
+        right: $padding-horizontal;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

@@ -1,0 +1,28 @@
+$table-padding: $padding !default;
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: $border;
+
+    thead {
+        background-color: $mono0;
+        border-bottom: $border;
+        font-family: $family-title;
+    }
+
+    tbody tr {
+        &:not(:last-child) {
+            border-bottom: $border;
+        }
+    }
+
+    td,
+    th {
+        padding: $table-padding;
+        border: none;
+        text-align: left;
+        font-weight: normal;
+    }
+}

@@ -1,0 +1,59 @@
+$primary: #03a9f4 !default;
+$primary-dark: darken($primary, 10%);
+
+$white: #efefef !default;
+$red: #f44336 !default;
+$green: #4caf50 !default;
+$black: #1a1a1a !default;
+
+$background: white !default;
+
+$mono0: #fcfcfc !default;
+$mono1: #eeeeee !default;
+$mono2: #CCCCCC !default;
+$mono3: #999999 !default;
+$mono4: #666666 !default;
+$mono5: #333333 !default;
+$mono6: #1A1A1A !default;
+
+$color: $black !default;
+$threshold-color: 60%;
+
+$shadow: 0 0.1rem 0.4rem rgba($black, 0.1) !default;
+
+$border-color: $mono1 !default;
+$border-width: 1px !default;
+$border: solid $border-width $border-color !default;
+
+$radius-small: 0.3rem !default;
+$radius-normal: 0.4rem !default;
+$radius-large: 0.8rem !default;
+
+$gap: 1.5rem !default;
+
+$padding-vertical: 0.7rem !default;
+$padding-horizontal: 0.9rem !default;
+$padding: $padding-vertical $padding-horizontal !default;
+
+$family-title: "Manrope", sans-serif !default;
+$family-text: "Manrope", sans-serif !default;
+
+$weight-title: 800 !default;
+$weight-text: 400 !default;
+
+$height: 3rem !default;
+
+$transition-duration: .25s !default;
+$transition: ease $transition-duration !default;
+
+$sm: 544px !default;
+$md: 768px !default;
+$bg: 1023px !default;
+$xl: 1215px !default;
+
+$max-width: 60rem !default;
+
+$size-small: 9pt !default;
+$size-normal: 11pt !default;
+$size-medium: 14pt !default;
+$size-large: 17pt !default;
