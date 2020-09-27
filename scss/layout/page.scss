@@ -1,7 +1,47 @@
 .page {
     position: relative;
-    
-    .sidebar.is-sticky {
-        top: $navbar-height;
+    display: grid;
+    grid-template-columns: minmax(15rem, #{$sidebar-width}) 1fr;
+    grid-template-rows: $navbar-height 1fr;
+    grid-template-areas:
+        "sidebar navbar"
+        "sidebar body";
+
+    > .sidebar {
+        grid-area: sidebar;
+        position: sticky;
+        max-height: 100vh;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: $border;
+    }
+
+    > .content {
+        grid-area: body;
+    }
+
+    > .navbar {
+        grid-area: navbar;
+    }
+
+    @media (max-width: $md) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "navbar"
+            "body";
+
+        > .sidebar {
+            position: fixed;
+            width: $sidebar-width;
+            max-width: 70vw;
+            box-shadow: $sidebar-shadow-left;
+            z-index: 11;
+            transform: translateX(-100%);
+
+            &.is-active {
+                transform: translateX(0);
+            }
+        }
     }
 }

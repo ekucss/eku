@@ -1,4 +1,4 @@
-$sidebar-width: 21rem !default;
+$sidebar-width: 22rem !default;
 $sidebar-shadow-left: 0.3rem 0 0.5rem rgba(black, 0.06) !default;
 $sidebar-shadow-right: -0.3rem 0 0.5rem rgba(black, 0.06) !default;
 $sidebar-margin: 2rem !default;
@@ -8,6 +8,7 @@ $sidebar-transition-duration: $transition-duration !default;
     height: auto;
     display: block;
     background-color: $background;
+    transition: transform ease $sidebar-transition-duration;
     
     &.is-sticky {
         position: sticky;
@@ -17,22 +18,19 @@ $sidebar-transition-duration: $transition-duration !default;
     
     &.is-fearful {
         max-width: 75vw;
-        width: calc(#{$sidebar-width} - 1vw);
+        width: $sidebar-width;
         height: 100%;
         max-height: 100vh;
         position: fixed;
         transform: translateX(-100%);
         top: 0;
-        visibility: hidden;
         overflow-y: auto;
         box-shadow: $sidebar-shadow-left;
         border-right: $border;
-        transition: transform ease $sidebar-transition-duration, visibility linear ($sidebar-transition-duration + 0.1s);
         z-index: 11;
 
         &.is-active {
             transform: translateX(0%);
-            visibility: visible;
         }
     }
 
@@ -44,28 +42,13 @@ $sidebar-transition-duration: $transition-duration !default;
 
     nav,
     nav > ul {
-        @include gapped($sidebar-margin / 2);
+        @include gapped($sidebar-margin);
 
         list-style: none;
 
         > %title {
-            border-bottom: $border;
-            padding-bottom: $padding-vertical;
+            // border-bottom: $border;
+            // padding-bottom: $padding-vertical;
         }
-
-        > li a {
-            padding: 0.6rem 0.8rem;
-            border-radius: $radius-normal;
-            transition: background-color ease $transition-duration;
-
-            &:hover {
-                background-color: $mono0;
-            }
-        }
-    }
-
-    a {
-        text-decoration: none;
-        color: $color;
     }
 }

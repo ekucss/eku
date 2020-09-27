@@ -28,11 +28,10 @@
 }
 
 %grouper {
-
     &.is-attached {
         flex-wrap: nowrap;
 
-        > %control {
+        > * {
             &:last-child:not(:first-child) {
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;

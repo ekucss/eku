@@ -32,30 +32,18 @@
 .is-attached.control, .is-attached.buttons, .is-attached.chips {
   flex-wrap: nowrap;
 }
-.is-attached.control > .input:last-child:not(:first-child), .is-attached.buttons > .input:last-child:not(:first-child), .is-attached.control > button:last-child:not(:first-child), .is-attached.buttons > button:last-child:not(:first-child),
-.is-attached.control > .button:last-child:not(:first-child),
-.is-attached.buttons > .button:last-child:not(:first-child), .is-attached.chips > .input:last-child:not(:first-child), .is-attached.chips > button:last-child:not(:first-child),
-.is-attached.chips > .button:last-child:not(:first-child) {
+.is-attached.control > *:last-child:not(:first-child), .is-attached.buttons > *:last-child:not(:first-child), .is-attached.chips > *:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.is-attached.control > .input:first-child:not(:last-child), .is-attached.buttons > .input:first-child:not(:last-child), .is-attached.control > button:first-child:not(:last-child), .is-attached.buttons > button:first-child:not(:last-child),
-.is-attached.control > .button:first-child:not(:last-child),
-.is-attached.buttons > .button:first-child:not(:last-child), .is-attached.chips > .input:first-child:not(:last-child), .is-attached.chips > button:first-child:not(:last-child),
-.is-attached.chips > .button:first-child:not(:last-child) {
+.is-attached.control > *:first-child:not(:last-child), .is-attached.buttons > *:first-child:not(:last-child), .is-attached.chips > *:first-child:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.is-attached.control > .input:not(:last-child), .is-attached.buttons > .input:not(:last-child), .is-attached.control > button:not(:last-child), .is-attached.buttons > button:not(:last-child),
-.is-attached.control > .button:not(:last-child),
-.is-attached.buttons > .button:not(:last-child), .is-attached.chips > .input:not(:last-child), .is-attached.chips > button:not(:last-child),
-.is-attached.chips > .button:not(:last-child) {
+.is-attached.control > *:not(:last-child), .is-attached.buttons > *:not(:last-child), .is-attached.chips > *:not(:last-child) {
   margin-right: -1px;
 }
-.is-attached.control > .input:not(:last-child):not(:first-child), .is-attached.buttons > .input:not(:last-child):not(:first-child), .is-attached.control > button:not(:last-child):not(:first-child), .is-attached.buttons > button:not(:last-child):not(:first-child),
-.is-attached.control > .button:not(:last-child):not(:first-child),
-.is-attached.buttons > .button:not(:last-child):not(:first-child), .is-attached.chips > .input:not(:last-child):not(:first-child), .is-attached.chips > button:not(:last-child):not(:first-child),
-.is-attached.chips > .button:not(:last-child):not(:first-child) {
+.is-attached.control > *:not(:last-child):not(:first-child), .is-attached.buttons > *:not(:last-child):not(:first-child), .is-attached.chips > *:not(:last-child):not(:first-child) {
   border-radius: 0;
 }
 
@@ -105,23 +93,28 @@ abbr[title] {
 }
 
 a {
+  text-decoration: none;
   cursor: pointer;
-  text-decoration: underline solid;
-  color: #03a9f4;
   display: inline-flex;
   align-items: center;
+  color: #1a1a1a;
 }
-a .bx, a box-icon, a .icon {
+
+p a {
+  text-decoration: underline solid;
+  color: #03a9f4;
+}
+p a .bx, p a box-icon, p a .icon {
   fill: #03a9f4;
   font-size: 0.7em;
 }
-a .bx:first-child, a box-icon:first-child, a .icon:first-child {
+p a .bx:first-child, p a box-icon:first-child, p a .icon:first-child {
   margin-right: 0.5rem;
 }
-a .bx:last-child, a box-icon:last-child, a .icon:last-child {
+p a .bx:last-child, p a box-icon:last-child, p a .icon:last-child {
   margin-left: 0.5rem;
 }
-a .bx:first-child:last-child, a box-icon:first-child:last-child, a .icon:first-child:last-child {
+p a .bx:first-child:last-child, p a box-icon:first-child:last-child, p a .icon:first-child:last-child {
   margin: 0;
 }
 
@@ -263,12 +256,6 @@ h6 {
 .card > footer nav ul li {
   list-style: none;
 }
-.card-footer nav ul li a,
-.card > footer nav ul li a {
-  text-decoration: none;
-  user-select: none;
-  color: inherit;
-}
 
 .dropdown {
   position: relative;
@@ -313,11 +300,6 @@ h6 {
 .dropdown > ul li a, .dropdown > ul li.has-content {
   padding: 0.7rem 0.9rem;
 }
-.dropdown > ul li a {
-  width: 100%;
-  text-decoration: none;
-  user-select: none;
-}
 .dropdown > ul li a:hover {
   background-color: #fcfcfc;
 }
@@ -346,12 +328,11 @@ h6 {
 }
 
 .navbar {
-  min-height: 4.4rem;
+  height: 4.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(0.5rem);
+  background: white;
   padding: 0 1.5rem;
   border-bottom: solid 1px #eeeeee;
 }
@@ -375,16 +356,12 @@ h6 {
   width: 1px;
   height: 1.5rem;
 }
-.navbar a {
-  text-decoration: none;
-  color: #1a1a1a;
-  user-select: none;
-}
 
 .sidebar {
   height: auto;
   display: block;
   background-color: white;
+  transition: transform ease 0.25s;
 }
 .sidebar.is-sticky {
   position: sticky;
@@ -393,22 +370,19 @@ h6 {
 }
 .sidebar.is-fearful {
   max-width: 75vw;
-  width: calc(21rem - 1vw);
+  width: 22rem;
   height: 100%;
   max-height: 100vh;
   position: fixed;
   transform: translateX(-100%);
   top: 0;
-  visibility: hidden;
   overflow-y: auto;
   box-shadow: 0.3rem 0 0.5rem rgba(0, 0, 0, 0.06);
   border-right: solid 1px #eeeeee;
-  transition: transform ease 0.25s, visibility linear 0.35s;
   z-index: 11;
 }
 .sidebar.is-fearful.is-active {
   transform: translateX(0%);
-  visibility: visible;
 }
 .sidebar menu {
   padding: 1.5rem;
@@ -422,34 +396,8 @@ h6 {
 }
 .sidebar nav > :not(:last-child),
 .sidebar nav > ul > :not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
-.sidebar nav > .title, .sidebar nav > h1, .sidebar nav > h2, .sidebar nav > h3, .sidebar nav > h4, .sidebar nav > h5, .sidebar nav > h6,
-.sidebar nav > ul > .title,
-.sidebar nav > ul > h1,
-.sidebar nav > ul > h2,
-.sidebar nav > ul > h3,
-.sidebar nav > ul > h4,
-.sidebar nav > ul > h5,
-.sidebar nav > ul > h6 {
-  border-bottom: solid 1px #eeeeee;
-  padding-bottom: 0.7rem;
-}
-.sidebar nav > li a,
-.sidebar nav > ul > li a {
-  padding: 0.6rem 0.8rem;
-  border-radius: 0.4rem;
-  transition: background-color ease 0.25s;
-}
-.sidebar nav > li a:hover,
-.sidebar nav > ul > li a:hover {
-  background-color: #fcfcfc;
-}
-.sidebar a {
-  text-decoration: none;
-  color: #1a1a1a;
-}
-
 .tooltip {
   position: relative;
 }
@@ -528,12 +476,28 @@ h6 {
 .chip .bx:first-child:last-child, .chip box-icon:first-child:last-child, .chip .icon:first-child:last-child {
   margin: 0;
 }
-.chip.is-active {
-  background: #03a9f4;
-  border-color: none;
+.chip.is-primary {
+  background-color: #03a9f4;
+  border: none;
   color: #efefef;
 }
-.chip.is-active .bx, .chip.is-active box-icon, .chip.is-active .icon {
+.chip.is-primary .bx, .chip.is-primary box-icon, .chip.is-primary .icon {
+  fill: #efefef;
+}
+.chip.is-success {
+  background-color: #4caf50;
+  border: none;
+  color: #efefef;
+}
+.chip.is-success .bx, .chip.is-success box-icon, .chip.is-success .icon {
+  fill: #efefef;
+}
+.chip.is-error {
+  background-color: #f44336;
+  border: none;
+  color: #efefef;
+}
+.chip.is-error .bx, .chip.is-error box-icon, .chip.is-error .icon {
   fill: #efefef;
 }
 
@@ -875,10 +839,6 @@ form,
   width: 100%;
   transition: box-shadow ease 0.25s, border ease 0.25s;
 }
-.input::placeholder {
-  color: rgba(26, 26, 26, 0.4);
-  user-select: none;
-}
 .input.is-error {
   border-color: rgba(244, 67, 54, 0.5);
   box-shadow: 0 0 0 0.15rem rgba(244, 67, 54, 0.1);
@@ -955,10 +915,12 @@ textarea {
   }
 }
 .flexbox {
+  width: 100%;
   display: flex;
 }
 .flexbox.is-spaced {
   justify-content: space-between;
+  align-items: center;
 }
 
 .grid {
@@ -1390,9 +1352,42 @@ textarea {
 
 .page {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(15rem, 22rem) 1fr;
+  grid-template-rows: 4.4rem 1fr;
+  grid-template-areas: "sidebar navbar" "sidebar body";
 }
-.page .sidebar.is-sticky {
-  top: 4.4rem;
+.page > .sidebar {
+  grid-area: sidebar;
+  position: sticky;
+  max-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: solid 1px #eeeeee;
+}
+.page > .content {
+  grid-area: body;
+}
+.page > .navbar {
+  grid-area: navbar;
+}
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "navbar" "body";
+  }
+  .page > .sidebar {
+    position: fixed;
+    width: 22rem;
+    max-width: 70vw;
+    box-shadow: 0.3rem 0 0.5rem rgba(0, 0, 0, 0.06);
+    z-index: 11;
+    transform: translateX(-100%);
+  }
+  .page > .sidebar.is-active {
+    transform: translateX(0);
+  }
 }
 
 /*# sourceMappingURL=eku.css.map */

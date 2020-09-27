@@ -59,14 +59,8 @@ $dropdown-margin: ($gap / 3) !default;
                 padding: $padding;
             }
 
-            a  {
-                width: 100%;
-                text-decoration: none;
-                user-select: none;
-
-                &:hover {
-                    background-color: $mono0;
-                }
+            a:hover {
+                background-color: $mono0;
             }
         }
     }

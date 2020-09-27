@@ -1,7 +1,9 @@
 .flexbox {
+    width: 100%;
     display: flex;
 
     &.is-spaced {
         justify-content: space-between;
+        align-items: center;
     }
 }

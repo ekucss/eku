@@ -1,13 +1,12 @@
 $input-radius: $radius-normal !default;
 $input-transition: box-shadow ease $transition-duration, border ease $transition-duration !default;
-$input-placeholder-color: rgba($color, 0.4) !default;
 
 $input-focus-shadow: $shadow !default;
 $input-focus-border-color: $mono3 !default;
 
 $input-hover-border-color: $mono2 !default;
 
-@mixin input-status($color, $hover: false) {
+@mixin make-input($color, $hover: false) {
     @if $hover {
         border-color: rgba($color, 0.8);
         box-shadow: 0 0 0 0.2rem rgba($color, 0.2);
@@ -25,17 +24,12 @@ $input-hover-border-color: $mono2 !default;
     width: 100%;
     transition: $input-transition;
 
-    &::placeholder {
-        color: $input-placeholder-color;
-        user-select: none;
-    }
-
     &.is-error {
-        @include input-status($red, false); 
+        @include make-input($red, false); 
     }
 
     &.is-success {
-        @include input-status($green, false);
+        @include make-input($green, false);
     }
 
     &:focus,
@@ -45,11 +39,11 @@ $input-hover-border-color: $mono2 !default;
         z-index: 2;
 
         &.is-error {
-            @include input-status($red, true);
+            @include make-input($red, true);
         }
 
         &.is-success {
-            @include input-status($green, true);
+            @include make-input($green, true);
         }
     }
 

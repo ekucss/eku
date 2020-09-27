@@ -4,9 +4,17 @@ $chip-border-color: $border-color !default;
 $chip-padding: 0.2rem 0.6rem !default;
 $chip-margin: 0.2rem !default;
 
-$chip-active-background: $primary !default;
-$chip-active-border-color: none !default;
-$chip-active-color: contrast-color($chip-active-background) !default;
+@mixin make-chip($background: $primary) {
+    $color: contrast-color($background);
+
+    background-color: $background;
+    border: none;
+    color: $color;
+
+    %icon {
+        fill: $color;
+    }
+}
 
 .chip {
     display: inline-flex;
@@ -35,14 +43,16 @@ $chip-active-color: contrast-color($chip-active-background) !default;
         }
     }
 
-    &.is-active {
-        background: $chip-active-background;
-        border-color: $chip-active-border-color;
-        color: $chip-active-color;
+    &.is-primary {
+        @include make-chip($primary);
+    }
 
-        %icon {
-            fill: $chip-active-color;
-        }
+    &.is-success {
+        @include make-chip($green);
+    }
+
+    &.is-error {
+        @include make-chip($red);
     }
 }
 
