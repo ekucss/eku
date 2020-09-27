@@ -55,18 +55,10 @@ a {
     display: inline-flex;
     align-items: center;
     color: $color;
-}
 
-p a {
     $margin: $gap / 3;
 
-    text-decoration: underline solid;
-    color: $primary;
-
     %icon {
-        fill: $primary;
-        font-size: 0.7em;
-
         &:first-child {
             margin-right: $margin;
         }
@@ -81,9 +73,22 @@ p a {
     }
 }
 
+p a {
+    text-decoration: underline solid;
+    color: $primary;
+
+    %icon {
+        fill: $primary;
+    }
+}
+
 hr {
     display: block;
     height: $border-width;
     border: none;
     background-color: $border-color;
+}
+
+li {
+    list-style: none;
 }

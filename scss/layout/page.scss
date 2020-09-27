@@ -1,17 +1,21 @@
+$page-sidebar-max-width: 30vw !default;
+$page-sidebar-width: min(#{$sidebar-width}, #{$page-sidebar-max-width}) !default;
+
 .page {
     position: relative;
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: minmax(15rem, #{$sidebar-width}) 1fr;
-    grid-template-rows: $navbar-height 1fr;
-    grid-template-areas:
-        "sidebar navbar"
-        "sidebar body";
+    grid-template-columns: $page-sidebar-width 1fr;
+    grid-template-rows: $navbar-height auto;
+    grid-template-areas: "sidebar navbar" "sidebar body";
 
     > .sidebar {
         grid-area: sidebar;
-        position: sticky;
-        max-height: 100vh;
+        width: $sidebar-width;
+        max-width: $page-sidebar-max-width;
         height: 100vh;
+        position: fixed;
+        top: 0;
         overflow-y: auto;
         border-right: $border;
     }
@@ -26,20 +30,17 @@
 
     @media (max-width: $md) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            "navbar"
-            "body";
+        grid-template-rows: $navbar-height 1fr;
+        grid-template-areas: "navbar" "body";
 
         > .sidebar {
-            position: fixed;
             width: $sidebar-width;
-            max-width: 70vw;
-            box-shadow: $sidebar-shadow-left;
+            max-width: $sidebar-max-width;
             z-index: 11;
             transform: translateX(-100%);
-
+            
             &.is-active {
+                box-shadow: $sidebar-shadow-left;
                 transform: translateX(0);
             }
         }

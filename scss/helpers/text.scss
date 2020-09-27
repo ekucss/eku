@@ -16,6 +16,10 @@
     &.is-bold {
         font-weight: bold;
     }
+
+    &.has-color-primary {
+        color: $primary;
+    }
 }
 
 .text, p, a, %button, %title {

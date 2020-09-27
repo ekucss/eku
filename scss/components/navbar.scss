@@ -25,6 +25,10 @@ $navbar-background: $background !default;
         align-items: center;
         list-style: none;
 
+        li {
+            display: inline-flex;
+        }
+
         > hr {
             width: $border-width;
             height: 1.5rem;
