@@ -34,4 +34,13 @@ $navbar-background: $background !default;
             height: 1.5rem;
         }
     }
+
+    .tab {
+        border-bottom: none;
+        height: 100%;
+
+        %tab-body {
+            height: 100%;
+        }
+    }
 }

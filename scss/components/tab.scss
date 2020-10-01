@@ -1,0 +1,42 @@
+$tab-height: $height + ($padding-vertical * 2) !default;
+
+.tab {
+    border-bottom: $border;
+    position: relative;
+    padding: 0 $padding-horizontal;
+    
+    %tab-body {
+        @include gapped(1rem, tre);
+
+        display: flex;
+    }
+    
+    %tab-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: $padding-vertical 0;
+        
+        &.is-active {
+            color: $primary;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: $border-width * 2;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                background-color: $primary;
+            }
+        }
+    }
+
+    > ul {
+        @extend %tab-body;
+
+        li {
+            @extend %tab-item;
+        }
+    }
+}
