@@ -7,7 +7,7 @@ $page-sidebar-width: min(#{$sidebar-width}, #{$page-sidebar-max-width}) !default
     display: grid;
     grid-template-columns: $page-sidebar-width 1fr;
     grid-template-rows: $navbar-height auto;
-    grid-template-areas: "sidebar navbar" "sidebar body";
+    grid-template-areas: "sidebar body";
 
     > .sidebar {
         grid-area: sidebar;
@@ -24,14 +24,24 @@ $page-sidebar-width: min(#{$sidebar-width}, #{$page-sidebar-max-width}) !default
         grid-area: body;
     }
 
-    > .navbar {
-        grid-area: navbar;
+    &.has-navbar {
+        grid-template-columns: $page-sidebar-width 1fr;
+        grid-template-rows: $navbar-height auto;
+        grid-template-areas: "sidebar navbar" "sidebar body";
+
+        > .navbar {
+            grid-area: navbar;
+        }
     }
 
     @media (max-width: $md) {
         grid-template-columns: 1fr;
         grid-template-rows: $navbar-height 1fr;
-        grid-template-areas: "navbar" "body";
+        grid-template-areas: "body";
+        
+        &.has-navbar {
+            grid-template-areas: "navbar" "body";
+        }
 
         > .sidebar {
             width: $sidebar-width;

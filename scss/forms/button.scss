@@ -67,10 +67,10 @@ $button-hover-shadow: 0 0.2rem 0.6rem rgba($primary, 0.3) !default;
     color: $color;
     transition: box-shadow ease-in .15s;
     border: none;
-    box-shadow: 0 0.2rem 0.4rem -0.1rem rgba($background, 0.35);
+    box-shadow: 0 0.15rem 0.6rem 0.05rem rgba($background, 0.35);
 
     &:hover {
-        box-shadow: 0 0.3rem 0.6rem -0.1rem rgba($background, 0.45);
+        box-shadow: 0 0.2rem 0.6rem 0.15rem rgba($background, 0.45);
     }
 
     &:active {
