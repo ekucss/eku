@@ -17,8 +17,7 @@ $modal-shadow:  0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
     visibility: hidden;
     z-index: 20;
     
-    &.is-active,
-    &[aria-modal=true] {
+    &.is-active {
         visibility: visible;
     }
 
@@ -58,6 +57,11 @@ $modal-shadow:  0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
             align-items: initial;
             text-align: initial;
         }
+    }
+
+    > article,
+    > .modal-body {
+        @extend %modal-body;
     }
 
     @media (max-width: $sm) {

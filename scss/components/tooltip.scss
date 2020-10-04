@@ -13,7 +13,7 @@ $tooltip-size-large: 8rem !default;
     position: relative;
 
     &::before {
-        content: attr(aria-label);
+        content: attr(data-label);
         max-width: 10rem;
         display: inline-flex;
         justify-content: center;

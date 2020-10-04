@@ -17,18 +17,16 @@ $card-gap: 1rem !default;
     padding: $card-padding;
     box-shadow: $card-shadow;
 
-    &-header,
-    > header {
+    %card-header {
         @include gapped($card-gap);
         flex: 1;
     }
 
-    %card-body, article {
+    %card-body {
         @include gapped(0.5rem);
     }
 
-    &-footer,
-    > footer {
+    %card-footer {
         border-top: $card-border;
 
         nav ul {
@@ -41,5 +39,20 @@ $card-gap: 1rem !default;
                 list-style: none;
             }
         }
+    }
+
+    > header,
+    > .card-header {
+        @extend %card-header;
+    }
+
+    > article,
+    > .card-article {
+        @extend %card-body;
+    }
+
+    > footer,
+    > .card-footer {
+        @extend %card-footer;
     }
 }
