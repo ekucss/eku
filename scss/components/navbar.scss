@@ -36,11 +36,11 @@ $navbar-background: $background !default;
     }
 
     .tab {
-        border-bottom: none;
         height: 100%;
-
+        
         %tab-body {
             height: 100%;
+            border-bottom: none;
         }
     }
 }

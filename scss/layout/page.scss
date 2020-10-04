@@ -25,7 +25,7 @@ $page-sidebar-width: min(#{$sidebar-width}, #{$page-sidebar-max-width}) !default
     }
 
     &.has-navbar {
-        grid-template-columns: $page-sidebar-width 1fr;
+        //grid-template-columns: $page-sidebar-width 1fr;
         grid-template-rows: $navbar-height auto;
         grid-template-areas: "sidebar navbar" "sidebar body";
 

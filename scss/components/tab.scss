@@ -1,14 +1,13 @@
 $tab-height: $height + ($padding-vertical * 2) !default;
 
 .tab {
-    border-bottom: $border;
     position: relative;
-    padding: 0 $padding-horizontal;
     
     %tab-body {
         @include gapped(1rem, tre);
-
+        
         display: flex;
+        border-bottom: $border;
     }
     
     %tab-item {
@@ -16,6 +15,7 @@ $tab-height: $height + ($padding-vertical * 2) !default;
         align-items: center;
         position: relative;
         padding: $padding-vertical 0;
+        cursor: pointer;
         
         &.is-active {
             color: $primary;
@@ -38,5 +38,16 @@ $tab-height: $height + ($padding-vertical * 2) !default;
         li {
             @extend %tab-item;
         }
+    }
+
+    // content
+
+    %tab-content {
+        margin-top: $gap;
+    }
+
+    > .content,
+    > .container {
+        @extend %tab-content;
     }
 }
