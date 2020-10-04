@@ -7,6 +7,7 @@ $button-hover-shadow: 0 0.2rem 0.6rem rgba($primary, 0.3) !default;
 
 %button {
     @extend %control;
+    @extend %addonable;
 
     text-decoration: none;
     user-select: none;
@@ -21,21 +22,6 @@ $button-hover-shadow: 0 0.2rem 0.6rem rgba($primary, 0.3) !default;
 
     &.is-spread {
         justify-content: center;
-    }
-
-    %icon,
-    %loader {
-        &:first-child {
-            margin-right: $button-margin;
-        }
-
-        &:last-child {
-            margin-left: $button-margin;
-        }
-
-        &:first-child:last-child {
-            margin: 0;
-        }
     }
 
     %icon {

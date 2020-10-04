@@ -1,19 +1,42 @@
+%loader {
+    @extend %addon;
+}
+
+@mixin make-loader($width, $color: $mono6) {
+    @extend %loader;
+
+    &::before {
+        content: "";
+        width: $width;
+        height: $width;
+        display: inline-flex;
+        border: solid ($width / 8) rgba(black, 0.2);
+        border-left-color: $color;
+        border-radius: 50%;
+        animation: loader-animation linear 0.9s infinite;
+    }
+}
+
 @keyframes loader-animation {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
 
 .loader {
+    @extend %loader;
+
+    display: inline-flex;
+
+    &,
     &.is-small {
-        @include loader(1rem);
+        @include make-loader(1rem);
     }
     
-    &,
     &.is-normal {
-        @include loader(3rem);
+        @include make-loader(3rem);
     }
     
     &.is-large {
-        @include loader(8rem);
+        @include make-loader(8rem);
     }
 }

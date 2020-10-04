@@ -52,3 +52,19 @@
         }
     }
 }
+
+%addonable {
+    > %addon {
+        &:first-child {
+            margin-right: $padding-vertical;
+        }
+    
+        &:last-child {
+            margin-left: $padding-vertical;
+        }
+    
+        &:first-child:last-child {
+            margin: 0;
+        }
+    }
+}

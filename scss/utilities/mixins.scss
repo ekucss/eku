@@ -38,15 +38,3 @@
         }
     }
 }
-
-@mixin loader($width, $color: $mono6) {
-    @extend %loader !optional;
-
-    width: $width;
-    height: $width;
-    display: inline-flex;
-    border: solid ($width / 9) rgba(black, 0.2);
-    border-left-color: $color;
-    border-radius: 50%;
-    animation: loader-animation linear 0.9s infinite;
-}

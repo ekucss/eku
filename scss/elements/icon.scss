@@ -1,15 +1,20 @@
+%icon {
+    @extend %addon;
+}
+
 .icon {
     @extend %icon;
+    display: flex;
 }
 
 // boxicons
 
 box-icon {
     @extend %icon;
-
-    font-size: 1em;
 }
 
-.bx {
+// feather
+
+feather-icon {
     @extend %icon;
 }

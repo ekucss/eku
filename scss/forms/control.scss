@@ -3,10 +3,12 @@ $control-gap: 0.4rem !default;
 .control {
     @include grouped($control-gap);
 
-    > .input + %icon {
+    position: relative;
+
+    > .input + %addon {
         position: absolute;
         right: $padding-horizontal;
-        top: 50%;
-        transform: translateY(-50%);
+        top: calc(50% + #{$border-width * 2});
+        transform: translateY(-100%);
     }
 }
