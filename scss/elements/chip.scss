@@ -8,7 +8,7 @@ $chip-margin: 0.2rem !default;
     $color: contrast-color($background);
 
     background-color: $background;
-    border: none;
+    border-color: rgba($black, 0.05);
     color: $color;
 
     %icon {
