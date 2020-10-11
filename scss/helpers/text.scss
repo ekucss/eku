@@ -17,11 +17,28 @@
         font-weight: bold;
     }
 
-    &.has-color-primary {
+    // color
+
+    &.is-primary {
         color: $primary;
+    }
+
+    &.is-success {
+        color: $green;
+    }
+
+    &.is-error {
+        color: $red;
     }
 }
 
-.text, p, a, %button, %title {
+.text, p, a, %title {
     @extend %text;
+}
+
+.text {
+    @extend %addonable;
+
+    display: inline-flex;
+    align-items: center;
 }

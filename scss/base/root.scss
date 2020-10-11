@@ -1,0 +1,60 @@
+:root {
+    --primary: #{$primary};
+
+    --white: #{$white};
+    --red: #{$red};
+    --green: #{$green};
+    --black: #{$black};
+
+    --background: #{$background};
+
+    --mono0: #{$mono0};
+    --mono1: #{$mono1};
+    --mono2: #{$mono2};
+    --mono3: #{$mono3};
+    --mono4: #{$mono4};
+    --mono5: #{$mono5};
+    --mono6: #{$mono6};
+
+    --color: #{$color};
+    --threshold-color: #{$threshold-color};
+
+    --shadow: #{$shadow};
+
+    --border-color: #{$border-color};
+    --border-width: #{$border-width};
+    --border: #{$border};
+
+    --radius-small: #{$radius-small};
+    --radius-normal: #{$radius-normal};
+    --radius-large: #{$radius-large};
+
+    --gap: #{$gap};
+
+    --padding-vertical: #{$padding-vertical};
+    --padding-horizontal: #{$padding-horizontal};
+    --padding: #{$padding};
+
+    --family-title: #{$family-title};
+    --family-text: #{$family-text};
+
+    --weight-title: #{$weight-title};
+    --weight-text: #{$weight-text};
+
+    --height: #{$height};
+
+    --transition-duration: #{$transition-duration};
+    --transition: #{$transition};
+
+    --sm: #{$sm};
+    --md: #{$md};
+    --bg: #{$bg};
+    --xl: #{$xl};
+
+    --max-width: #{$max-width};
+
+    --size-small: #{$size-small};
+    --size-normal: #{$size-normal};
+    --size-medium: #{$size-medium};
+    --size-large: #{$size-large};
+}
