@@ -1,28 +1,37 @@
-$input-radius: $radius-normal !default;
-$input-transition: box-shadow ease $transition-duration, border ease $transition-duration !default;
-
 $input-focus-shadow: $shadow !default;
 $input-focus-border-color: $mono3 !default;
 
 $input-hover-border-color: $mono2 !default;
 
 @mixin make-input($color, $hover: false) {
-    @if $hover {
-        border-color: rgba($color, 0.8);
-        box-shadow: 0 0 0 0.2rem rgba($color, 0.2);
-    }
+    @extend %input-themed !optional;
 
-    @else {
+    border-color: rgba($color, 0.8);
+    box-shadow: 0 0 0 0.2rem rgba($color, 0.2);
+
+    &:focus,
+    &:active {
         border-color: rgba($color, 0.5);
         box-shadow: 0 0 0 0.15rem rgba($color, 0.1);
     }
 }
 
-.input {
+%input {
     @extend %control;
 
     width: 100%;
-    transition: $input-transition;
+    transition: box-shadow ease $transition-duration, border ease $transition-duration;
+}
+
+.input {
+    @extend %input;
+
+    &:focus,
+    &:active {
+        border-color: $input-focus-border-color;
+        box-shadow: $input-focus-shadow;
+        z-index: 2;
+    }
 
     &.is-error {
         @include make-input($red, false); 
@@ -30,26 +39,6 @@ $input-hover-border-color: $mono2 !default;
 
     &.is-success {
         @include make-input($green, false);
-    }
-
-    &:focus,
-    &:active {
-        border-color: $input-focus-border-color;
-        box-shadow: $input-focus-shadow;
-        z-index: 2;
-
-        &.is-error {
-            @include make-input($red, true);
-        }
-
-        &.is-success {
-            @include make-input($green, true);
-        }
-    }
-
-    &[disabled],
-    fieldset[disabled] & {
-        @include disabled;
     }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "eku",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A friendly, light and simple style library",
   "main": "scss/eku.scss",
   "repository": "https://github.com/ekucss/eku",
@@ -8,7 +8,8 @@
   "author": "Andres Celis <adwher@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "build": "sass eku.scss css/eku.css --no-source-map -s compressed",
+    "minify": "sass eku.scss css/eku.min.css --no-source-map -s compressed",
+    "build": "sass eku.scss css/eku.css -s expanded",
     "watch": "npm run build -- --watch"
   },
   "dependencies": {

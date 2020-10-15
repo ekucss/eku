@@ -11,6 +11,11 @@
     &.is-spread {
         width: 100%;
     }
+
+    &[disabled],
+    fieldset[disabled] & {
+        @include disabled;
+    }
 }
 
 %sizable {

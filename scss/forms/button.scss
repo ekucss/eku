@@ -1,9 +1,8 @@
 $button-background: $background !default;
+$button-radius: $radius-normal !default;
 $button-color: contrast-color($button-background) !default;
 $button-shadow: 0 0.1rem 0.5rem rgba($primary, 0.25) !default;
 $button-margin: $gap / 4 !default;
-
-$button-hover-shadow: 0 0.2rem 0.6rem rgba($primary, 0.3) !default;
 
 %button {
     @extend %control;
@@ -15,10 +14,6 @@ $button-hover-shadow: 0 0.2rem 0.6rem rgba($primary, 0.3) !default;
     text-align: center;
     color: $color;
     transition: background-color ease $transition-duration;
-
-    &[disabled] {
-        @include disabled;
-    }
 
     &.is-spread {
         justify-content: center;
@@ -46,21 +41,26 @@ $button-hover-shadow: 0 0.2rem 0.6rem rgba($primary, 0.3) !default;
     }
 }
 
+%button-themed {
+    border: none;
+    transition: box-shadow ease-in .15s;
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
 @mixin make-button($background: $button-background) {
+    @extend %button-themed !optional;
+
     $color: contrast-color($background);
 
     background: $background;
     color: $color;
-    transition: box-shadow ease-in .15s;
-    border: none;
     box-shadow: 0 0.15rem 0.6rem 0.05rem rgba($background, 0.35);
 
     &:hover {
         box-shadow: 0 0.2rem 0.6rem 0.15rem rgba($background, 0.45);
-    }
-
-    &:active {
-        box-shadow: none;
     }
 
     %icon {
@@ -75,8 +75,6 @@ button,
     &:hover {
         background: $mono0;
     }
-
-    // themes
 
     &.is-ghost {
         border: none;

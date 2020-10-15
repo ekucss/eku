@@ -5,6 +5,8 @@ $chip-padding: 0.2rem 0.6rem !default;
 $chip-margin: 0.2rem !default;
 
 @mixin make-chip($background: $primary) {
+    @extend %chip-themed !optional;
+
     $color: contrast-color($background);
 
     background-color: $background;
@@ -44,6 +46,8 @@ $chip-margin: 0.2rem !default;
             margin: 0;
         }
     }
+
+    // marker
 
     &.is-primary {
         @include make-chip($primary);

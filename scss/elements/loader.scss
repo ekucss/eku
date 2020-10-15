@@ -3,8 +3,6 @@
 }
 
 @mixin make-loader($width, $color: $mono6) {
-    @extend %loader;
-
     &::before {
         content: "";
         width: $width;
