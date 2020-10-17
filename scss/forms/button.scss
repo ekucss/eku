@@ -1,8 +1,13 @@
 $button-background: $background !default;
 $button-radius: $radius-normal !default;
 $button-color: contrast-color($button-background) !default;
-$button-shadow: 0 0.1rem 0.5rem rgba($primary, 0.25) !default;
+$button-shadow: none !default;
 $button-margin: $gap / 4 !default;
+
+$button-hover-elevation: 1px !default;
+$button-hover-shadow: 0 0.4rem 0.8rem rgba($color, 0.08) !default;
+
+$button-active-shadow: none !default;
 
 %button {
     @extend %control;
@@ -41,26 +46,31 @@ $button-margin: $gap / 4 !default;
     }
 }
 
-%button-themed {
-    border: none;
-    transition: box-shadow ease-in .15s;
-
-    &:active {
-        box-shadow: none;
-    }
-}
-
 @mixin make-button($background: $button-background) {
-    @extend %button-themed !optional;
-
     $color: contrast-color($background);
 
     background: $background;
     color: $color;
-    box-shadow: 0 0.15rem 0.6rem 0.05rem rgba($background, 0.35);
+    box-shadow: $button-shadow;
+    border: none;
+    transition: box-shadow ease-in .14s, transform ease .20s;
 
     &:hover {
-        box-shadow: 0 0.2rem 0.6rem 0.15rem rgba($background, 0.45);
+        box-shadow: $button-hover-shadow;
+    }
+
+    &:active {
+        box-shadow: $button-active-shadow;
+    }
+
+    @if $button-hover-elevation != 0px and $button-hover-elevation != 0 {
+        &:hover {
+            transform: translateY($button-hover-elevation * -1);
+        }
+    
+        &:active {
+            transform: translateY(0);
+        }
     }
 
     %icon {

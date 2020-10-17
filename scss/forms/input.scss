@@ -4,8 +4,6 @@ $input-focus-border-color: $mono3 !default;
 $input-hover-border-color: $mono2 !default;
 
 @mixin make-input($color, $hover: false) {
-    @extend %input-themed !optional;
-
     border-color: rgba($color, 0.8);
     box-shadow: 0 0 0 0.2rem rgba($color, 0.2);
 

@@ -24,9 +24,9 @@ $border-color: $mono1 !default;
 $border-width: 1px !default;
 $border: solid $border-width $border-color !default;
 
-$radius-small: 0.3rem !default;
-$radius-normal: 0.4rem !default;
-$radius-large: 0.8rem !default;
+$radius-small: 0.2rem !default;
+$radius-normal: 0.3rem !default;
+$radius-large: 0.7rem !default;
 
 $gap: 1.5rem !default;
 
@@ -52,7 +52,7 @@ $xl: 1215px !default;
 
 $max-width: 60rem !default;
 
-$size-small: 9pt !default;
+$size-small: 8pt !default;
 $size-normal: 11pt !default;
 $size-medium: 14pt !default;
 $size-large: 17pt !default;
