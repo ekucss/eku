@@ -14,15 +14,10 @@ $input-hover-border-color: $mono2 !default;
     }
 }
 
-%input {
+.input {
     @extend %control;
 
-    width: 100%;
     transition: box-shadow ease $transition-duration, border ease $transition-duration;
-}
-
-.input {
-    @extend %input;
 
     &:focus,
     &:active {

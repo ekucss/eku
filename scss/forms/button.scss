@@ -5,7 +5,7 @@ $button-shadow: none !default;
 $button-margin: $gap / 4 !default;
 
 $button-hover-elevation: 1px !default;
-$button-hover-shadow: 0 0.4rem 0.8rem rgba($color, 0.08) !default;
+$button-hover-shadow: $shadow !default;
 
 $button-active-shadow: none !default;
 

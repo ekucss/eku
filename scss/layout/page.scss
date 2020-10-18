@@ -1,11 +1,10 @@
 $page-sidebar-max-width: 35vw !default;
-$page-sidebar-width: min(#{$sidebar-width}, #{$page-sidebar-max-width}) !default;
 
 .page {
     position: relative;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: $page-sidebar-width 1fr;
+    grid-template-columns: min(#{$sidebar-width}, #{$page-sidebar-max-width}) 1fr;
     grid-template-rows: $navbar-height auto;
     grid-template-areas: "sidebar body";
 

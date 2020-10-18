@@ -3,7 +3,7 @@ $primary: #275efe !default;
 $white: #efefef !default;
 $red: #f44336 !default;
 $green: #4caf50 !default;
-$black: #24292e !default;
+$black: #1a1a1a !default;
 
 $background: white !default;
 
@@ -13,12 +13,12 @@ $mono2: #CCCCCC !default;
 $mono3: #999999 !default;
 $mono4: #666666 !default;
 $mono5: #333333 !default;
-$mono6: #1A1A1A !default;
+$mono6: #1a1a1a !default;
 
-$color: $black !default;
+$color: #172142 !default;
 $threshold-color: 60%;
 
-$shadow: 0 0.1rem 0.4rem rgba($black, 0.1) !default;
+$shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 
 $border-color: $mono1 !default;
 $border-width: 1px !default;

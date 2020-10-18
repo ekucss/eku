@@ -8,13 +8,14 @@
     display: inline-flex;
     align-items: center;
 
-    &.is-spread {
-        width: 100%;
-    }
-
     &[disabled],
     fieldset[disabled] & {
         @include disabled;
+    }
+
+    &.is-spread {
+        width: 100%;
+        flex: 1;
     }
 }
 
