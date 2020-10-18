@@ -17,6 +17,11 @@
         font-weight: bold;
     }
 
+    &.is-mono {
+        font-family: $family-mono;
+        font-weight: $weight-mono;
+    }
+
     // color
 
     &.is-primary {

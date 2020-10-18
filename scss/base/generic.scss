@@ -24,17 +24,18 @@ body {
     font-weight: $weight-text;
 }
 
-$code-radius: $radius-normal !default;
-$code-padding: 0.2rem 0.4rem;
-$code-background: rgba($mono1, 0.1);
-
 code {
-    font-family: monospace;
+    $code-radius: $radius-small !default;
+    $code-padding: 0.3rem 0.5rem !default;
+    $code-background: $mono1 !default;
+
+    font-size: $size-small;
+    font-family: $family-mono;
+    font-weight: $weight-mono;
     background: $code-background;
     padding: $code-padding;
     border-radius: $code-radius;
     display: inline-block;
-    font-size: $size-small;
 }
 
 small {
