@@ -1,20 +1,19 @@
 $dropdown-shadow: $shadow !default;
-$dropdown-margin: ($gap / 3) !default;
+$dropdown-margin: ($gap / 2) !default;
+
+$dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
 
 .dropdown {
     position: relative;
+    display: inline-flex;
 
-    &.is-dropup ul {
-        top: initial;
-        bottom: calc(100% + #{$dropdown-margin});
-    }
-
-    &.is-active,
-    &.is-hoverable:hover {
-        ul {
-            opacity: 1;
-            visibility: visible;
-        }
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: $dropdown-margin;
+        position: absolute;
+        top: 100%;
     }
 
     %dropdown-body {
@@ -29,7 +28,7 @@ $dropdown-margin: ($gap / 3) !default;
         overflow: hidden;
         top: calc(100% + #{$dropdown-margin});
         transition: opacity ease 0.2s, visibility ease 0.2s;
-        z-index: 11;
+        z-index: 2;
 
         &,
         &.in-left {
@@ -48,14 +47,37 @@ $dropdown-margin: ($gap / 3) !default;
         }
     }
 
-    > ul {
+    &.is-dropup {
+        %dropdown-body {
+            top: initial;
+            bottom: calc(100% + #{$dropdown-margin});
+            box-shadow: $dropdown-dropup-shadow;
+        }
+
+        &::before {
+            top: initial;
+            bottom: 100%;
+        }
+    }
+
+    &.is-active,
+    &.is-hoverable:hover {
+        > %dropdown-body {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    ul {
         @extend %dropdown-body;
 
         li {
+            width: 100%;
             list-style: none;
 
             a,
             &.has-content {
+                width: 100%;
                 padding: $padding;
             }
 

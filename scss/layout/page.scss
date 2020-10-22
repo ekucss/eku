@@ -43,7 +43,7 @@ $page-sidebar-max-width: 35vw !default;
         > .sidebar {
             width: $sidebar-width;
             max-width: $sidebar-max-width;
-            z-index: 11;
+            z-index: 4;
             transform: translateX(-100%);
             
             &.is-active {

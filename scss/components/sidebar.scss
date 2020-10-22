@@ -28,7 +28,7 @@ $sidebar-transition-duration: $transition-duration !default;
         overflow-y: auto;
         box-shadow: $sidebar-shadow-left;
         border-right: $border;
-        z-index: 11;
+        z-index: 4;
 
         &.is-active {
             transform: translateX(0%);

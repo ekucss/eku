@@ -15,7 +15,7 @@ $modal-shadow:  0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
     align-items: center;
     margin: 0;
     visibility: hidden;
-    z-index: 20;
+    z-index: 5;
     
     &.is-active {
         visibility: visible;
