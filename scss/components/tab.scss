@@ -1,21 +1,21 @@
 $tab-height: $height + ($padding-vertical * 2) !default;
 
-.tab {
-    position: relative;
-    
-    %tab-body {
-        @include gapped(1rem, tre);
+.tabs {
+    @include gapped(1rem, true);
         
-        display: flex;
-        border-bottom: $border;
-    }
-    
-    %tab-item {
+    display: flex;
+    border-bottom: $border;
+    position: relative;
+
+    > .tab {
+        @extend %addonable;
+
         display: flex;
         align-items: center;
         position: relative;
-        padding: $padding-vertical 0;
+        padding: $padding;
         cursor: pointer;
+        user-select: none;
         
         &.is-active {
             color: $primary;
@@ -27,27 +27,14 @@ $tab-height: $height + ($padding-vertical * 2) !default;
                 display: block;
                 position: absolute;
                 bottom: 0;
+                left: 0;
                 background-color: $primary;
             }
         }
     }
+}
 
-    > ul {
-        @extend %tab-body;
-
-        li {
-            @extend %tab-item;
-        }
-    }
-
-    // content
-
-    %tab-content {
-        margin-top: $gap;
-    }
-
-    > .content,
-    > .container {
-        @extend %tab-content;
-    }
+.navbar .tabs {
+    height: 100%;
+    border-bottom: none;
 }
