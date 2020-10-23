@@ -8,8 +8,6 @@ $checkbox-checked-color: contrast-color($checkbox-checked-background) !default;
 
 .checkbox {
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     width: $checkbox-size;
     height: $checkbox-size;
     border: $border;

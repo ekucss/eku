@@ -3,13 +3,12 @@ $sidebar-max-width: 80vw !default;
 $sidebar-shadow-left: 0.3rem 0 0.5rem rgba(black, 0.06) !default;
 $sidebar-shadow-right: -0.3rem 0 0.5rem rgba(black, 0.06) !default;
 $sidebar-margin: 2rem !default;
-$sidebar-transition-duration: $transition-duration !default;
 
 .sidebar {
     height: auto;
     display: block;
     background-color: $background;
-    transition: transform ease $sidebar-transition-duration;
+    transition: transform ease $transition-duration;
     
     &.is-sticky {
         position: sticky;
