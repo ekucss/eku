@@ -11,7 +11,7 @@ $selection-background: rgba($primary, 0.2) !default;
 }
 
 ::selection {
-    background: $selection-background;
+    background-color: $selection-background;
 }
 
 body {
@@ -32,7 +32,7 @@ code {
     font-size: $size-small;
     font-family: $family-mono;
     font-weight: $weight-mono;
-    background: $code-background;
+    background-color: $code-background;
     padding: $code-padding;
     border-radius: $code-radius;
     display: inline-block;

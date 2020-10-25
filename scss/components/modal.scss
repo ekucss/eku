@@ -9,7 +9,7 @@ $modal-shadow:  0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba($modal-background, 0.75);
+    background-color: rgba($modal-background, 0.75);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@ $modal-shadow:  0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
     }
 
     %modal-body {
-        background: white;
+        background-color: white;
         max-width: 90vw;
         max-height: 90vh;
         box-shadow: $modal-shadow;

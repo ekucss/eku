@@ -4,7 +4,7 @@
     user-select: none;
     box-shadow: none;
     pointer-events: none;
-    background: $mono0;
+    background-color: $mono0;
 }
 
 @mixin grouped($margin) {

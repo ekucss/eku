@@ -1,16 +1,14 @@
 $input-focus-shadow: $shadow !default;
 $input-focus-border-color: $mono3 !default;
 
-$input-hover-border-color: $mono2 !default;
-
-@mixin make-input($color, $hover: false) {
-    border-color: rgba($color, 0.8);
-    box-shadow: 0 0 0 0.2rem rgba($color, 0.2);
+@mixin make-input($theme) {
+    border-color: rgba($theme, 0.8);
+    box-shadow: 0 0 0 0.2rem rgba($theme, 0.2);
 
     &:focus,
     &:active {
-        border-color: rgba($color, 0.5);
-        box-shadow: 0 0 0 0.15rem rgba($color, 0.1);
+        border-color: rgba($theme, 0.5);
+        box-shadow: 0 0 0 0.15rem rgba($theme, 0.1);
     }
 }
 
@@ -27,11 +25,11 @@ $input-hover-border-color: $mono2 !default;
     }
 
     &.is-error {
-        @include make-input($red, false); 
+        @include make-input($red);
     }
 
     &.is-success {
-        @include make-input($green, false);
+        @include make-input($green);
     }
 }
 

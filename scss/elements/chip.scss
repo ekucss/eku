@@ -4,10 +4,10 @@ $chip-border-color: $border-color !default;
 $chip-padding: 0.2rem 0.6rem !default;
 $chip-margin: 0.2rem !default;
 
-@mixin make-chip($background: $primary) {
-    $color: contrast-color($background);
+@mixin make-chip($theme: $primary) {
+    $color: contrast-color($theme);
 
-    background-color: $background;
+    background-color: $theme;
     border-color: rgba($black, 0.05);
     color: $color;
 

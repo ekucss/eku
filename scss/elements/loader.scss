@@ -2,14 +2,14 @@
     @extend %addon;
 }
 
-@mixin make-loader($width, $color: $mono6) {
+@mixin make-loader($width, $theme: $mono6) {
     &::before {
         content: "";
         width: $width;
         height: $width;
         display: inline-flex;
         border: solid ($width / 8) rgba(black, 0.2);
-        border-left-color: $color;
+        border-left-color: $theme;
         border-radius: 50%;
         animation: loader-animation linear 0.9s infinite;
     }

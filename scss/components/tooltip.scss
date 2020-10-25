@@ -19,7 +19,7 @@ $tooltip-size-large: 8rem !default;
         justify-content: center;
         font-size: $tooltip-font-size;
         padding: $tooltip-padding;
-        background: $tooltip-background;
+        background-color: $tooltip-background;
         color: $tooltip-color;
         border-radius: $tooltip-radius;
         position: absolute;
