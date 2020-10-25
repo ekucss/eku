@@ -15,24 +15,6 @@ $sidebar-margin: 2rem !default;
         align-self: flex-start;
         top: 0;
     }
-    
-    &.is-fearful {
-        max-width: $sidebar-max-width;
-        width: $sidebar-width;
-        height: 100%;
-        max-height: 100vh;
-        position: fixed;
-        transform: translateX(-100%);
-        top: 0;
-        overflow-y: auto;
-        box-shadow: $sidebar-shadow-left;
-        border-right: $border;
-        z-index: 4;
-
-        &.is-active {
-            transform: translateX(0%);
-        }
-    }
 
     menu {
         @include gapped($sidebar-margin);
