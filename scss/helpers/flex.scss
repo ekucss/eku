@@ -1,15 +1,16 @@
 $flex-gap: $gap / 3 !default;
 
 .flex {
-    width: 100%;
-    display: flex;
-
+    display: inline-flex;
+    
     &.is-spaced {
+        width: 100%;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
     }
 
     &.is-centered {
+        width: 100%;
         justify-content: center;
         align-items: center;
     }
@@ -38,10 +39,7 @@ $flex-gap: $gap / 3 !default;
         }
     }
 
-    %wrapper,
     &.is-wrapper {
-        width: auto;
-        display: inline-flex;
         flex-wrap: wrap;
         margin-left: -$flex-gap;
         margin-bottom: -$flex-gap;
