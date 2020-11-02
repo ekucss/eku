@@ -7,22 +7,6 @@
     background-color: $mono0;
 }
 
-@mixin grouped($margin) {
-    @extend %grouper;
-
-    display: flex;
-    
-    &:not(.is-attached) {
-        margin: $margin * -1;
-        flex-wrap: wrap;
-        align-items: flex-start;
-
-        > * {
-            margin: $margin;
-        }
-    }
-}
-
 @mixin gapped($margin, $vertical: false) {
     > :not(:last-child) {
         @if $vertical {

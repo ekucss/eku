@@ -59,7 +59,3 @@ $chip-margin: 0.2rem !default;
         @include make-chip($red);
     }
 }
-
-.chips {
-    @include grouped($gap / 4);
-}

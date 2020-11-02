@@ -2,7 +2,6 @@ $button-background: $background !default;
 $button-radius: $radius-normal !default;
 $button-color: contrast-color($button-background) !default;
 $button-shadow: none !default;
-$button-margin: $gap / 4 !default;
 
 $button-hover-elevation: 1px !default;
 $button-hover-shadow: $shadow !default;
@@ -100,8 +99,4 @@ button,
     &.is-error {
         @include make-button($red);
     }
-}
-
-.buttons {
-    @include grouped($button-margin);
 }
