@@ -1,4 +1,4 @@
-name: Publish to NPM
+name: Publish
 
 on:
   release:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   npm:
-    name: Publish NPM
+    name: Publish to NPM
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
