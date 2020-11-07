@@ -1,0 +1,50 @@
+$toggle-height: 2rem !default;
+$toggle-background: $mono0 !default;
+$toggle-border: $border-width rgba(black, 0.05) !default;
+$toggle-margin: 0.3rem !default;
+
+$toggle-thumb-size: $toggle-height - ($toggle-margin * 2) !default;
+
+.toggle {
+    appearance: none;
+    display: inline-flex;
+    width: $toggle-height * 2;
+    height: $toggle-height;
+    background: $toggle-background;
+    border: solid $toggle-border;
+    border-radius: $toggle-height;
+    position: relative;
+    cursor: pointer;
+    transition: background-color ease 0.3s;
+    
+    &::before {
+        content: "";
+        width: $toggle-thumb-size;
+        height: $toggle-thumb-size;
+        display: block;
+        position: absolute;
+        background: white;
+        top: 50%;
+        transform: translateY(-50%);
+        left: $toggle-margin;
+        border: $border;
+        border-radius: $toggle-thumb-size;
+        transition: left ease 0.2s, box-shadow ease-in 0.2s;
+    }
+
+    &:hover {
+        &::before {
+            box-shadow: $shadow;
+        }
+    }
+
+    &.is-active,
+    &[type=checkbox]:checked {
+        background: $primary;
+
+        &::before {
+            left: ($toggle-height * 2) - ($toggle-thumb-size + $tooltip-margin);
+            box-shadow: $shadow;
+        }
+    }
+}
