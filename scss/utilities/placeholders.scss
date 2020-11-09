@@ -1,4 +1,6 @@
 %control {
+    @extend %element;
+
     min-height: $height;
     font: inherit;
     background: none;

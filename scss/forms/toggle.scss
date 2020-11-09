@@ -6,6 +6,8 @@ $toggle-margin: 0.3rem !default;
 $toggle-thumb-size: $toggle-height - ($toggle-margin * 2) !default;
 
 .toggle {
+    @extend %element;
+
     appearance: none;
     display: inline-flex;
     width: $toggle-height * 2;

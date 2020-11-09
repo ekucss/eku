@@ -17,10 +17,11 @@ $chip-margin: 0.2rem !default;
 }
 
 .chip {
+    @extend %element;
     @extend %addonable;
 
     display: inline-flex;
-    align-items: center;
+    align-items: baseline;
     border: solid $border-width;
     border-color: $chip-border-color;
     border-radius: $chip-height;

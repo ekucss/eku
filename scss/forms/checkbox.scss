@@ -7,6 +7,8 @@ $checkbox-checked-background: $primary !default;
 $checkbox-checked-color: contrast-color($checkbox-checked-background) !default;
 
 .checkbox {
+    @extend %element;
+
     appearance: none;
     width: $checkbox-size;
     height: $checkbox-size;

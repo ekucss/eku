@@ -18,7 +18,7 @@ $flex-gap: $gap / 3 !default;
     &.is-attached {
         flex-wrap: nowrap;
 
-        > * {
+        > %control {
             &:last-child:not(:first-child) {
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
@@ -44,7 +44,8 @@ $flex-gap: $gap / 3 !default;
         margin-left: -$flex-gap;
         margin-bottom: -$flex-gap;
 
-        > * {
+        > %element,
+        > %addon {
             margin-left: $flex-gap;
             margin-bottom: $flex-gap;
         }

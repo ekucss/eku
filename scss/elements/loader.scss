@@ -1,5 +1,6 @@
-%loader {
-    @extend %addon;
+@keyframes loader-animation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 @mixin make-loader($width, $theme: $mono6) {
@@ -15,13 +16,8 @@
     }
 }
 
-@keyframes loader-animation {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
 .loader {
-    @extend %loader;
+    @extend %addon;
 
     display: inline-flex;
 
