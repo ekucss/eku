@@ -1,6 +1,6 @@
 $primary: #275efe !default;
 
-$white: #efefef !default;
+$white: #f3f3f3 !default;
 $red: #f44336 !default;
 $green: #4caf50 !default;
 $black: #1a1a1a !default;
@@ -15,7 +15,7 @@ $mono4: #666666 !default;
 $mono5: #333333 !default;
 $mono6: #1a1a1a !default;
 
-$color: #172142 !default;
+$color: #222222 !default;
 $threshold-color: 60%;
 
 $shadow: 0 0.4rem 1rem rgba($black, 0.1) !default;
@@ -34,11 +34,11 @@ $padding-vertical: 0.7rem !default;
 $padding-horizontal: 0.9rem !default;
 $padding: $padding-vertical $padding-horizontal !default;
 
-$family-title: "Manrope", sans-serif !default;
-$family-text: "Manrope", sans-serif !default;
+$family-title: "Inter", sans-serif !default;
+$family-text: "Inter", sans-serif !default;
 $family-mono: "DM Mono", monospace !default;
 
-$weight-title: 800 !default;
+$weight-title: 600 !default;
 $weight-text: 300 !default;
 $weight-mono: 300 !default;
 
@@ -54,7 +54,7 @@ $xl: 1215px !default;
 
 $max-width: 60rem !default;
 
-$size-small: 8pt !default;
+$size-small: 9pt !default;
 $size-normal: 11pt !default;
 $size-medium: 14pt !default;
 $size-large: 17pt !default;

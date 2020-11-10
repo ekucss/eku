@@ -42,7 +42,7 @@ $button-active-shadow: none !default;
     color: $color;
     box-shadow: $button-shadow;
     border: none;
-    transition: box-shadow ease-in .14s, transform ease .20s;
+    transition: box-shadow ease-in 0.14s, transform ease 0.20s;
 
     &:hover {
         box-shadow: $button-hover-shadow;
@@ -60,6 +60,10 @@ $button-active-shadow: none !default;
         &:active {
             transform: translateY(0);
         }
+    }
+    
+    &[disabled] {
+        opacity: 40%;
     }
 
     %icon {

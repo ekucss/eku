@@ -15,6 +15,7 @@
         top: 0;
         overflow-y: auto;
         border-right: $border;
+        transition: transform ease $transition-duration;
     }
     
     > .navbar {

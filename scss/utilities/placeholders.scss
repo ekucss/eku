@@ -12,7 +12,12 @@
 
     &[disabled],
     fieldset[disabled] & {
-        @include disabled;
+        color: $mono3;
+        cursor: default;
+        user-select: none;
+        box-shadow: none;
+        pointer-events: none;
+        background-color: $mono0;
     }
 
     &.is-spread {

@@ -8,7 +8,6 @@ $sidebar-margin: 2rem !default;
     height: auto;
     display: block;
     background-color: $background;
-    transition: transform ease $transition-duration;
     
     &.is-sticky {
         position: sticky;

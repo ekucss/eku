@@ -1,12 +1,3 @@
-@mixin disabled {
-    color: $mono3;
-    cursor: default;
-    user-select: none;
-    box-shadow: none;
-    pointer-events: none;
-    background-color: $mono0;
-}
-
 @mixin gapped($margin, $vertical: false) {
     > :not(:last-child) {
         @if $vertical {

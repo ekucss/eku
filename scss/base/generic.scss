@@ -18,10 +18,11 @@ body {
     font-size: $size-normal;
     font-family: $family-text;
     color: $color;
-    line-height: 1.5;
+    line-height: 1.6;
     overflow-x: hidden;
     background-color: $background;
     font-weight: $weight-text;
+    -webkit-font-smoothing: antialiased;
 }
 
 code {

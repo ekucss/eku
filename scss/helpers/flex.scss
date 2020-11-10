@@ -6,7 +6,7 @@ $flex-gap: $gap / 3 !default;
     &.is-spaced {
         width: 100%;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
     }
 
     &.is-centered {
