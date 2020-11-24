@@ -13,7 +13,7 @@
     &[disabled],
     fieldset[disabled] & {
         color: $mono3;
-        cursor: default;
+        cursor: no-drop;
         user-select: none;
         box-shadow: none;
         pointer-events: none;

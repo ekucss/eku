@@ -1,0 +1,22 @@
+$hero-background: $mono0 !default;
+$hero-padding: $gap !default;
+$hero-height: 12rem !default;
+$hero-hump: 5rem !default;
+
+.hero {
+    @include gapped($gap);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: $hero-height;
+    background: $hero-background;
+    padding: $hero-padding;
+    padding-top: $hero-hump;
+    border-bottom: $border;
+
+    > .tabs {
+        border-bottom: none;
+        margin-bottom: -$gap;
+    }
+}

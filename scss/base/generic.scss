@@ -58,9 +58,9 @@ a {
     align-items: center;
     color: $color;
 
-    $margin: $gap / 3;
-
     %icon {
+        $margin: $gap / 3;
+
         &:first-child {
             margin-right: $margin;
         }
@@ -72,15 +72,6 @@ a {
         &:first-child:last-child {
             margin: 0;
         }
-    }
-}
-
-p a {
-    text-decoration: underline solid;
-    color: $primary;
-
-    %icon {
-        fill: $primary;
     }
 }
 

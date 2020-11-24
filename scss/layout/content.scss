@@ -3,15 +3,21 @@ $content-padding: $gap !default;
 $content-width: $max-width !default;
 
 .content {
-    @include gapped($content-gap);
     @extend %sizable;
+
+    &,
+    > section,
+    > section > article {
+        @include gapped($content-gap);
+    }
     
     &.has-gap {
         padding: $content-padding;
+    }
 
-        > section,
-        > section > article {
-            @include gapped($content-gap);
-        }
+    &.is-centered {
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
     }
 }

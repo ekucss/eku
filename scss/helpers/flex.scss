@@ -1,58 +1,70 @@
 $flex-gap: $gap / 3 !default;
 
 .flex {
+    width: 100%;
     display: inline-flex;
     
     &.is-spaced {
-        width: 100%;
         justify-content: space-between;
         align-items: center;
     }
 
     &.is-centered {
-        width: 100%;
         justify-content: center;
         align-items: center;
     }
 
-    &.is-attached {
-        flex-wrap: nowrap;
+    &:not(.is-stack) {
+        &.in-left {
+            justify-content: flex-start;
+        }
 
-        > %control {
-            &:last-child:not(:first-child) {
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-    
-            &:first-child:not(:last-child) {
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-    
-            &:not(:last-child) {
-                margin-right: $border-width * -1;
-    
-                &:not(:first-child) {
-                    border-radius: 0;
-                }
-            }
+        &.in-center {
+            justify-content: center;
+        }
+
+        &.in-right {
+            justify-content: flex-end;
+        }
+
+        &.in-top {
+            align-items: flex-start;
+        }
+
+        &.in-middle {
+            align-items: center;
+        }
+
+        &.in-bottom {
+            align-items: flex-end;
         }
     }
 
-    &.is-wrapper {
-        flex-wrap: wrap;
-        margin-left: -$flex-gap;
-        margin-bottom: -$flex-gap;
+    &.is-stack {
+        flex-direction: column;
 
-        > %element,
-        > %addon {
-            margin-left: $flex-gap;
-            margin-bottom: $flex-gap;
+        &.in-left {
+            align-items: flex-start;
         }
 
-        & > & {
-            margin-left: initial;
-            margin-bottom: initial;
+        &.in-right {
+            align-items: flex-end;
+        }
+        
+        &.in-center {
+            align-items: center;
+        }
+
+        &.in-top {
+            justify-content: flex-start;
+        }
+
+        &.in-middle {
+            justify-content: center;
+        }
+        
+        &.in-bottom {
+            justify-content: flex-end;
         }
     }
 }

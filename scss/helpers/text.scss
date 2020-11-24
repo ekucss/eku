@@ -23,6 +23,17 @@
         font-weight: $weight-mono;
     }
 
+    &.is-link {
+        text-decoration: underline solid;
+        color: $primary;
+        cursor: pointer;
+    }
+
+    &[disabled] {
+        color: $mono3;
+        user-select: none;
+    }
+
     // color
 
     &.is-primary {
@@ -38,8 +49,12 @@
     }
 }
 
-.text, p, a, label, %title {
+.text, p, small, a, label, %title {
     @extend %text;
+}
+
+p a {
+    @extend .is-link;
 }
 
 .text {
