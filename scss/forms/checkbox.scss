@@ -1,12 +1,12 @@
 $checkbox-size: 1.4rem !default;
 $checkbox-stroke-size: 0.1rem !default;
 $checkbox-background: none !default;
-$checkbox-color: $primary !default;
 
-$checkbox-checked-background: $primary !default;
-$checkbox-checked-color: contrast-color($checkbox-checked-background) !default;
+$checkbox-checked-color: $primary !default;
+$checkbox-checked-background: rgba($checkbox-checked-color, 0.1) !default;
 
-.checkbox {
+.checkbox,
+input[type=checkbox] {
     @extend %element;
 
     appearance: none;
@@ -28,8 +28,8 @@ $checkbox-checked-color: contrast-color($checkbox-checked-background) !default;
         content: "";
         width: $check-size / 2;
         height: $check-size;
-        border-right: solid $checkbox-stroke-size $checkbox-color;
-        border-bottom: solid $checkbox-stroke-size $checkbox-color;
+        border-right: solid $checkbox-stroke-size transparent;
+        border-bottom: solid $checkbox-stroke-size transparent;
         transform-origin: right bottom;
         position: absolute;
         bottom: 50%;
@@ -39,7 +39,7 @@ $checkbox-checked-color: contrast-color($checkbox-checked-background) !default;
     &.is-active,
     &:checked {
         background-color: $checkbox-checked-background;
-        border-color: $checkbox-checked-background;
+        border-color: $checkbox-checked-color;
 
         &::before {
             border-color: $checkbox-checked-color;

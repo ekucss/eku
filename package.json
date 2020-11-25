@@ -1,6 +1,6 @@
 {
   "name": "eku",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "A friendly, light and simple style library",
   "main": "scss/eku.scss",
   "repository": "https://github.com/ekucss/eku",
