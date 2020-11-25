@@ -1,0 +1,36 @@
+$box-shadow: 0 0.2rem 0.6rem rgba($black, 0.1) !default;
+$box-transition: border-color ease $transition-duration, box-shadow ease $transition-duration !default;
+
+$box-active-shadow: 0 0 0 0.2rem rgba($primary, 0.1);
+
+.box {
+    @extend %element;
+
+    display: flex;
+    border: $border;
+    padding: $gap;
+    border-radius: $radius-normal;
+    transition: $box-transition;
+
+    &.is-hoverable {
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            box-shadow: $box-shadow;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+
+        &.is-active {
+            box-shadow: $box-active-shadow;
+        }
+    }
+
+    &.is-active {
+        border-color: $primary;
+        box-shadow: $box-active-shadow;
+    }
+}
