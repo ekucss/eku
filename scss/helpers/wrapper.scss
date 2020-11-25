@@ -1,4 +1,4 @@
-$wrapper-gap: $gap / 3;
+$wrapper-gap: $gap / 2;
 
 .wrapper {
     display: flex;
@@ -13,8 +13,18 @@ $wrapper-gap: $gap / 3;
         margin-bottom: $wrapper-gap;
     }
 
+    &.is-spread {
+        width: 100%;
+
+        > %element {
+            flex: 1;
+        }
+    }
+
     &.is-attached {
         flex-wrap: nowrap;
+        margin-left: 0;
+        margin-bottom: 0;
 
         > %element {
             margin: 0;
