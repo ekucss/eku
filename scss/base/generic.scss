@@ -40,6 +40,7 @@ code {
 }
 
 small {
+    display: block;
     font-size: $size-small;
 }
 
@@ -56,7 +57,7 @@ a {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    color: $color;
+    color: inherit;
 
     %icon {
         $margin: $gap / 3;
@@ -75,13 +76,15 @@ a {
     }
 }
 
-hr {
-    display: block;
-    height: $border-width;
-    border: none;
-    background-color: $border-color;
+hr,
+.is-separator {
+    @extend %separator;
 }
 
 li {
     list-style: none;
+}
+
+label[for] {
+    cursor: pointer;
 }
