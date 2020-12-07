@@ -1,7 +1,7 @@
 $hero-background: $mono0 !default;
 $hero-padding: $gap !default;
 $hero-height: 12rem !default;
-$hero-hump: 5rem !default;
+$hero-hump: 3rem !default;
 
 .hero {
     @include gapped($gap);

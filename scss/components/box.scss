@@ -1,15 +1,16 @@
-$box-shadow: 0 0.2rem 0.6rem rgba($black, 0.1) !default;
+$box-shadow: 0 0.2rem 0.8rem rgba($black, 0.05) !default;
+$box-padding: 1.1rem 1.4rem !default;
 $box-transition: border-color ease $transition-duration, box-shadow ease $transition-duration !default;
+$box-radius: $radius-normal !default;
 
 $box-active-shadow: 0 0 0 0.2rem rgba($primary, 0.1);
 
 .box {
     @extend %element;
 
-    display: flex;
     border: $border;
-    padding: $gap;
-    border-radius: $radius-normal;
+    padding: $box-padding;
+    border-radius: $box-radius;
     transition: $box-transition;
 
     &.is-hoverable {

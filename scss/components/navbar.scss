@@ -29,9 +29,14 @@ $navbar-background: $background !default;
             display: inline-flex;
         }
 
-        > hr {
+        > %separator {
             width: $border-width;
             height: 1.5rem;
         }
+    }
+
+    > .tabs {
+        height: 100%;
+        border-bottom: none;
     }
 }

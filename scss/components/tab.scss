@@ -16,6 +16,7 @@ $tab-height: $height + ($padding-vertical * 2) !default;
         padding: $padding;
         cursor: pointer;
         user-select: none;
+        color: $color;
         
         &.is-active {
             color: $primary;
@@ -32,9 +33,4 @@ $tab-height: $height + ($padding-vertical * 2) !default;
             }
         }
     }
-}
-
-.navbar .tabs {
-    height: 100%;
-    border-bottom: none;
 }

@@ -1,8 +1,10 @@
 $chip-height: 1rem !default;
 $chip-color: $color !default;
 $chip-border-color: $border-color !default;
-$chip-padding: 0.2rem 0.6rem !default;
+$chip-padding-vertical: 0.3rem !default;
+$chip-padding-horizontal: 0.6rem !default;
 $chip-margin: 0.2rem !default;
+$chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
 
 @mixin make-chip($theme: $primary) {
     $color: contrast-color($theme);
@@ -21,32 +23,32 @@ $chip-margin: 0.2rem !default;
     @extend %addonable;
 
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
     border: solid $border-width;
     border-color: $chip-border-color;
     border-radius: $chip-height;
-    padding: $chip-padding;
+    padding: $chip-padding-vertical $chip-padding-horizontal;
     font-size: $size-small;
     transition: box-shadow ease $transition-duration;
     user-select: none;
 
-    %icon {
-        fill: $chip-color;
-
+    %addon {
         &:first-child {
-            margin-right: $chip-margin;
+            margin-left: (-$chip-padding-horizontal / 2);
         }
 
         &:last-child {
-            margin-left: $chip-margin;
-        }
-
-        &:first-child:last-child {
-            margin: 0;
+            margin-right: (-$chip-padding-horizontal / 2);
         }
     }
 
-    // marker
+    // colors
+
+    &.is-active {
+        background: rgba($primary, 0.1);
+        border-color: $primary;
+        color: $primary;
+    }
 
     &.is-primary {
         @include make-chip($primary);
@@ -58,5 +60,14 @@ $chip-margin: 0.2rem !default;
 
     &.is-error {
         @include make-chip($red);
+    }
+
+    &.is-hoverable {
+        cursor: pointer;
+
+        &:active,
+        &:hover {
+            box-shadow: $chip-shadow;
+        }
     }
 }

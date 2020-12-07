@@ -39,7 +39,7 @@ $card-gap: 1rem !default;
     }
 
     > article,
-    > .card-article {
+    > .card-body {
         @extend %card-body;
     }
 

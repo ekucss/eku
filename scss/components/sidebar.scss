@@ -1,8 +1,9 @@
 $sidebar-width: 20rem !default;
 $sidebar-max-width: 80vw !default;
-$sidebar-shadow-left: 0.3rem 0 0.5rem rgba(black, 0.06) !default;
-$sidebar-shadow-right: -0.3rem 0 0.5rem rgba(black, 0.06) !default;
 $sidebar-margin: 2rem !default;
+
+$sidebar-shadow-left: 0.4rem 0 0.6rem rgba(black, 0.04) !default;
+$sidebar-shadow-right: -0.4rem 0 0.6rem rgba(black, 0.04) !default;
 
 .sidebar {
     height: auto;
@@ -15,16 +16,11 @@ $sidebar-margin: 2rem !default;
         top: 0;
     }
 
-    menu {
+    menu, nav, ul {
         @include gapped($sidebar-margin);
-        
-        padding: $gap;
     }
 
-    nav,
-    nav > ul {
-        @include gapped($sidebar-margin);
-
-        list-style: none;
+    menu {
+        padding: $gap;
     }
 }
