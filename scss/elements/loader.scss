@@ -1,18 +1,19 @@
 @keyframes loader-animation {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-@mixin make-loader($width, $theme: $mono6) {
+@mixin make-loader($width, $theme: inherit) {
     &::before {
         content: "";
         width: $width;
         height: $width;
         display: inline-flex;
-        border: solid ($width / 8) rgba(black, 0.2);
-        border-left-color: $theme;
+        border: solid ($width / 8) $theme;
+        border-left-color: transparent !important;
         border-radius: 50%;
         animation: loader-animation linear 0.9s infinite;
+        transform-origin: center center;
     }
 }
 

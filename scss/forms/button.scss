@@ -33,6 +33,18 @@ $button-active-shadow: none !default;
         border-radius: $radius-small;
         padding: .3rem .5rem;
     }
+
+    &.is-loading {
+        @include make-loader(1rem, $mono3);
+
+        color: transparent !important;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: calc(50% - (#{$padding-horizontal} / 2));
+        }
+    }
 }
 
 @mixin make-button($theme: $button-background) {
@@ -63,11 +75,12 @@ $button-active-shadow: none !default;
     }
     
     &[disabled] {
-        opacity: 40%;
+        opacity: 50%;
+        box-shadow: none;
     }
 
-    %icon {
-        fill: $color;
+    &.is-loading::before {
+        border-color: $color;
     }
 }
 
