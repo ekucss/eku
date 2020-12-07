@@ -5,9 +5,9 @@ $checkbox-background: none !default;
 $checkbox-checked-color: $primary !default;
 $checkbox-checked-background: rgba($checkbox-checked-color, 0.1) !default;
 
-.checkbox,
-input[type=checkbox] {
+.checkbox {
     @extend %element;
+    @extend %addon;
 
     appearance: none;
     width: $checkbox-size;

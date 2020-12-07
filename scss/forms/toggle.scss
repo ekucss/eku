@@ -5,6 +5,8 @@ $toggle-margin: 0.3rem !default;
 
 $toggle-thumb-size: $toggle-height - ($toggle-margin * 2) !default;
 
+$toggle-active-background: $primary !default;
+
 .toggle {
     @extend %element;
 
@@ -42,7 +44,7 @@ $toggle-thumb-size: $toggle-height - ($toggle-margin * 2) !default;
 
     &.is-active,
     &[type=checkbox]:checked {
-        background: $primary;
+        background: $toggle-active-background;
 
         &::before {
             left: ($toggle-height * 2) - ($toggle-thumb-size + $tooltip-margin);

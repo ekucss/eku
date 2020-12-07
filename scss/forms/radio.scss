@@ -6,9 +6,9 @@ $radio-transition: border-color ease $transition-duration, background-color ease
 $radio-checked-color: $primary !default;
 $radio-checked-background: rgba($radio-checked-color, 0.1) !default;
 
-.radio,
-input[type=radio] {
+.radio {
     @extend %element;
+    @extend %addon;
     
     width: $radio-size;
     height: $radio-size;
