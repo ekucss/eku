@@ -1,5 +1,5 @@
 $dropdown-shadow: 0 0.2rem 0.8rem rgba($black, 0.06) !default;
-$dropdown-margin: ($gap / 2) !default;
+$dropdown-margin: 0.25rem !default;
 
 $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
 
@@ -16,39 +16,8 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
         top: 100%;
     }
 
-    %dropdown-body {
-        border: $border;
-        min-width: 11rem;
-        border-radius: $radius-normal;
-        position: absolute;
-        background-color: $background;
-        box-shadow: $dropdown-shadow;
-        opacity: 0;
-        visibility: hidden;
-        overflow: hidden;
-        top: calc(100% + #{$dropdown-margin});
-        transition: opacity ease 0.2s, visibility ease 0.2s;
-        z-index: 2;
-
-        &,
-        &.in-left {
-            left: 0;
-            right: initial;
-        }
-
-        &.in-right {
-            right: 0;
-            left: initial;
-        }
-
-        &.in-center {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-
     &.is-dropup {
-        %dropdown-body {
+        > .dropdown-body {
             top: initial;
             bottom: calc(100% + #{$dropdown-margin});
             box-shadow: $dropdown-dropup-shadow;
@@ -61,29 +30,67 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
     }
 
     &.is-active,
-    &.is-hoverable:hover {
-        > %dropdown-body {
+    &.is-hoverable:hover,
+    &.is-hoverable:focus-within {
+        > .dropdown-body {
             opacity: 1;
             visibility: visible;
         }
     }
+}
 
-    ul {
-        @extend %dropdown-body;
+.dropdown > .dropdown-body {
+    border: $border;
+    min-width: 14rem;
+    border-radius: $radius-normal;
+    position: absolute;
+    background-color: $background;
+    box-shadow: $dropdown-shadow;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    top: calc(100% + #{$dropdown-margin});
+    transition: opacity ease 0.2s, visibility ease 0.2s;
+    z-index: 2;
 
-        li {
-            width: 100%;
-            list-style: none;
+    // position
 
-            a,
-            &.has-content {
-                width: 100%;
-                padding: $padding;
-            }
+    &,
+    &.in-right {
+        left: 0;
+        right: initial;
+    }
 
-            a:hover {
-                background-color: $mono0;
-            }
-        }
+    &.in-left {
+        right: 0;
+        left: initial;
+    }
+
+    &.in-center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    // size
+
+    &.is-normal {
+        min-width: 16rem;
+    }
+
+    &.is-large {
+        min-width: 18rem;
+    }
+}
+
+.dropdown-item {
+    @extend %addonable;
+
+    width: 100%;
+    padding: $padding;
+}
+
+a.dropdown-item {
+    &:hover {
+        background-color: $mono0;
     }
 }
