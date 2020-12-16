@@ -1,0 +1,46 @@
+@mixin make-toast($theme: $primary) {
+    background-color: lighten($theme, 38%);
+    border-color: lighten($theme, 24%);
+    color: $theme;
+}
+
+.toaster {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: $gap;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    > .toaster-item {
+        @include gapped(0.5rem);
+
+        max-width: 30rem;
+        padding: 0.8rem 1rem;
+        border-radius: $radius-normal;
+        border: $border;
+        background-color: white;
+        user-select: none;
+        box-shadow: $shadow;
+
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+        // colors
+
+        &.is-primary {
+            @include make-toast($primary);
+        }
+
+        &.is-success {
+            @include make-toast($green);
+        }
+
+        &.is-error {
+            @include make-toast($red);
+        }
+    }
+}
