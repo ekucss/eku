@@ -1,0 +1,61 @@
+.dashboard {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: min(#{$sidebar-width}, 35vw) 1fr;
+    grid-template-areas: "sidebar body" "sidebar body";
+    grid-template-rows: $navbar-height 1fr;
+    
+    &.has-navbar {
+        grid-template-areas: "sidebar navbar" "sidebar body";
+
+        > .navbar {
+            grid-area: navbar;
+        }
+    }
+
+    > .sidebar {
+        grid-area: sidebar;
+        width: $sidebar-width;
+        max-width: 35vw;
+        height: 100%;
+        top: 0;
+        overflow-y: auto;
+        border-right: $border;
+        transition: transform ease $transition-duration;
+    }
+    
+    > .container,
+    > .content {
+        grid-area: body;
+    }
+
+    @media (max-width: $md) {
+        grid-template-areas: "body body";
+        
+        &.has-sidebar {
+            grid-template-areas: "navbar navbar" "body body";
+        }
+
+        > .sidebar {
+            width: $sidebar-width;
+            max-width: $sidebar-max-width;
+            z-index: 4;
+            transform: translateX(-100%);
+            position: fixed;
+
+            &::-webkit-backdrop {
+                content: "";
+                display: block;
+                width: 100vw;
+                height: 100vh;
+                background: red;
+            }
+            
+            &.is-active {
+                box-shadow: $sidebar-shadow-left;
+                transform: translateX(0);
+            }
+        }
+    }
+}
