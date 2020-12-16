@@ -43,7 +43,7 @@ $toggle-active-background: $primary !default;
     }
 
     &.is-active,
-    &[type=checkbox]:checked {
+    &:checked {
         background: $toggle-active-background;
 
         &::before {

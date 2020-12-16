@@ -10,16 +10,16 @@ $navbar-background: $background !default;
     background-color: $navbar-background;
     padding: 0 $gap;
     border-bottom: $border;
+    z-index: 3;
 
     &.is-sticky {
         position: sticky;
         top: 0;
-        z-index: 3;
     }
 
     nav,
     nav > ul {
-        @include gapped($navbar-gap, true);
+        //@include gapped($navbar-gap, true);
 
         display: flex;
         align-items: center;
@@ -35,7 +35,7 @@ $navbar-background: $background !default;
         }
     }
 
-    > .tabs {
+    > .tab {
         height: 100%;
         border-bottom: none;
     }

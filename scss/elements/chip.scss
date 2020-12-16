@@ -32,7 +32,7 @@ $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
     transition: box-shadow ease $transition-duration;
     user-select: none;
 
-    %addon {
+    .radio {
         &:first-child {
             margin-left: (-$chip-padding-horizontal / 2);
         }
@@ -65,9 +65,12 @@ $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
     &.is-hoverable {
         cursor: pointer;
 
-        &:active,
         &:hover {
             box-shadow: $chip-shadow;
+        }
+
+        &:active {
+            box-shadow: none;
         }
     }
 }
