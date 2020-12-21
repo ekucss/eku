@@ -3,7 +3,7 @@ $box-padding: 1.1rem 1.4rem !default;
 $box-transition: border-color ease $transition-duration, box-shadow ease $transition-duration !default;
 $box-radius: $radius-normal !default;
 
-$box-active-shadow: 0 0 0 0.2rem rgba($primary, 0.1);
+$box-active-shadow: 0 0 0 0.2rem rgba($primary, 0.08);
 
 .box {
     @extend %element;
@@ -19,19 +19,24 @@ $box-active-shadow: 0 0 0 0.2rem rgba($primary, 0.1);
 
         &:hover {
             box-shadow: $box-shadow;
+
+            &.is-active {
+                box-shadow: none;
+            }
         }
 
         &:active {
             box-shadow: none;
-        }
-
-        &.is-active {
-            box-shadow: $box-active-shadow;
         }
     }
 
     &.is-active {
         border-color: $primary;
         box-shadow: $box-active-shadow;
+        z-index: 2;
+    }
+
+    &.is-spread {
+        width: 100%;
     }
 }

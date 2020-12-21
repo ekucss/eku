@@ -5,6 +5,8 @@ $content-width: $max-width !default;
 .content {
     @extend %sizable;
 
+    position: relative;
+
     &,
     > section,
     > section > article {

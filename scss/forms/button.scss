@@ -77,6 +77,7 @@ $button-active-shadow: none !default;
     &[disabled] {
         opacity: 50%;
         box-shadow: none;
+        transform: none;
     }
 
     &.is-loading::before {

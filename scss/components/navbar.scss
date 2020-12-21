@@ -3,13 +3,14 @@ $navbar-height: $height + ($padding-vertical * 2);
 $navbar-background: $background !default;
 
 .navbar {
-    height: $navbar-height;
+    min-height: $navbar-height;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $navbar-background;
     padding: 0 $gap;
     border-bottom: $border;
+    position: relative;
     z-index: 3;
 
     &.is-sticky {
@@ -17,26 +18,50 @@ $navbar-background: $background !default;
         top: 0;
     }
 
-    nav,
-    nav > ul {
-        //@include gapped($navbar-gap, true);
-
+    .navbar-menu,
+    .navbar-brand {
         display: flex;
-        align-items: center;
-        list-style: none;
+    }
 
-        li {
-            display: inline-flex;
-        }
+    @media (min-width: $md) {
+        .navbar-brand,
+        .navbar-menu {
+            @include gapped($navbar-gap, true);
 
-        > %separator {
-            width: $border-width;
-            height: 1.5rem;
+            align-items: center;
         }
     }
 
-    > .tab {
-        height: 100%;
-        border-bottom: none;
+    @media (max-width: $md) {
+        flex-wrap: wrap;
+
+        .navbar-brand {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-menu {
+            @include gapped($navbar-gap);
+
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: $gap;
+            background-color: $background;
+            border-top: $border;
+            border-bottom: $border;
+            z-index: 2;
+        }
+
+        &:not(.is-active) {
+            .navbar-menu {
+                display: none;
+            }
+        }
     }
 }

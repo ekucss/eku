@@ -3,16 +3,8 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: min(#{$sidebar-width}, 35vw) 1fr;
-    grid-template-areas: "sidebar body" "sidebar body";
-    grid-template-rows: $navbar-height 1fr;
-    
-    &.has-navbar {
-        grid-template-areas: "sidebar navbar" "sidebar body";
-
-        > .navbar {
-            grid-area: navbar;
-        }
-    }
+    grid-template-areas: "sidebar body";
+    grid-template-rows: 1fr;
 
     > .sidebar {
         grid-area: sidebar;
@@ -32,10 +24,6 @@
 
     @media (max-width: $md) {
         grid-template-areas: "body body";
-        
-        &.has-sidebar {
-            grid-template-areas: "navbar navbar" "body body";
-        }
 
         > .sidebar {
             width: $sidebar-width;
@@ -43,14 +31,6 @@
             z-index: 4;
             transform: translateX(-100%);
             position: fixed;
-
-            &::-webkit-backdrop {
-                content: "";
-                display: block;
-                width: 100vw;
-                height: 100vh;
-                background: red;
-            }
             
             &.is-active {
                 box-shadow: $sidebar-shadow-left;

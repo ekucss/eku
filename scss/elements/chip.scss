@@ -45,7 +45,7 @@ $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
     // colors
 
     &.is-active {
-        background: rgba($primary, 0.1);
+        background-color: rgba($primary, 0.1);
         border-color: $primary;
         color: $primary;
     }
