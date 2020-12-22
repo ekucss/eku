@@ -14,7 +14,7 @@ $wrapper-gap: $gap / 2;
         margin-bottom: $wrapper-gap;
     }
 
-    & > & {
+    & & {
         margin-left: 0;
         margin-bottom: 0;
     }
@@ -24,6 +24,10 @@ $wrapper-gap: $gap / 2;
 
         > %element {
             flex: 1;
+
+            @media (max-width: $sm) {
+                flex: auto;
+            }
         }
     }
 

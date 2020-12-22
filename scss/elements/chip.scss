@@ -19,7 +19,6 @@ $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
 }
 
 .chip {
-    @extend %element;
     @extend %addonable;
 
     display: inline-flex;

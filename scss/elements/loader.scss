@@ -3,7 +3,7 @@
     100% { transform: rotate(360deg); }
 }
 
-@mixin make-loader($width, $theme: inherit) {
+@mixin make-loader($width, $theme: $color) {
     &::before {
         content: "";
         width: $width;

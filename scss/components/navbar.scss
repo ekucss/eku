@@ -21,13 +21,13 @@ $navbar-background: $background !default;
     .navbar-menu,
     .navbar-brand {
         display: flex;
+        user-select: none;
     }
 
     @media (min-width: $md) {
         .navbar-brand,
         .navbar-menu {
             @include gapped($navbar-gap, true);
-
             align-items: center;
         }
     }
@@ -46,6 +46,7 @@ $navbar-background: $background !default;
             @include gapped($navbar-gap);
 
             width: 100%;
+            max-height: calc(100vh - #{$navbar-height});
             flex-direction: column;
             align-items: flex-start;
             position: absolute;
@@ -55,12 +56,13 @@ $navbar-background: $background !default;
             background-color: $background;
             border-top: $border;
             border-bottom: $border;
+            overflow-y: auto;
             z-index: 2;
         }
-
+        
         &:not(.is-active) {
             .navbar-menu {
-                display: none;
+                visibility: hidden;
             }
         }
     }

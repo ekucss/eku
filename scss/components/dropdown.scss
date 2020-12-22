@@ -29,12 +29,12 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
         }
     }
 
-    &.is-active,
-    &.is-hoverable:hover,
-    &.is-hoverable:focus-within {
-        > .dropdown-body {
-            opacity: 1;
-            visibility: visible;
+    &:not(.is-active),
+    &:not(.is-hoverable:hover),
+    &:not(.is-hoverable:focus-within) {
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
         }
     }
 }
@@ -46,8 +46,6 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
     position: absolute;
     background-color: $background;
     box-shadow: $dropdown-shadow;
-    opacity: 0;
-    visibility: hidden;
     overflow: hidden;
     top: calc(100% + #{$dropdown-margin});
     transition: opacity ease 0.2s, visibility ease 0.2s;

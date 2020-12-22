@@ -12,6 +12,11 @@ $tooltip-size-large: 8rem !default;
 .tooltip {
     position: relative;
 
+    @keyframes tooltip-animation {
+        from { opacity: 0%; }
+        to { opacity: 100%; }
+    }
+
     &::before {
         content: attr(data-label);
         max-width: 10rem;
@@ -23,22 +28,16 @@ $tooltip-size-large: 8rem !default;
         color: $tooltip-color;
         border-radius: $tooltip-radius;
         position: absolute;
-        visibility: hidden;
         text-align: center;
+        animation: tooltip-animation ease-in $transition-duration;
         z-index: 2;
     }
 
-    &:hover,
-    &:focus,
-    &.is-active {
-        @keyframes animation {
-            from { opacity: 0%; }
-            to { opacity: 100%; }
-        }
-        
+    &:not(:hover),
+    &:not(:focus-within)
+    &:not(.is-active) {
         &::before {
-            visibility: visible;
-            animation: animation ease-in $transition-duration;
+            visibility: hidden;
         }
     }
 

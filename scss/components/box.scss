@@ -1,7 +1,8 @@
-$box-shadow: 0 0.2rem 0.8rem rgba($black, 0.05) !default;
 $box-padding: 1.1rem 1.4rem !default;
 $box-transition: border-color ease $transition-duration, box-shadow ease $transition-duration !default;
 $box-radius: $radius-normal !default;
+
+$box-hover-shadow: 0 0.2rem 0.8rem rgba($black, 0.06) !default;
 
 $box-active-shadow: 0 0 0 0.2rem rgba($primary, 0.08);
 
@@ -18,10 +19,12 @@ $box-active-shadow: 0 0 0 0.2rem rgba($primary, 0.08);
         user-select: none;
 
         &:hover {
-            box-shadow: $box-shadow;
+            box-shadow: $box-hover-shadow;
+            color: $primary;
+            z-index: 2;
 
             &.is-active {
-                box-shadow: none;
+                box-shadow: $box-hover-shadow, $box-active-shadow;
             }
         }
 
@@ -31,12 +34,9 @@ $box-active-shadow: 0 0 0 0.2rem rgba($primary, 0.08);
     }
 
     &.is-active {
-        border-color: $primary;
         box-shadow: $box-active-shadow;
-        z-index: 2;
-    }
-
-    &.is-spread {
-        width: 100%;
+        border-color: $primary;
+        color: $primary;
+        z-index: 1;
     }
 }

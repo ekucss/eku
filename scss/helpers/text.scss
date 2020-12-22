@@ -1,6 +1,5 @@
 %text {
     @extend %sizable;
-    @extend %element;
     
     &.is-uppercase {
         text-transform: uppercase;

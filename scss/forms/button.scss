@@ -3,7 +3,6 @@ $button-radius: $radius-normal !default;
 $button-color: contrast-color($button-background) !default;
 $button-shadow: none !default;
 
-$button-hover-elevation: 1px !default;
 $button-hover-shadow: $shadow !default;
 
 $button-active-shadow: none !default;
@@ -62,16 +61,6 @@ $button-active-shadow: none !default;
 
     &:active {
         box-shadow: $button-active-shadow;
-    }
-
-    @if $button-hover-elevation != 0 {
-        &:hover {
-            transform: translateY($button-hover-elevation * -1);
-        }
-    
-        &:active {
-            transform: translateY(0);
-        }
     }
     
     &[disabled] {
