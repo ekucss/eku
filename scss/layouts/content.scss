@@ -12,7 +12,7 @@ $content-width: $max-width !default;
     > section > article {
         @include gapped($content-gap);
     }
-    
+
     &.has-gap {
         padding: $content-padding;
     }

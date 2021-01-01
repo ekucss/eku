@@ -10,7 +10,7 @@ $container-padding: $padding !default;
     &.has-gap {
         padding: $container-padding;
     }
-    
+
     &.has-content {
         @include gapped($container-gap);
     }

@@ -1,29 +1,31 @@
 .dashboard {
     position: relative;
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: min(#{$sidebar-width}, 35vw) 1fr;
-    grid-template-areas: "sidebar body";
-    grid-template-rows: 1fr;
+    padding-left: $sidebar-width;
 
     > .sidebar {
+        min-height: 100vh;
         grid-area: sidebar;
         width: $sidebar-width;
         max-width: 35vw;
         height: 100%;
         top: 0;
         overflow-y: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $background;
         border-right: $border;
         transition: transform ease $transition-duration;
     }
-    
+
     > .container,
     > .content {
         grid-area: body;
     }
 
     @media (max-width: $md) {
-        grid-template-areas: "body body";
+        padding-left: 0;
 
         > .sidebar {
             width: $sidebar-width;
@@ -31,7 +33,7 @@
             z-index: 4;
             transform: translateX(-100%);
             position: fixed;
-            
+
             &.is-active {
                 box-shadow: $sidebar-shadow-left;
                 transform: translateX(0);
