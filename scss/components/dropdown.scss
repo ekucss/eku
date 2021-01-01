@@ -1,82 +1,96 @@
 $dropdown-shadow: 0 0.2rem 0.8rem rgba($black, 0.06) !default;
-$dropdown-margin: 0.25rem !default;
+$dropdown-margin: 1rem !default;
 
 $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
 
 .dropdown {
+    @extend %element;
+
     position: relative;
     display: inline-flex;
 
-    &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: $dropdown-margin;
-        position: absolute;
-        top: 100%;
+    &.is-small .dropdown-menu {
+        min-width: 14rem;
     }
 
-    &.is-dropup {
-        > .dropdown-body {
-            top: initial;
-            bottom: calc(100% + #{$dropdown-margin});
-            box-shadow: $dropdown-dropup-shadow;
-        }
-
-        &::before {
-            top: initial;
-            bottom: 100%;
-        }
+    &.is-large .dropdown-menu {
+        min-width: 22rem;
     }
 
-    &:not(.is-active),
-    &:not(.is-hoverable:hover),
-    &:not(.is-hoverable:focus-within) {
+    &.is-hoverable:not(:hover):not(.is-active),
+    &:not(.is-active):not(.is-hoverable) {
         .dropdown-menu {
-            opacity: 0;
             visibility: hidden;
         }
     }
 }
 
-.dropdown > .dropdown-body {
+.dropdown > .dropdown-menu {
     border: $border;
-    min-width: 14rem;
+    min-width: 16rem;
     border-radius: $radius-normal;
     position: absolute;
     background-color: $background;
     box-shadow: $dropdown-shadow;
     overflow: hidden;
-    top: calc(100% + #{$dropdown-margin});
-    transition: opacity ease 0.2s, visibility ease 0.2s;
     z-index: 2;
 
     // position
 
-    &,
-    &.in-right {
-        left: 0;
-        right: initial;
+    &:not(.in-top):not(.in-bottom) {
+        &.in-left {
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &.in-right {
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 
-    &.in-left {
-        right: 0;
-        left: initial;
+    &.in-top {
+        top: 0;
+        left: 50%;
+        transform: translateY(-100%) translateX(-50%);
+
+        &::before {
+            top: 100%;
+        }
+
+        &.in-left {
+            right: 0;
+            left: initial;
+            transform: translateY(-100%) translateX(0);
+        }
+
+        &.in-right {
+            left: 0;
+            transform: translateY(-100%) translateX(0);
+        }
     }
 
-    &.in-center {
+    &.in-bottom {
+        top: 100%;
         left: 50%;
         transform: translateX(-50%);
-    }
 
-    // size
+        &::before {
+            top: 100%;
+        }
 
-    &.is-normal {
-        min-width: 16rem;
-    }
+        &.in-left {
+            right: 0;
+            left: initial;
+            transform: translateX(0);
+        }
 
-    &.is-large {
-        min-width: 18rem;
+        &.in-right {
+            left: 0;
+            transform: translateX(0);
+        }
     }
 }
 

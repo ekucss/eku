@@ -2,7 +2,7 @@ $field-gap: $gap / 2 !default;
 
 .field {
     display: flex;
-    
+
     &:not(.is-inline) {
         @include gapped($field-gap);
 
@@ -18,7 +18,7 @@ $field-gap: $gap / 2 !default;
 
     label {
         user-select: none;
-        
+
         &[for] {
             cursor: pointer;
         }

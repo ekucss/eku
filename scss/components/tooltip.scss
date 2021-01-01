@@ -13,8 +13,12 @@ $tooltip-size-large: 8rem !default;
     position: relative;
 
     @keyframes tooltip-animation {
-        from { opacity: 0%; }
-        to { opacity: 100%; }
+        from {
+            opacity: 0%;
+        }
+        to {
+            opacity: 100%;
+        }
     }
 
     &::before {
@@ -34,8 +38,7 @@ $tooltip-size-large: 8rem !default;
     }
 
     &:not(:hover),
-    &:not(:focus-within)
-    &:not(.is-active) {
+    &:not(:focus-within) &:not(.is-active) {
         &::before {
             visibility: hidden;
         }

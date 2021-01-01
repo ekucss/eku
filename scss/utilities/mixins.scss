@@ -2,9 +2,7 @@
     > :not(:last-child) {
         @if $vertical {
             margin-right: $margin;
-        }
-        
-        @else {
+        } @else {
             margin-bottom: $margin;
         }
     }

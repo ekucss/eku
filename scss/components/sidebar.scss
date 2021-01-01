@@ -1,6 +1,6 @@
 $sidebar-width: 18rem !default;
 $sidebar-max-width: 80vw !default;
-$sidebar-margin: 2rem !default;
+$sidebar-margin: 1rem !default;
 
 $sidebar-shadow-left: 0.4rem 0 1rem rgba(black, 0.04) !default;
 $sidebar-shadow-right: -0.4rem 0 1rem rgba(black, 0.04) !default;
@@ -9,18 +9,32 @@ $sidebar-shadow-right: -0.4rem 0 1rem rgba(black, 0.04) !default;
     height: auto;
     display: block;
     background-color: $background;
-    
+
     &.is-sticky {
         position: sticky;
         align-self: flex-start;
         top: 0;
     }
 
-    menu, nav, ul {
+    .sidebar-menu {
         @include gapped($sidebar-margin);
-    }
 
-    menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         padding: $gap;
+
+        .sidebar-item {
+            @extend %addonable;
+
+            display: inline-flex;
+            padding: 0.4rem 0.6rem;
+            transition: background-color ease 0.3s;
+            border-radius: $radius-small;
+
+            &:hover {
+                background-color: $mono0;
+            }
+        }
     }
 }

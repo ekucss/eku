@@ -7,7 +7,6 @@ $checkbox-checked-background: rgba($checkbox-checked-color, 0.1) !default;
 
 .checkbox {
     @extend %element;
-    @extend %addon;
 
     appearance: none;
     width: $checkbox-size;
@@ -20,7 +19,8 @@ $checkbox-checked-background: rgba($checkbox-checked-color, 0.1) !default;
     align-items: center;
     position: relative;
     cursor: pointer;
-    transition: background-color ease $transition-duration, border-color ease $transition-duration;
+    transition: background-color ease $transition-duration,
+        border-color ease $transition-duration;
 
     &::before {
         $check-size: $checkbox-size / 2.2 !default;

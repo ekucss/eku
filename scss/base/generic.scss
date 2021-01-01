@@ -59,22 +59,6 @@ a {
     display: inline-flex;
     align-items: center;
     color: inherit;
-
-    %icon {
-        $margin: $gap / 3;
-
-        &:first-child {
-            margin-right: $margin;
-        }
-
-        &:last-child {
-            margin-left: $margin;
-        }
-
-        &:first-child:last-child {
-            margin: 0;
-        }
-    }
 }
 
 hr,

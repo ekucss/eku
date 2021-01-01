@@ -1,10 +1,9 @@
 %icon {
-    @extend %addon;
+    display: inline-flex;
 }
 
 .icon {
     @extend %icon;
-    display: flex;
 }
 
 // feather

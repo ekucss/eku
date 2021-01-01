@@ -1,7 +1,7 @@
 $modal-background: black !default;
-$modal-padding: $gap !default;
+$modal-padding: 2.5rem 2rem !default;
 $modal-radius: $radius-large !default;
-$modal-shadow:  0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
+$modal-shadow: 0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
 
 .modal {
     width: 100%;
@@ -16,7 +16,7 @@ $modal-shadow:  0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
     margin: 0;
     visibility: hidden;
     z-index: 5;
-    
+
     &.is-active {
         visibility: visible;
     }
@@ -43,8 +43,8 @@ $modal-shadow:  0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
 
         &,
         &.is-normal {
-            width: 40rem;
-            height: 25rem;
+            width: 35rem;
+            height: 30rem;
         }
 
         &.is-large {

@@ -22,6 +22,22 @@ $navbar-background: $background !default;
     .navbar-brand {
         display: flex;
         user-select: none;
+
+        .navbar-item {
+            @extend %addonable;
+            display: inline-flex;
+        }
+    }
+
+    .navbar-brand {
+        > .tab {
+            height: 100%;
+            border-bottom: none;
+
+            .tab-item {
+                min-height: 100%;
+            }
+        }
     }
 
     @media (min-width: $md) {
@@ -29,17 +45,22 @@ $navbar-background: $background !default;
         .navbar-menu {
             @include gapped($navbar-gap, true);
             align-items: center;
+
+            %separator {
+                height: 100%;
+                width: $border-width;
+                background-color: $border-color;
+                margin: $padding-vertical 0;
+            }
         }
     }
 
     @media (max-width: $md) {
-        flex-wrap: wrap;
-
         .navbar-brand {
             width: 100%;
-            display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: $gap;
         }
 
         .navbar-menu {
@@ -56,10 +77,10 @@ $navbar-background: $background !default;
             background-color: $background;
             border-top: $border;
             border-bottom: $border;
-            overflow-y: auto;
+            // overflow-y: auto;
             z-index: 2;
         }
-        
+
         &:not(.is-active) {
             .navbar-menu {
                 visibility: hidden;

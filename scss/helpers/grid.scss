@@ -7,14 +7,14 @@ $grid-columns: 12 !default;
     &.has-gap {
         grid-gap: $grid-gap;
     }
-    
+
     @for $i from 1 through $grid-columns {
         &.xs-#{$i} {
             grid-template-columns: repeat($i, 1fr);
         }
     }
 
-    @media(min-width: $sm) {
+    @media (min-width: $sm) {
         @for $i from 1 through $grid-columns {
             &.sm-#{$i} {
                 grid-template-columns: repeat($i, 1fr);
@@ -22,7 +22,7 @@ $grid-columns: 12 !default;
         }
     }
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         @for $i from 1 through $grid-columns {
             &.md-#{$i} {
                 grid-template-columns: repeat($i, 1fr);
@@ -30,7 +30,7 @@ $grid-columns: 12 !default;
         }
     }
 
-    @media(min-width: $bg) {
+    @media (min-width: $bg) {
         @for $i from 1 through $grid-columns {
             &.bg-#{$i} {
                 grid-template-columns: repeat($i, 1fr);
@@ -38,7 +38,7 @@ $grid-columns: 12 !default;
         }
     }
 
-    @media(min-width: $xl) {
+    @media (min-width: $xl) {
         @for $i from 1 through $grid-columns {
             &.xl-#{$i} {
                 grid-template-columns: repeat($i, 1fr);
@@ -54,7 +54,7 @@ $grid-columns: 12 !default;
         }
     }
 
-    @media(min-width: $sm) {
+    @media (min-width: $sm) {
         @for $i from 1 through $grid-columns {
             &.sm-#{$i} {
                 grid-column: $i span;
@@ -62,7 +62,7 @@ $grid-columns: 12 !default;
         }
     }
 
-    @media(min-width: $md) {
+    @media (min-width: $md) {
         @for $i from 1 through $grid-columns {
             &.md-#{$i} {
                 grid-column: $i span;
@@ -70,7 +70,7 @@ $grid-columns: 12 !default;
         }
     }
 
-    @media(min-width: $bg) {
+    @media (min-width: $bg) {
         @for $i from 1 through $grid-columns {
             &.bg-#{$i} {
                 grid-column: $i span;
@@ -78,7 +78,7 @@ $grid-columns: 12 !default;
         }
     }
 
-    @media(min-width: $xl) {
+    @media (min-width: $xl) {
         @for $i from 1 through $grid-columns {
             &.xl-#{$i} {
                 grid-column: $i span;

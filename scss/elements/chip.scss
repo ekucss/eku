@@ -12,10 +12,6 @@ $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
     background-color: $theme;
     border-color: rgba($black, 0.05);
     color: $color;
-
-    %icon {
-        fill: $color;
-    }
 }
 
 .chip {

@@ -1,24 +1,24 @@
 // show
 
-@media(max-width: $xl) {
+@media (max-width: $xl) {
     .show-xl {
         display: none !important;
     }
 }
 
-@media(max-width: $bg) {
+@media (max-width: $bg) {
     .show-bg {
         display: none !important;
     }
 }
 
-@media(max-width: $md) {
+@media (max-width: $md) {
     .show-md {
         display: none !important;
     }
 }
 
-@media(max-width: $sm) {
+@media (max-width: $sm) {
     .show-sm {
         display: none !important;
     }
@@ -26,25 +26,25 @@
 
 // hide
 
-@media(min-width: $xl) {
+@media (min-width: $xl) {
     .hide-xl {
         display: none !important;
     }
 }
 
-@media(min-width: $bg) {
+@media (min-width: $bg) {
     .hide-bg {
         display: none !important;
     }
 }
 
-@media(min-width: $md) {
+@media (min-width: $md) {
     .hide-md {
         display: none !important;
     }
 }
 
-@media(min-width: $sm) {
+@media (min-width: $sm) {
     .hide-sm {
         display: none !important;
     }

@@ -2,7 +2,7 @@ $tab-height: $height + ($padding-vertical * 2) !default;
 
 .tab {
     @include gapped(1rem, true);
-        
+
     display: flex;
     border-bottom: $border;
     position: relative;
@@ -17,7 +17,7 @@ $tab-height: $height + ($padding-vertical * 2) !default;
         cursor: pointer;
         user-select: none;
         color: $color;
-        
+
         &.is-active {
             color: $primary;
 

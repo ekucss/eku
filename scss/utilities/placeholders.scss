@@ -41,24 +41,13 @@
 }
 
 %addonable {
-    > %addon {
-        &:first-child {
-            margin-right: $padding-vertical;
-        }
-    
-        &:last-child {
-            margin-left: $padding-vertical;
-        }
-    
-        &:first-child:last-child {
-            margin: 0;
-        }
-    }
+    gap: $padding-vertical;
 }
 
 %separator {
-    display: block;
+    width: 100%;
     height: $border-width;
+    display: block;
     border: none;
     background-color: $border-color;
 }

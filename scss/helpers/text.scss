@@ -1,6 +1,8 @@
 %text {
     @extend %sizable;
-    
+
+    transition: color ease $transition-duration;
+
     &.is-uppercase {
         text-transform: uppercase;
     }
@@ -49,7 +51,12 @@
     }
 }
 
-.text, p, small, a, label, %title {
+.text,
+p,
+small,
+a,
+label,
+%title {
     @extend %text;
 }
 

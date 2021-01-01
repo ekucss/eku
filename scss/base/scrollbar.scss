@@ -4,23 +4,23 @@
         height: 1rem;
         background-color: transparent;
     }
-    
+
     ::-webkit-scrollbar-track {
         &:vertical {
             border-left: $border;
         }
-    
+
         &:horizontal {
             border-top: $border;
         }
     }
-    
+
     ::-webkit-scrollbar-thumb {
         background-color: $mono2;
         border-radius: 1rem;
         border: solid 0.3rem transparent;
         background-clip: content-box;
-    
+
         &:hover {
             background-color: $mono3;
         }

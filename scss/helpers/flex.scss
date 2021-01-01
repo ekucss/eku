@@ -3,7 +3,11 @@ $flex-gap: $gap / 3 !default;
 .flex {
     width: 100%;
     display: inline-flex;
-    
+
+    &.has-gap {
+        gap: $gap;
+    }
+
     &.is-spaced {
         justify-content: space-between;
         align-items: center;
@@ -50,7 +54,7 @@ $flex-gap: $gap / 3 !default;
         &.in-right {
             align-items: flex-end;
         }
-        
+
         &.in-center {
             align-items: center;
         }
@@ -62,7 +66,7 @@ $flex-gap: $gap / 3 !default;
         &.in-middle {
             justify-content: center;
         }
-        
+
         &.in-bottom {
             justify-content: flex-end;
         }

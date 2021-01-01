@@ -15,7 +15,8 @@ $input-focus-border-color: $mono3 !default;
 .input {
     @extend %control;
 
-    transition: box-shadow ease $transition-duration, border ease $transition-duration;
+    transition: box-shadow ease $transition-duration,
+        border ease $transition-duration;
 
     &:focus,
     &:active {

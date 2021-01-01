@@ -1,6 +1,10 @@
 @keyframes loader-animation {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @mixin make-loader($width, $theme: $color) {
@@ -18,19 +22,17 @@
 }
 
 .loader {
-    @extend %addon;
-
     display: inline-flex;
 
     &,
     &.is-small {
         @include make-loader(1rem);
     }
-    
+
     &.is-normal {
         @include make-loader(3rem);
     }
-    
+
     &.is-large {
         @include make-loader(8rem);
     }

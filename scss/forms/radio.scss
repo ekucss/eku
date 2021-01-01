@@ -1,15 +1,15 @@
 $radio-size: 1.4rem !default;
 $radio-stroke-size: 0.1rem !default;
 $radio-background: none !default;
-$radio-transition: border-color ease $transition-duration, background-color ease $transition-duration !default;
+$radio-transition: border-color ease $transition-duration,
+    background-color ease $transition-duration !default;
 
 $radio-checked-color: $primary !default;
 $radio-checked-background: rgba($radio-checked-color, 0.1) !default;
 
 .radio {
     @extend %element;
-    @extend %addon;
-    
+
     width: $radio-size;
     height: $radio-size;
     border: $border;

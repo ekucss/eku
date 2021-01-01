@@ -30,7 +30,7 @@ $button-active-shadow: none !default;
         min-height: auto;
         font-size: $size-small;
         border-radius: $radius-small;
-        padding: .3rem .5rem;
+        padding: 0.3rem 0.5rem;
     }
 
     &.is-loading {
@@ -53,7 +53,7 @@ $button-active-shadow: none !default;
     color: $color;
     box-shadow: $button-shadow;
     border: none;
-    transition: box-shadow ease-in 0.14s, transform ease 0.20s;
+    transition: box-shadow ease-in 0.14s, transform ease 0.2s;
 
     &:hover {
         box-shadow: $button-hover-shadow;
@@ -62,7 +62,7 @@ $button-active-shadow: none !default;
     &:active {
         box-shadow: $button-active-shadow;
     }
-    
+
     &[disabled] {
         opacity: 50%;
         box-shadow: none;
