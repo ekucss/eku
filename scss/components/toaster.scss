@@ -15,8 +15,6 @@
     align-items: flex-end;
 
     > .toaster-item {
-        @include gapped(0.5rem);
-
         max-width: 30rem;
         padding: 0.8rem 1rem;
         border-radius: $radius-normal;

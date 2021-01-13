@@ -1,9 +1,8 @@
 $tab-height: $height + ($padding-vertical * 2) !default;
 
 .tab {
-    @include gapped(1rem, true);
-
     display: flex;
+    gap: 1rem;
     border-bottom: $border;
     position: relative;
 

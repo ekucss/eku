@@ -2,16 +2,13 @@ $field-gap: $gap / 2 !default;
 
 .field {
     display: flex;
+    gap: $field-gap;
 
     &:not(.is-inline) {
-        @include gapped($field-gap);
-
         flex-direction: column;
     }
 
     &.is-inline {
-        @include gapped($field-gap, true);
-
         align-items: center;
         flex-direction: row;
     }

@@ -4,10 +4,9 @@ $hero-height: 12rem !default;
 $hero-hump: 3rem !default;
 
 .hero {
-    @include gapped($gap);
-
     display: flex;
     flex-direction: column;
+    gap: $gap;
     justify-content: flex-end;
     min-height: $hero-height;
     background: $hero-background;

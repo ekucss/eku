@@ -30,6 +30,10 @@
         cursor: pointer;
     }
 
+    &.is-tached {
+        
+    }
+
     &[disabled] {
         color: $mono3;
         user-select: none;

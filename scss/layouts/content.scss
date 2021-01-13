@@ -10,7 +10,9 @@ $content-width: $max-width !default;
     &,
     > section,
     > section > article {
-        @include gapped($content-gap);
+        display: flex;
+        flex-direction: column;
+        gap: $content-gap;
     }
 
     &.has-gap {

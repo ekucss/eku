@@ -17,9 +17,8 @@ $sidebar-shadow-right: -0.4rem 0 1rem rgba(black, 0.04) !default;
     }
 
     .sidebar-menu {
-        @include gapped($sidebar-margin);
-
         display: flex;
+        gap: $sidebar-margin;
         flex-direction: column;
         align-items: flex-start;
         padding: $gap;

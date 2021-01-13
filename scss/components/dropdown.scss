@@ -9,12 +9,27 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
     position: relative;
     display: inline-flex;
 
-    &.is-small .dropdown-menu {
-        min-width: 14rem;
+    &::after {
+        content: '';
+        width: 100%;
+        height: $dropdown-margin;
+        left: 0;
+        top: 100%;
+        position: absolute;
     }
 
-    &.is-large .dropdown-menu {
-        min-width: 22rem;
+    // position
+
+    &.in-up {
+        &::after {
+            top: initial;
+            bottom: 100%;
+        }
+
+        .dropdown-menu {
+            bottom: calc(100% + #{$dropdown-margin});
+            top: initial;
+        }
     }
 
     &.is-hoverable:not(:hover):not(.is-active),
@@ -27,70 +42,22 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
 
 .dropdown > .dropdown-menu {
     border: $border;
-    min-width: 16rem;
+    min-width: 14rem;
     border-radius: $radius-normal;
     position: absolute;
+    top: calc(100% + #{$dropdown-margin});
     background-color: $background;
     box-shadow: $dropdown-shadow;
     overflow: hidden;
     z-index: 2;
 
-    // position
-
-    &:not(.in-top):not(.in-bottom) {
-        &.in-left {
-            right: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        &.in-right {
-            left: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    &.in-left {
+        right: 0;
     }
 
-    &.in-top {
-        top: 0;
-        left: 50%;
-        transform: translateY(-100%) translateX(-50%);
-
-        &::before {
-            top: 100%;
-        }
-
-        &.in-left {
-            right: 0;
-            left: initial;
-            transform: translateY(-100%) translateX(0);
-        }
-
-        &.in-right {
-            left: 0;
-            transform: translateY(-100%) translateX(0);
-        }
-    }
-
-    &.in-bottom {
-        top: 100%;
+    &.in-center {
         left: 50%;
         transform: translateX(-50%);
-
-        &::before {
-            top: 100%;
-        }
-
-        &.in-left {
-            right: 0;
-            left: initial;
-            transform: translateX(0);
-        }
-
-        &.in-right {
-            left: 0;
-            transform: translateX(0);
-        }
     }
 }
 
@@ -99,6 +66,7 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
 
     width: 100%;
     padding: $padding;
+    user-select: none;
 }
 
 a.dropdown-item {

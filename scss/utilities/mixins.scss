@@ -1,9 +1,0 @@
-@mixin gapped($margin, $vertical: false) {
-    > :not(:last-child) {
-        @if $vertical {
-            margin-right: $margin;
-        } @else {
-            margin-bottom: $margin;
-        }
-    }
-}

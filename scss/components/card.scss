@@ -1,50 +1,57 @@
 $card-height: 16rem !default;
 $card-radius: $radius-large !default;
-$card-shadow: 0 0.3rem 0.8rem rgba(black, 0.08) !default;
+$card-shadow: 0 0.2rem 0.6rem rgba(black, 0.05) !default;
 $card-padding: 1.4rem !default;
 $card-border: $border !default;
-$card-gap: 1rem !default;
+$card-gap: 0.65rem !default;
+
+$card-hover-shadow: 0 0.5rem 0.9rem 0.01rem rgba(black, 0.07) !default;
+$card-hover-elevation: 0.25rem !default;
 
 .card {
-    @include gapped($card-gap);
-
     min-height: $card-height;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: $card-border;
     border-radius: $card-radius;
-    padding: $card-padding;
     box-shadow: $card-shadow;
+    overflow: hidden;
 
-    %card-header {
-        @include gapped($card-gap);
+    .card-header,
+    .card-body,
+    .card-footer {
+        display: flex;
+        flex-direction: column;
+        padding: $card-padding;
+        gap: $card-gap;
+    }
+
+    .card-image {
+        flex: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+    
+    .card-header {
         flex: 1;
     }
 
-    %card-body {
-        @include gapped($card-gap / 2);
-    }
-
-    %card-footer {
-        @include gapped($card-gap / 2, true);
-
+    .card-footer {
+        flex-direction: row;
         border-top: $card-border;
-        padding-top: $card-padding / 2;
     }
 
-    > header,
-    > .card-header {
-        @extend %card-header;
-    }
-
-    > article,
-    > .card-body {
-        @extend %card-body;
-    }
-
-    > footer,
-    > .card-footer {
-        @extend %card-footer;
+    &.is-hoverable {
+        user-select: none;
+        transition: $transition;
+        
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-$card-hover-elevation);
+            box-shadow: $card-hover-shadow;
+        }
     }
 }

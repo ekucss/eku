@@ -1,10 +1,10 @@
 .dashboard {
     position: relative;
-    min-height: 100vh;
+    min-height: 100%;
     padding-left: $sidebar-width;
 
     > .sidebar {
-        min-height: 100vh;
+        min-height: 100%;
         grid-area: sidebar;
         width: $sidebar-width;
         max-width: 35vw;
