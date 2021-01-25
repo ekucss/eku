@@ -1,0 +1,42 @@
+$message-quote-width: 0.25rem;
+$message-quote-color: $mono2;
+
+@mixin make-message($theme) {
+    background-color: lighten($theme, 40%);
+
+    &::before {
+        background-color: $theme;
+    }
+}
+
+.message {
+    padding: $padding;
+    padding-left: $padding-horizontal + $message-quote-width;
+    border-radius: $radius-small;
+    background-color: $mono0;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: $message-quote-width;
+        height: 100%;
+        background-color: $message-quote-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &.is-primary {
+        @include make-message($primary);
+    }
+
+    &.is-error {
+        @include make-message($red);
+    }
+
+    &.is-success {
+        @include make-message($green);
+    }
+}

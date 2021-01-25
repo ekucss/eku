@@ -25,13 +25,12 @@
     }
 
     &.is-link {
-        text-decoration: underline solid;
         color: $primary;
         cursor: pointer;
-    }
 
-    &.is-tached {
-        
+        &:hover {
+            text-decoration: underline solid;
+        }
     }
 
     &[disabled] {

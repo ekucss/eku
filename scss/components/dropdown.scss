@@ -8,6 +8,8 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
 
     position: relative;
     display: inline-flex;
+    perspective: 60rem;
+    user-select: none;
 
     &::after {
         content: '';
@@ -20,7 +22,7 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
 
     // position
 
-    &.in-up {
+    &.is-upward {
         &::after {
             top: initial;
             bottom: 100%;
@@ -32,15 +34,27 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
         }
     }
 
-    &.is-hoverable:not(:hover):not(.is-active),
-    &:not(.is-active):not(.is-hoverable) {
+    &:not(.is-active):not(:focus-within):not(:hover) {
         .dropdown-menu {
             visibility: hidden;
+            opacity: 0;
+            transform: rotateX(-20deg);
+        }
+    }
+
+    &.is-spread {
+        width: 100%;
+        flex: 1;
+
+        .dropdown-menu {
+            width: 100%;
         }
     }
 }
 
 .dropdown > .dropdown-menu {
+    display: flex;
+    flex-direction: column;
     border: $border;
     min-width: 14rem;
     border-radius: $radius-normal;
@@ -50,6 +64,9 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
     box-shadow: $dropdown-shadow;
     overflow: hidden;
     z-index: 2;
+    transition: all ease-in-out 0.2s;
+    transform-origin: top center;
+    transform-style: preserve-3d;
 
     &.in-left {
         right: 0;
@@ -66,6 +83,8 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
 
     width: 100%;
     padding: $padding;
+    user-select: none;
+    border-radius: $radius-normal;
     user-select: none;
 }
 

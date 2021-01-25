@@ -5,8 +5,6 @@ $navbar-background: $background !default;
 .navbar {
     min-height: $navbar-height;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: $navbar-background;
     padding: 0 $gap;
     border-bottom: $border;
@@ -19,7 +17,8 @@ $navbar-background: $background !default;
     }
 
     .navbar-menu,
-    .navbar-brand {
+    .navbar-brand,
+    .navbar-middle {
         display: flex;
         gap: $gap;
         user-select: none;
@@ -30,9 +29,11 @@ $navbar-background: $background !default;
         }
     }
 
-    .navbar-brand {
+    .navbar-middle {
+        justify-content: center;
+
         > .tab {
-            height: 100%;
+            height: $navbar-height;
             border-bottom: none;
 
             .tab-item {
@@ -41,26 +42,60 @@ $navbar-background: $background !default;
         }
     }
 
-    @media (min-width: $md) {
+    .dropdown {
+        z-index: 3;
+    }
+
+    @media (min-width: $bg) {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        .navbar-menu,
         .navbar-brand,
-        .navbar-menu {
+        .navbar-middle {
+            flex: auto;
             align-items: center;
 
-            %separator {
+            > %separator {
                 height: 100%;
                 width: $border-width;
                 background-color: $border-color;
                 margin: $padding-vertical 0;
             }
         }
+
+        .navbar-middle {
+            max-width: 40%;
+        }
+
+        .navbar-menu {
+            justify-content: flex-end;
+        }
     }
 
-    @media (max-width: $md) {
+    @media (max-width: $bg) {
+        flex-wrap: wrap;
+        padding: 0;
+        flex-direction: column;
+        
+        .navbar-brand,
+        .navbar-middle {
+            height: $navbar-height;
+            padding: 0 $gap;
+        }
+
+        .navbar-middle {
+            width: 100%;
+            align-items: center;
+            border-top: $border;
+        }
+        
         .navbar-brand {
+            min-height: $navbar-height;
             justify-content: space-between;
             align-items: center;
             gap: $gap;
-            flex: 1;
         }
 
         .navbar-menu {

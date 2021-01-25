@@ -1,8 +1,8 @@
 {
     "name": "eku",
-    "version": "0.4.1",
+    "version": "0.4.1-alpha.1",
     "description": "A friendly, light and simple style library",
-    "main": "scss/eku.scss",
+    "main": "eku.scss",
     "repository": "https://github.com/ekucss/eku",
     "homepage": "https://github.com/ekucss/eku#readme",
     "author": "Andres Celis",

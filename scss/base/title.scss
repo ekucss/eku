@@ -33,10 +33,14 @@ h4 {
     font-size: 1.6em;
 }
 
+h5, h6 {
+    font-weight: $weight-text;
+}
+
 h5 {
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 h6 {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }

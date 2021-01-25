@@ -15,7 +15,7 @@ $mono4: #666666 !default;
 $mono5: #333333 !default;
 $mono6: #1a1a1a !default;
 
-$color: #202941 !default;
+$color: #152647 !default;
 $threshold-color: 65%;
 
 $shadow: 0 0.4rem 1rem rgba($black, 0.1) !default;
@@ -24,9 +24,9 @@ $border-color: $mono1 !default;
 $border-width: 1px !default;
 $border: solid $border-width $border-color !default;
 
-$radius-small: 0.2rem !default;
-$radius-normal: 0.3rem !default;
-$radius-large: 0.7rem !default;
+$radius-small: 0.25rem !default;
+$radius-normal: 0.35rem !default;
+$radius-large: 0.75rem !default;
 
 $gap: 1.5rem !default;
 
@@ -42,7 +42,7 @@ $weight-title: 700 !default;
 $weight-text: 300 !default;
 $weight-mono: 300 !default;
 
-$height: 3rem !default;
+$height: 2.8rem !default;
 
 $transition-duration: 0.25s !default;
 $transition: ease $transition-duration !default;

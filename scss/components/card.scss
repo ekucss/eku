@@ -1,7 +1,7 @@
 $card-height: 16rem !default;
 $card-radius: $radius-large !default;
 $card-shadow: 0 0.2rem 0.6rem rgba(black, 0.05) !default;
-$card-padding: 1.4rem !default;
+$card-padding: 1rem 1.4rem !default;
 $card-border: $border !default;
 $card-gap: 0.65rem !default;
 
@@ -13,6 +13,7 @@ $card-hover-elevation: 0.25rem !default;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: stretch;
     border: $card-border;
     border-radius: $card-radius;
     box-shadow: $card-shadow;
@@ -42,6 +43,7 @@ $card-hover-elevation: 0.25rem !default;
     .card-footer {
         flex-direction: row;
         border-top: $card-border;
+        background-color: $mono0;
     }
 
     &.is-hoverable {

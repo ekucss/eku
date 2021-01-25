@@ -5,6 +5,7 @@ $container-padding: $padding !default;
     display: flex;
     flex-direction: column;
     gap: $container-gap;
+    position: relative;
 
     &.has-table {
         width: 100%;

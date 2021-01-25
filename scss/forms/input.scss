@@ -1,5 +1,5 @@
 $input-focus-shadow: $shadow !default;
-$input-focus-border-color: $mono3 !default;
+$input-focus-border-color: $mono2 !default;
 
 @mixin make-input($theme) {
     border-color: rgba($theme, 0.8);
@@ -15,14 +15,17 @@ $input-focus-border-color: $mono3 !default;
 .input {
     @extend %control;
 
-    transition: box-shadow ease $transition-duration,
-        border ease $transition-duration;
+    transition: border ease $transition-duration;
 
     &:focus,
     &:active {
         border-color: $input-focus-border-color;
-        box-shadow: $input-focus-shadow;
         z-index: 2;
+    }
+
+    &::placeholder {
+        color: $mono3;
+        user-select: none;
     }
 
     &.is-error {

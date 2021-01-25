@@ -6,6 +6,7 @@ $content-width: $max-width !default;
     @extend %sizable;
 
     position: relative;
+    padding: $content-padding;
 
     &,
     > section,
@@ -13,10 +14,6 @@ $content-width: $max-width !default;
         display: flex;
         flex-direction: column;
         gap: $content-gap;
-    }
-
-    &.has-gap {
-        padding: $content-padding;
     }
 
     &.is-centered {
