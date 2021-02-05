@@ -29,10 +29,10 @@ $sidebar-shadow-right: -0.4rem 0 1rem rgba(black, 0.04) !default;
             display: inline-flex;
             padding: 0.4rem 0.6rem;
             transition: background-color ease 0.3s;
-            border-radius: $radius-small;
+            border-radius: $radius-xs;
 
             &:hover {
-                background-color: $mono0;
+                background-color: $light;
             }
         }
     }

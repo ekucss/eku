@@ -1,5 +1,5 @@
 $button-background: $background !default;
-$button-radius: $radius-normal !default;
+$button-radius: $radius-md !default;
 $button-color: contrast-color($button-background) !default;
 $button-shadow: none !default;
 
@@ -29,13 +29,13 @@ $button-active-shadow: none !default;
 
     &.is-small {
         min-height: auto;
-        font-size: $size-small;
-        border-radius: $radius-small;
+        font-size: $size-xs;
+        border-radius: $radius-xs;
         padding: 0.3rem 0.5rem;
     }
 
     &.is-loading {
-        @include make-loader(1rem, $mono3);
+        @include make-loader(1rem, $gray);
 
         color: transparent !important;
         position: relative;
@@ -88,7 +88,7 @@ button,
     }
 
     &.is-static {
-        background-color: $mono0;
+        background-color: $light;
         cursor: default;
         color: $color;
         border: $border;

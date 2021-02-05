@@ -15,34 +15,35 @@ $selection-background: rgba($primary, 0.2) !default;
 }
 
 body {
-    font-size: $size-normal;
-    font-family: $family-text;
+    font-size: $size-md;
+    font-family: $font-family-text;
     color: $color;
     line-height: 1.6;
     overflow-x: hidden;
     background-color: $background;
-    font-weight: $weight-text;
+    font-weight: $font-weight-text;
     -webkit-font-smoothing: antialiased;
 }
 
 code {
-    $code-radius: $radius-small !default;
+    $code-radius: $radius-xs !default;
     $code-padding: 0.3rem 0.5rem !default;
-    $code-background: $mono1 !default;
+    $code-background: $smoke !default;
 
-    font-size: $size-small;
-    font-family: $family-mono;
-    font-weight: $weight-mono;
+    font-size: $size-xs;
+    font-family: $font-family-text;
+    font-weight: $font-weight-text;
     background-color: $code-background;
     padding: $code-padding;
     border-radius: $code-radius;
     display: inline-block;
+    user-select: none;
 }
 
 small {
     display: block;
-    font-size: $size-small;
-    color: $mono4;
+    font-size: $size-xs;
+    color: $gray;
 }
 
 p {
@@ -50,7 +51,7 @@ p {
 }
 
 abbr[title] {
-    text-decoration: underline solid $mono3;
+    text-decoration: underline solid $gray;
 }
 
 a {

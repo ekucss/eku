@@ -8,7 +8,6 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
 
     position: relative;
     display: inline-flex;
-    perspective: 60rem;
     user-select: none;
 
     &::after {
@@ -38,7 +37,6 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
         .dropdown-menu {
             visibility: hidden;
             opacity: 0;
-            transform: rotateX(-20deg);
         }
     }
 
@@ -57,7 +55,7 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
     flex-direction: column;
     border: $border;
     min-width: 14rem;
-    border-radius: $radius-normal;
+    border-radius: $radius-md;
     position: absolute;
     top: calc(100% + #{$dropdown-margin});
     background-color: $background;
@@ -84,12 +82,12 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
     width: 100%;
     padding: $padding;
     user-select: none;
-    border-radius: $radius-normal;
+    border-radius: $radius-md;
     user-select: none;
 }
 
 a.dropdown-item {
     &:hover {
-        background-color: $mono0;
+        background-color: $light;
     }
 }

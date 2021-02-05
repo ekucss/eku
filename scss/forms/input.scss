@@ -1,5 +1,5 @@
 $input-focus-shadow: $shadow !default;
-$input-focus-border-color: $mono2 !default;
+$input-focus-border-color: $mono !default;
 
 @mixin make-input($theme) {
     border-color: rgba($theme, 0.8);
@@ -24,7 +24,7 @@ $input-focus-border-color: $mono2 !default;
     }
 
     &::placeholder {
-        color: $mono3;
+        color: $gray;
         user-select: none;
     }
 

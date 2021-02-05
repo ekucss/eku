@@ -7,26 +7,24 @@ $black: #1a1a1a !default;
 
 $background: white !default;
 
-$mono0: #fcfcfc !default;
-$mono1: #f0f0f0 !default;
-$mono2: #cccccc !default;
-$mono3: #999999 !default;
-$mono4: #666666 !default;
-$mono5: #333333 !default;
-$mono6: #1a1a1a !default;
+$light: #fcfcfc !default;
+$smoke: #f0f0f0 !default;
+$mono: #cccccc !default;
+$gray: #999999 !default;
+$dark: #303030 !default;
 
-$color: #152647 !default;
+$color: #292929 !default;
 $threshold-color: 65%;
 
 $shadow: 0 0.4rem 1rem rgba($black, 0.1) !default;
 
-$border-color: $mono1 !default;
+$border-color: $smoke !default;
 $border-width: 1px !default;
 $border: solid $border-width $border-color !default;
 
-$radius-small: 0.25rem !default;
-$radius-normal: 0.35rem !default;
-$radius-large: 0.75rem !default;
+$radius-xs: 0.3rem !default;
+$radius-md: 0.4rem !default;
+$radius-bg: 0.7rem !default;
 
 $gap: 1.5rem !default;
 
@@ -34,15 +32,11 @@ $padding-vertical: 0.7rem !default;
 $padding-horizontal: 0.9rem !default;
 $padding: $padding-vertical $padding-horizontal !default;
 
-$family-title: "Inter", sans-serif !default;
-$family-text: "Inter", sans-serif !default;
-$family-mono: "DM Mono", monospace !default;
+$font-family-title: "Inter", sans-serif !default;
+$font-family-text: "Inter", sans-serif !default;
 
-$weight-title: 700 !default;
-$weight-text: 300 !default;
-$weight-mono: 300 !default;
-
-$height: 2.8rem !default;
+$font-weight-title: 700 !default;
+$font-weight-text: 300 !default;
 
 $transition-duration: 0.25s !default;
 $transition: ease $transition-duration !default;
@@ -52,9 +46,9 @@ $md: 762px !default;
 $bg: 1023px !default;
 $xl: 1215px !default;
 
+$height: 2.7rem !default;
 $max-width: 60rem !default;
 
-$size-small: 8pt !default;
-$size-normal: 11pt !default;
-$size-medium: 14pt !default;
-$size-large: 17pt !default;
+$size-xs: 8pt !default;
+$size-md: 11pt !default;
+$size-bg: 17pt !default;

@@ -24,11 +24,11 @@ $radio-checked-background: rgba($radio-checked-color, 0.1) !default;
     transition: $radio-transition;
 
     &::before {
-        $check-size: $radio-size / 2.2 !default;
+        $radio-check-size: $radio-size / 2.2 !default;
 
         content: "";
-        width: $check-size / 2;
-        height: $check-size;
+        width: $radio-check-size / 2;
+        height: $radio-check-size;
         border-right: solid $radio-stroke-size transparent;
         border-bottom: solid $radio-stroke-size transparent;
         transform-origin: right bottom;

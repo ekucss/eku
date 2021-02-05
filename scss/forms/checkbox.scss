@@ -12,7 +12,7 @@ $checkbox-checked-background: rgba($checkbox-checked-color, 0.1) !default;
     width: $checkbox-size;
     height: $checkbox-size;
     border: $border;
-    border-radius: $radius-small;
+    border-radius: $radius-xs;
     background-color: $checkbox-background;
     display: inline-flex;
     justify-content: center;
@@ -23,11 +23,11 @@ $checkbox-checked-background: rgba($checkbox-checked-color, 0.1) !default;
         border-color ease $transition-duration;
 
     &::before {
-        $check-size: $checkbox-size / 2.2 !default;
+        $checkbox-check-size: $checkbox-size / 2.2 !default;
 
         content: "";
-        width: $check-size / 2;
-        height: $check-size;
+        width: $checkbox-check-size / 2;
+        height: $checkbox-check-size;
         border-right: solid $checkbox-stroke-size transparent;
         border-bottom: solid $checkbox-stroke-size transparent;
         transform-origin: right bottom;

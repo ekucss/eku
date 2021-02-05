@@ -16,12 +16,7 @@
     }
 
     &.is-bold {
-        font-weight: $weight-title;
-    }
-
-    &.is-mono {
-        font-family: $family-mono;
-        font-weight: $weight-mono;
+        font-weight: $font-weight-title;
     }
 
     &.is-link {
@@ -34,23 +29,9 @@
     }
 
     &[disabled] {
-        color: $mono3;
+        color: $gray;
         user-select: none;
         cursor: default;
-    }
-
-    // color
-
-    &.is-primary {
-        color: $primary;
-    }
-
-    &.is-success {
-        color: $green;
-    }
-
-    &.is-error {
-        color: $red;
     }
 }
 

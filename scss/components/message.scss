@@ -1,5 +1,5 @@
 $message-quote-width: 0.25rem;
-$message-quote-color: $mono2;
+$message-quote-color: $mono;
 
 @mixin make-message($theme) {
     background-color: lighten($theme, 40%);
@@ -12,8 +12,8 @@ $message-quote-color: $mono2;
 .message {
     padding: $padding;
     padding-left: $padding-horizontal + $message-quote-width;
-    border-radius: $radius-small;
-    background-color: $mono0;
+    border-radius: $radius-xs;
+    background-color: $light;
     overflow: hidden;
     position: relative;
 

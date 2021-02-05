@@ -5,19 +5,19 @@
     font: inherit;
     background: none;
     border: $border;
-    border-radius: $radius-normal;
+    border-radius: $radius-md;
     padding: 0 $padding-vertical;
     display: inline-flex;
     align-items: center;
 
     &[disabled],
     fieldset[disabled] & {
-        color: $mono3;
+        color: $gray;
         cursor: no-drop;
         user-select: none;
         box-shadow: none;
         pointer-events: none;
-        background-color: $mono0;
+        background-color: $light;
     }
 
     &.is-spread {
@@ -28,15 +28,11 @@
 
 %sizable {
     &.is-small {
-        font-size: $size-small;
-    }
-
-    &.is-normal {
-        font-size: $size-medium;
+        font-size: $size-xs;
     }
 
     &.is-large {
-        font-size: $size-large;
+        font-size: $size-bg;
     }
 }
 

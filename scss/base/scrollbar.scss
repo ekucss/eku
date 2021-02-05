@@ -16,13 +16,13 @@
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: $mono2;
+        background-color: $mono;
         border-radius: 1rem;
         border: solid 0.3rem transparent;
         background-clip: content-box;
 
         &:hover {
-            background-color: $mono3;
+            background-color: $gray;
         }
     }
 }

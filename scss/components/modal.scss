@@ -1,7 +1,7 @@
 $modal-background: black !default;
 $modal-padding: 2.5rem 2rem !default;
-$modal-radius: $radius-large !default;
-$modal-shadow: 0 0.4rem 0.8rem 0.1rem rgba($mono6, 0.2) !default;
+$modal-radius: $radius-bg !default;
+$modal-shadow: 0 0.4rem 0.8rem 0.1rem rgba(black, 0.2) !default;
 
 .modal {
     width: 100%;
