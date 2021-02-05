@@ -1,0 +1,47 @@
+.color {
+    &-primary {
+        color: $primary;
+    }
+
+    &-error {
+        color: $red;
+    }
+
+    &-success {
+        color: $green;
+    }
+
+    &-light {
+        color: $light;
+    }
+
+    &-smoke {
+        color: $smoke;
+    }
+
+    &-mono {
+        color: $mono;
+    }
+
+    &-gray {
+        color: $gray;
+    }
+
+    &-dark {
+        color: $dark;
+    }
+}
+
+.radius {
+    &-xs {
+        border-radius: $radius-xs;
+    }
+
+    &-md {
+        border-radius: $radius-md;
+    }
+
+    &-bg {
+        border-radius: $radius-bg;
+    }
+}
