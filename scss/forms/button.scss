@@ -17,7 +17,7 @@ $button-active-shadow: none !default;
     cursor: pointer;
     text-align: center;
     color: $color;
-    transition: background-color ease $transition-duration;
+    transition: background-color ease 0.3s, shadow ease-in 0.35s;
 
     &.is-spread {
         justify-content: center;
@@ -29,7 +29,7 @@ $button-active-shadow: none !default;
 
     &.is-small {
         min-height: auto;
-        font-size: $size-xs;
+        font-size: $font-size-xs;
         border-radius: $radius-xs;
         padding: 0.3rem 0.5rem;
     }

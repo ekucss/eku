@@ -15,7 +15,7 @@ $selection-background: rgba($primary, 0.2) !default;
 }
 
 body {
-    font-size: $size-md;
+    font-size: $font-size-md;
     font-family: $font-family-text;
     color: $color;
     line-height: 1.6;
@@ -30,7 +30,7 @@ code {
     $code-padding: 0.3rem 0.5rem !default;
     $code-background: $smoke !default;
 
-    font-size: $size-xs;
+    font-size: $font-size-xs;
     font-family: $font-family-text;
     font-weight: $font-weight-text;
     background-color: $code-background;
@@ -42,8 +42,8 @@ code {
 
 small {
     display: block;
-    font-size: $size-xs;
-    color: $gray;
+    font-size: $font-size-xs;
+    color: $dark;
 }
 
 p {
@@ -60,6 +60,17 @@ a {
     display: inline-flex;
     align-items: center;
     color: inherit;
+
+    p &,
+    small &,
+    &.is-link {
+        color: $primary;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline solid;
+        }
+    }
 }
 
 hr,

@@ -1,6 +1,7 @@
 @mixin make-toast($theme: $primary) {
-    background-color: lighten($theme, 40%);
+    background-color: lighten($theme, 37%);
     border-color: lighten($theme, 25%);
+    color: $theme;
 }
 
 .toaster {

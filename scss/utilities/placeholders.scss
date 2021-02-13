@@ -9,6 +9,9 @@
     padding: 0 $padding-vertical;
     display: inline-flex;
     align-items: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &[disabled],
     fieldset[disabled] & {
@@ -28,11 +31,11 @@
 
 %sizable {
     &.is-small {
-        font-size: $size-xs;
+        font-size: $font-size-xs;
     }
 
     &.is-large {
-        font-size: $size-bg;
+        font-size: $font-size-bg;
     }
 }
 

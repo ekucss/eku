@@ -1,4 +1,8 @@
-.color {
+// text
+
+.text {
+    // color
+
     &-primary {
         color: $primary;
     }
@@ -30,7 +34,53 @@
     &-dark {
         color: $dark;
     }
+
+    // style
+
+    &-uppcase {
+        text-transform: uppercase;
+    }
+
+    &-lowcase {
+        text-transform: lowercase;
+    }
+
+    &-capitalize {
+        text-transform: capitalize;
+    }
+
+    // size
+
+    &-xs {
+        font-size: $font-size-xs;
+    }
 }
+
+// background
+
+.background {
+    &-light {
+        background-color: $light;
+    }
+
+    &-smoke {
+        background-color: $smoke;
+    }
+
+    &-mono {
+        background-color: $mono;
+    }
+
+    &-gray {
+        background-color: $gray;
+    }
+
+    &-dark {
+        background-color: $dark;
+    }
+}
+
+// radius
 
 .radius {
     &-xs {
@@ -43,5 +93,49 @@
 
     &-bg {
         border-radius: $radius-bg;
+    }
+}
+
+// border
+
+.has-border {
+    border: $border;
+}
+
+.border {
+    &-top {
+        border-top: $border;
+    }
+
+    &-bottom {
+        border-bottom: $border;
+    }
+
+    &-left {
+        border-left: $border;
+    }
+
+    &-right {
+        border-right: $border;
+    }
+}
+
+// padding
+
+.has-padding {
+    padding: $padding;
+}
+
+.padding {
+    &-xs {
+        padding: $font-size-xs;
+    }
+
+    &-md {
+        padding: $gap;
+    }
+
+    &-bg {
+        padding: $font-size-bg;
     }
 }

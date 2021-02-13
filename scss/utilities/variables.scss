@@ -7,11 +7,11 @@ $black: #1a1a1a !default;
 
 $background: white !default;
 
-$light: #fcfcfc !default;
+$light: #fdfdfd !default;
 $smoke: #f0f0f0 !default;
 $mono: #cccccc !default;
 $gray: #999999 !default;
-$dark: #303030 !default;
+$dark: #383838 !default;
 
 $color: #292929 !default;
 $threshold-color: 65%;
@@ -22,14 +22,14 @@ $border-color: $smoke !default;
 $border-width: 1px !default;
 $border: solid $border-width $border-color !default;
 
-$radius-xs: 0.3rem !default;
-$radius-md: 0.4rem !default;
-$radius-bg: 0.7rem !default;
+$radius-xs: 0.25rem !default;
+$radius-md: 0.35rem !default;
+$radius-bg: 0.65rem !default;
 
 $gap: 1.5rem !default;
 
 $padding-vertical: 0.7rem !default;
-$padding-horizontal: 0.9rem !default;
+$padding-horizontal: 1rem !default;
 $padding: $padding-vertical $padding-horizontal !default;
 
 $font-family-title: "Inter", sans-serif !default;
@@ -37,6 +37,10 @@ $font-family-text: "Inter", sans-serif !default;
 
 $font-weight-title: 700 !default;
 $font-weight-text: 300 !default;
+
+$font-size-xs: 11px !default;
+$font-size-md: 14px !default;
+$font-size-bg: 20px !default;
 
 $transition-duration: 0.25s !default;
 $transition: ease $transition-duration !default;
@@ -46,9 +50,5 @@ $md: 762px !default;
 $bg: 1023px !default;
 $xl: 1215px !default;
 
-$height: 2.7rem !default;
+$height: 2.6rem !default;
 $max-width: 60rem !default;
-
-$size-xs: 8pt !default;
-$size-md: 11pt !default;
-$size-bg: 17pt !default;

@@ -54,7 +54,6 @@ $navbar-background: $background !default;
         .navbar-menu,
         .navbar-brand,
         .navbar-middle {
-            flex: auto;
             align-items: center;
 
             > %separator {
@@ -75,8 +74,8 @@ $navbar-background: $background !default;
     }
 
     @media (max-width: $bg) {
-        flex-wrap: wrap;
         padding: 0;
+        flex-wrap: wrap;
         flex-direction: column;
         
         .navbar-brand,
@@ -110,7 +109,6 @@ $navbar-background: $background !default;
             background-color: $background;
             border-top: $border;
             border-bottom: $border;
-            overflow-y: auto;
             z-index: 2;
         }
 

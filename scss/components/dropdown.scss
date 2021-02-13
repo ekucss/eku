@@ -61,7 +61,7 @@ $dropdown-dropup-shadow: 0 -0.3rem 1rem rgba($black, 0.1) !default;
     background-color: $background;
     box-shadow: $dropdown-shadow;
     overflow: hidden;
-    z-index: 2;
+    z-index: 3;
     transition: all ease-in-out 0.2s;
     transform-origin: top center;
     transform-style: preserve-3d;

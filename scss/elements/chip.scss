@@ -16,6 +16,7 @@ $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
 
 .chip {
     @extend %addonable;
+    @extend %element;
 
     display: inline-flex;
     align-items: center;
@@ -23,7 +24,7 @@ $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
     border-color: $chip-border-color;
     border-radius: $chip-height;
     padding: $chip-padding-vertical $chip-padding-horizontal;
-    font-size: $size-xs;
+    font-size: $font-size-xs;
     transition: box-shadow ease $transition-duration;
     user-select: none;
 

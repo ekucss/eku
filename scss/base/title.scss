@@ -14,23 +14,23 @@ h6 {
 }
 
 .title {
-    font-size: 4em;
+    font-size: clamp(2rem, 14vw, 4rem);
 }
 
 h1 {
-    font-size: 2.8em;
+    font-size: clamp(2rem, 12vw, 3.5rem);
 }
 
 h2 {
-    font-size: 2.2em;
+    font-size: clamp(1.5rem, 10vw, 2.5rem);
 }
 
 h3 {
-    font-size: 1.8em;
+    font-size: clamp(1rem, 8vw, 2.0rem);
 }
 
 h4 {
-    font-size: 1.6em;
+    font-size: clamp(1rem, 6vw, 1.5rem);
 }
 
 h5, h6 {
@@ -38,9 +38,9 @@ h5, h6 {
 }
 
 h5 {
-    font-size: 1.3em;
+    font-size: clamp(1rem, 5vw, 1.3rem);
 }
 
 h6 {
-    font-size: 1.1em;
+    font-size: clamp(1rem, 5vw, 1.1rem);
 }
