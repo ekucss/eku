@@ -14,6 +14,10 @@ $selection-background: rgba($primary, 0.2) !default;
     background-color: $selection-background;
 }
 
+::placeholder {
+    user-select: none;
+}
+
 body {
     font-size: $font-size-md;
     font-family: $font-family-text;
@@ -27,7 +31,7 @@ body {
 
 code {
     $code-radius: $radius-xs !default;
-    $code-padding: 0.3rem 0.5rem !default;
+    $code-padding: 0.2em 0.4em !default;
     $code-background: $smoke !default;
 
     font-size: $font-size-xs;

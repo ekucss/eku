@@ -9,9 +9,10 @@ $wrapper-gap: $gap / 2;
 
     &.is-spread {
         width: 100%;
+        flex-wrap: nowrap;
 
         > %element {
-            flex: 1;
+            flex: auto;
 
             @media (max-width: $sm) {
                 flex: auto;

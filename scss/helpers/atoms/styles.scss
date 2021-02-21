@@ -1,62 +1,4 @@
-// text
-
-.text {
-    // color
-
-    &-primary {
-        color: $primary;
-    }
-
-    &-error {
-        color: $red;
-    }
-
-    &-success {
-        color: $green;
-    }
-
-    &-light {
-        color: $light;
-    }
-
-    &-smoke {
-        color: $smoke;
-    }
-
-    &-mono {
-        color: $mono;
-    }
-
-    &-gray {
-        color: $gray;
-    }
-
-    &-dark {
-        color: $dark;
-    }
-
-    // style
-
-    &-uppcase {
-        text-transform: uppercase;
-    }
-
-    &-lowcase {
-        text-transform: lowercase;
-    }
-
-    &-capitalize {
-        text-transform: capitalize;
-    }
-
-    // size
-
-    &-xs {
-        font-size: $font-size-xs;
-    }
-}
-
-// background
+@use "sass:selector" as *;
 
 .background {
     &-light {
@@ -80,8 +22,6 @@
     }
 }
 
-// radius
-
 .radius {
     &-xs {
         border-radius: $radius-xs;
@@ -96,13 +36,12 @@
     }
 }
 
-// border
-
-.has-border {
-    border: $border;
-}
-
 .border {
+    @at-root .has-border {
+        border: $border;
+        overflow: hidden;
+    }
+
     &-top {
         border-top: $border;
     }
@@ -120,13 +59,11 @@
     }
 }
 
-// padding
-
-.has-padding {
-    padding: $padding;
-}
-
 .padding {
+    @at-root .has-padding {
+        padding: $gap;
+    }
+
     &-xs {
         padding: $font-size-xs;
     }
