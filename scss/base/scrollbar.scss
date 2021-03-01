@@ -21,7 +21,7 @@
         border: solid 0.3rem transparent;
         background-clip: content-box;
 
-        &:hover {
+        &:active {
             background-color: $gray;
         }
     }

@@ -1,7 +1,8 @@
-$primary: #275efe !default;
+$primary: #5649ff !default;
 
 $white: #f3f3f3 !default;
-$red: #f44336 !default;
+$blue: blue !default;
+$red: #e94438 !default;
 $green: #4caf50 !default;
 $black: #1a1a1a !default;
 
@@ -14,7 +15,7 @@ $gray: #999999 !default;
 $dark: #383838 !default;
 
 $color: #292929 !default;
-$threshold-color: 65%;
+$threshold-color: 70%;
 
 $shadow: 0 0.4rem 1rem rgba($black, 0.1) !default;
 
@@ -22,9 +23,9 @@ $border-color: $smoke !default;
 $border-width: 1px !default;
 $border: solid $border-width $border-color !default;
 
-$radius-xs: 0.25rem !default;
-$radius-md: 0.35rem !default;
-$radius-bg: 0.65rem !default;
+$radius-xs: 0.35rem !default;
+$radius-md: 0.45rem !default;
+$radius-bg: 0.75rem !default;
 
 $gap: 1.5rem !default;
 
@@ -32,7 +33,7 @@ $padding-vertical: 0.7rem !default;
 $padding-horizontal: 1rem !default;
 $padding: $padding-vertical $padding-horizontal !default;
 
-$font-family-title: "Inter", sans-serif !default;
+$font-family-title: "Space Grotesk", sans-serif !default;
 $font-family-text: "Inter", sans-serif !default;
 
 $font-weight-title: 700 !default;

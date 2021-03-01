@@ -1,16 +1,22 @@
+@use "sass:selector";
+
 $field-gap: $gap / 2 !default;
 
 .field {
     display: flex;
     gap: $field-gap;
 
-    &:not(.is-inline) {
+    &:not(.is-wrapper) {
         flex-direction: column;
     }
 
-    &.is-inline {
+    &.is-wrapper {
         align-items: center;
         flex-direction: row;
+    }
+
+    @at-root #{selector.unify(&, "label")} {
+        cursor: pointer;
     }
 
     label {

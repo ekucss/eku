@@ -8,7 +8,31 @@ $button-hover-background: rgba(0, 0, 0, 0.01) !default;
 
 $button-active-shadow: none !default;
 
-%button {
+@mixin make-button($theme: $button-background) {
+    $color: contrast-color($theme);
+
+    background-color: $theme;
+    color: $color;
+    box-shadow: $button-shadow;
+    border-color: transparent;
+
+    &:hover {
+        background: darken($theme, 3%);
+    }
+
+    &[disabled] {
+        opacity: 50%;
+        box-shadow: none;
+        transform: none;
+    }
+
+    &.is-loading::before {
+        border-color: $color;
+    }
+}
+
+button,
+.button {
     @extend %control;
     @extend %addonable;
 
@@ -17,7 +41,7 @@ $button-active-shadow: none !default;
     cursor: pointer;
     text-align: center;
     color: $color;
-    transition: background-color ease 0.3s, shadow ease-in 0.35s;
+    transition: background-color ease 0.25s;
 
     &.is-spread {
         justify-content: center;
@@ -45,43 +69,12 @@ $button-active-shadow: none !default;
             left: calc(50% - (#{$padding-horizontal} / 2));
         }
     }
-}
-
-@mixin make-button($theme: $button-background) {
-    $color: contrast-color($theme);
-
-    background-color: $theme;
-    color: $color;
-    box-shadow: $button-shadow;
-    border: none;
-    transition: box-shadow ease-in 0.14s, transform ease 0.2s;
-
-    &:hover {
-        box-shadow: $button-hover-shadow;
-    }
-
-    &:active {
-        box-shadow: $button-active-shadow;
-    }
-
-    &[disabled] {
-        opacity: 50%;
-        box-shadow: none;
-        transform: none;
-    }
-
-    &.is-loading::before {
-        border-color: $color;
-    }
-}
-
-button,
-.button {
-    @extend %button;
 
     &:hover {
         background-color: $button-hover-background;
     }
+
+    // styles
 
     &.is-ghost {
         border: none;
@@ -92,6 +85,12 @@ button,
         cursor: default;
         color: $color;
         border: $border;
+    }
+
+    &.is-outline {
+        background-color: none;
+        color: $primary;
+        border-color: $primary;
     }
 
     // colors
