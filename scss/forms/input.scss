@@ -1,6 +1,5 @@
 @use "sass:selector";
 
-$input-focus-shadow: 0 0.3rem 0.8rem rgba($dark, 0.1) !default;
 $input-focus-border-color: $mono !default;
 
 @mixin make-input($theme) {
@@ -17,16 +16,19 @@ $input-focus-border-color: $mono !default;
 .input {
     @extend %control;
 
-    transition: border ease 0.3s, box-shadow ease 0.3s;
+    transition: border ease 0.3s, background-color ease 0.3s;
 
     @at-root #{selector.unify("textarea", &)} {
         min-height: $height * 3;
         padding: $padding;
     }
 
+    &:hover {
+        border-color: $input-focus-border-color;
+    }
+
     &:focus,
     &:active {
-        box-shadow: $input-focus-shadow;
         border-color: $input-focus-border-color;
         z-index: 2;
     }

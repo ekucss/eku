@@ -17,8 +17,7 @@ $navbar-background: $background !default;
     }
 
     .navbar-menu,
-    .navbar-brand,
-    .navbar-middle {
+    .navbar-brand {
         display: flex;
         gap: $gap;
         user-select: none;
@@ -26,19 +25,6 @@ $navbar-background: $background !default;
         .navbar-item {
             @extend %addonable;
             display: inline-flex;
-        }
-    }
-
-    .navbar-middle {
-        justify-content: center;
-
-        > .tab {
-            height: $navbar-height;
-            border-bottom: none;
-
-            .tab-item {
-                min-height: 100%;
-            }
         }
     }
 
@@ -52,8 +38,7 @@ $navbar-background: $background !default;
         flex-direction: row;
 
         .navbar-menu,
-        .navbar-brand,
-        .navbar-middle {
+        .navbar-brand {
             align-items: center;
 
             > %separator {
@@ -62,10 +47,6 @@ $navbar-background: $background !default;
                 background-color: $border-color;
                 margin: $padding-vertical 0;
             }
-        }
-
-        .navbar-middle {
-            max-width: 40%;
         }
 
         .navbar-menu {
@@ -78,20 +59,9 @@ $navbar-background: $background !default;
         flex-wrap: wrap;
         flex-direction: column;
         
-        .navbar-brand,
-        .navbar-middle {
+        .navbar-brand {
             height: $navbar-height;
             padding: 0 $gap;
-        }
-
-        .navbar-middle {
-            width: 100%;
-            align-items: center;
-            border-top: $border;
-        }
-        
-        .navbar-brand {
-            min-height: $navbar-height;
             justify-content: space-between;
             align-items: center;
             gap: $gap;

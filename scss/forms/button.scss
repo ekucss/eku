@@ -3,10 +3,7 @@ $button-radius: $radius-md !default;
 $button-color: contrast-color($button-background) !default;
 $button-shadow: none !default;
 
-$button-hover-shadow: $shadow !default;
 $button-hover-background: rgba(0, 0, 0, 0.01) !default;
-
-$button-active-shadow: none !default;
 
 @mixin make-button($theme: $button-background) {
     $color: contrast-color($theme);

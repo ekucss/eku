@@ -19,4 +19,8 @@ $wrapper-gap: $gap / 2;
             }
         }
     }
+
+    > .is-spread {
+        flex: 1;
+    }
 }
