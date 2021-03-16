@@ -5,6 +5,7 @@ $navbar-background: $background !default;
 .navbar {
     min-height: $navbar-height;
     display: flex;
+    justify-content: space-between;
     background-color: $navbar-background;
     padding: 0 $gap;
     border-bottom: $border;
@@ -33,7 +34,6 @@ $navbar-background: $background !default;
     }
 
     @media (min-width: $bg) {
-        justify-content: space-between;
         align-items: center;
         flex-direction: row;
 
@@ -55,13 +55,8 @@ $navbar-background: $background !default;
     }
 
     @media (max-width: $bg) {
-        padding: 0;
-        flex-wrap: wrap;
-        flex-direction: column;
-        
         .navbar-brand {
             height: $navbar-height;
-            padding: 0 $gap;
             justify-content: space-between;
             align-items: center;
             gap: $gap;

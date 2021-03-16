@@ -6,12 +6,10 @@ $chip-padding-horizontal: 0.7rem !default;
 $chip-margin: 0.2rem !default;
 $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
 
-@mixin make-chip($theme: $primary) {
-    $color: contrast-color($theme);
-
-    background-color: $theme;
-    border-color: rgba($black, 0.05);
-    color: $color;
+@mixin make-chip($theme) {
+    background-color: rgba($theme, 0.2);
+    border-color: $theme;
+    color: darken($theme, 10%);
 }
 
 .chip {

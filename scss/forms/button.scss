@@ -5,29 +5,6 @@ $button-shadow: none !default;
 
 $button-hover-background: rgba(0, 0, 0, 0.01) !default;
 
-@mixin make-button($theme: $button-background) {
-    $color: contrast-color($theme);
-
-    background-color: $theme;
-    color: $color;
-    box-shadow: $button-shadow;
-    border-color: transparent;
-
-    &:hover {
-        background: darken($theme, 3%);
-    }
-
-    &[disabled] {
-        opacity: 50%;
-        box-shadow: none;
-        transform: none;
-    }
-
-    &.is-loading::before {
-        border-color: $color;
-    }
-}
-
 button,
 .button {
     @extend %control;
@@ -85,22 +62,37 @@ button,
     }
 
     &.is-outline {
-        background-color: none;
+        background-color: transparent;
         color: $primary;
         border-color: $primary;
+
+        &.is-loading::before {
+            border-color: $primary;
+        }
     }
 
     // colors
 
     &.is-primary {
-        @include make-button($primary);
-    }
+        $color: contrast-color($primary);
 
-    &.is-success {
-        @include make-button($green);
-    }
+        background-color: $primary;
+        color: $color;
+        box-shadow: $button-shadow;
+        border-color: transparent;
 
-    &.is-error {
-        @include make-button($red);
+        &:hover {
+            background: darken($primary, 2%);
+        }
+
+        &[disabled] {
+            opacity: 50%;
+            box-shadow: none;
+            transform: none;
+        }
+
+        &.is-loading::before {
+            border-color: $color;
+        }
     }
 }

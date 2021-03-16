@@ -47,6 +47,10 @@
         text-transform: capitalize;
     }
 
+    &-title {
+        font-family: $font-family-title;
+    }
+
     @at-root {
         p a,
         small a,
