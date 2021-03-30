@@ -13,20 +13,19 @@
     -moz-appearance: none;
     appearance: none;
 
-    &[disabled],
-    fieldset[disabled] & {
-        color: $gray;
-        cursor: no-drop;
-        user-select: none;
-        box-shadow: none;
-        pointer-events: none;
-        background-color: $light;
-    }
-
     &.is-spread {
         width: 100%;
         flex: 1;
     }
+}
+
+@mixin disabled() {
+    color: $gray;
+    cursor: no-drop;
+    user-select: none;
+    pointer-events: none;
+    background-color: $light;
+    border-color: $smoke;
 }
 
 %sizable {

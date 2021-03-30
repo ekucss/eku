@@ -14,7 +14,7 @@
         height: $width;
         display: inline-flex;
         border: solid ($width / 8) $theme;
-        border-left-color: transparent !important;
+        border-left-color: rgba(black, 10%) !important;
         border-radius: 50%;
         animation: loader-animation linear 0.9s infinite;
         transform-origin: center center;

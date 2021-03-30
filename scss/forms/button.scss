@@ -10,6 +10,7 @@ button,
     @extend %control;
     @extend %addonable;
 
+    min-width: $height;
     text-decoration: none;
     user-select: none;
     cursor: pointer;
@@ -32,7 +33,7 @@ button,
         padding: 0.3rem 0.5rem;
     }
 
-    &.is-loading {
+    &.has-loader {
         @include make-loader(1rem, $gray);
 
         color: transparent !important;
@@ -66,7 +67,7 @@ button,
         color: $primary;
         border-color: $primary;
 
-        &.is-loading::before {
+        &.has-loader::before {
             border-color: $primary;
         }
     }
@@ -85,14 +86,16 @@ button,
             background: darken($primary, 2%);
         }
 
-        &[disabled] {
-            opacity: 50%;
-            box-shadow: none;
-            transform: none;
-        }
-
-        &.is-loading::before {
+        &.has-loader::before {
             border-color: $color;
+        }
+    }
+
+    &[disabled] {
+        @include disabled();
+
+        &.has-loader::before {
+            border-color: $mono;
         }
     }
 }

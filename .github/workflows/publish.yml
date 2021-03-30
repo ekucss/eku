@@ -1,26 +1,27 @@
 name: Publish
 
 on:
-    release:
-        types: [created]
+  push:
+    tag:
+      - "v[0-9].[0-9].[0-9]"
 
 jobs:
-    npm:
-        name: Publish to NPM
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v2
+  npm:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v1
-              with:
-                  node-version: "12.x"
-                  registry-url: "https://registry.npmjs.org"
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+          registry-url: "https://registry.npmjs.org"
 
-            - run: npm install
-            - run: npm run build
-            - run: npm run minify
-            - run: npm publish
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm install
+      - run: npm run build
+      - run: npm run minify
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
