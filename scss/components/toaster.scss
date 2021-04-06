@@ -1,11 +1,5 @@
-@mixin make-toast($theme: $primary) {
-    background-color: lighten($theme, 37%);
-    border-color: lighten($theme, 25%);
-    color: $theme;
-}
-
 .toaster {
-    width: 100%;
+    max-width: 100%;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -13,32 +7,19 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
 
-    > .toaster-item {
-        max-width: 30rem;
-        padding: 0.8rem 1rem;
-        border-radius: $radius-md;
-        border: $border;
-        background-color: white;
-        user-select: none;
-        box-shadow: $shadow;
+.toaster-item {
+    min-width: 10rem;
+    max-width: 30rem;
+    padding: 0.8rem 1rem;
+    border-radius: $radius-md;
+    border: $border;
+    background-color: white;
+    user-select: none;
+    box-shadow: $shadow;
 
-        &:not(:last-child) {
-            margin-bottom: 0.5rem;
-        }
-
-        // colors
-
-        &.is-primary {
-            @include make-toast($primary);
-        }
-
-        &.is-success {
-            @include make-toast($green);
-        }
-
-        &.is-error {
-            @include make-toast($red);
-        }
+    &:not(:last-child) {
+        margin-bottom: 0.5rem;
     }
 }

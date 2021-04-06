@@ -1,21 +1,16 @@
-$chip-height: 1rem !default;
+$chip-height: 1.4rem !default;
 $chip-color: $color !default;
 $chip-border-color: $border-color !default;
-$chip-padding-vertical: 0.3rem !default;
-$chip-padding-horizontal: 0.7rem !default;
-$chip-margin: 0.2rem !default;
+$chip-padding-vertical: 0.2rem !default;
+$chip-padding-horizontal: 0.5rem !default;
+$chip-margin: $chip-padding-horizontal !default;
 $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
-
-@mixin make-chip($theme) {
-    background-color: rgba($theme, 0.2);
-    border-color: $theme;
-    color: darken($theme, 10%);
-}
 
 .chip {
     @extend %addonable;
     @extend %element;
 
+    height: $chip-height;
     display: inline-flex;
     align-items: center;
     border: solid $border-width;
@@ -25,6 +20,7 @@ $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
     font-size: $font-size-xs;
     transition: box-shadow ease $transition-duration;
     user-select: none;
+    gap: $chip-margin;
 
     .radio {
         &:first-child {
@@ -38,10 +34,10 @@ $chip-shadow: 0 0.2rem 0.6rem rgba($black, 0.05) !default;
 
     // colors
 
-    &.is-active {
-        background-color: rgba($primary, 0.1);
-        border-color: $primary;
-        color: $primary;
+    @mixin make-chip($theme) {
+        background-color: rgba($theme, 10%);
+        border-color: transparent;
+        color: darken($theme, 10%);
     }
 
     &.is-primary {

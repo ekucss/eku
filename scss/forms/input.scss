@@ -1,4 +1,4 @@
-@use "sass:selector";
+@use "sass:selector" as *;
 
 $input-focus-border-color: $mono !default;
 
@@ -22,13 +22,23 @@ $input-focus-border-color: $mono !default;
 
     transition: border ease 0.3s, background-color ease 0.3s;
 
-    @at-root #{selector.unify("textarea", &)} {
+    @at-root #{unify("textarea", &)} {
         min-height: $height * 3;
         padding: $padding;
     }
 
+    @at-root #{unify("select", &)} {
+        cursor: pointer;
+    }
+
+    &.is-borderless {
+        padding: none;
+        border: none;
+    }
+
     &:focus,
-    &:active {
+    &:active,
+    &:hover {
         border-color: $input-focus-border-color;
         z-index: 2;
     }

@@ -1,11 +1,15 @@
-$flex-gap: $gap / 3 !default;
-
 .flex {
     width: 100%;
     display: inline-flex;
+    flex-direction: row;
 
     &.has-gap {
         gap: $gap;
+    }
+
+    &-spread {
+        width: 100%;
+        flex: 1;
     }
 
     &.is-spaced {

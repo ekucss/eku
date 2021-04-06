@@ -8,3 +8,9 @@ form,
     flex-direction: column;
     gap: $form-gap;
 }
+
+fieldset {
+    padding: $gap;
+    border: $border;
+    border-radius: $radius-md;
+}

@@ -4,6 +4,7 @@ $hero-height: 10rem !default;
 $hero-hump: 4rem !default;
 
 .hero {
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     gap: $gap;
@@ -13,6 +14,7 @@ $hero-hump: 4rem !default;
     padding: $hero-padding;
     padding-top: $hero-hump;
     border-bottom: $border;
+    overflow: hidden;
 
     > .tab {
         border-bottom: none;

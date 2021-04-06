@@ -2,15 +2,15 @@
     // color
 
     &-primary {
-        color: $primary;
+        color: darken($primary, 10%);
     }
 
     &-error {
-        color: $red;
+        color: darken($red, 10%);
     }
 
     &-success {
-        color: $green;
+        color: darken($green, 10%);
     }
 
     &-light {
@@ -45,6 +45,14 @@
 
     &-capcase {
         text-transform: capitalize;
+    }
+
+    &-firstcase {
+        text-transform: lowercase;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
 
     &-title {

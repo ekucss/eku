@@ -1,6 +1,4 @@
-@use "sass:selector" as *;
-
-.background {
+background {
     &-light {
         background-color: $light;
     }
@@ -61,7 +59,7 @@
 
 .padding {
     @at-root .has-padding {
-        padding: $gap;
+        padding: $padding;
     }
 
     &-xs {

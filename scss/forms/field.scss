@@ -1,4 +1,4 @@
-@use "sass:selector";
+@use "sass:selector" as *;
 
 $field-gap: $gap / 2 !default;
 
@@ -15,8 +15,9 @@ $field-gap: $gap / 2 !default;
         flex-direction: row;
     }
 
-    @at-root #{selector.unify(&, "label")} {
+    @at-root #{unify(&, "label")} {
         cursor: pointer;
+        user-select: none;
     }
 
     label {

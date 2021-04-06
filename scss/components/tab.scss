@@ -1,36 +1,55 @@
 .tab {
+    max-width: 100vw;
     display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
     border-bottom: $border;
     position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
 
-    > .tab-item {
-        @extend %addonable;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
-        display: flex;
-        align-items: center;
-        position: relative;
-        padding: $padding;
-        cursor: pointer;
-        user-select: none;
-        color: $color;
+    &.is-badge {
+        .tab-item {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: ($padding-vertical * 1.5) ($padding-vertical * 2);
+            flex: auto;
+        }
+    }
+}
+
+.tab-item {
+    @extend %addonable;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: $padding;
+    cursor: pointer;
+    user-select: none;
+    color: $color;
+    transition: color ease 0.2s;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: $border-width * 2;
+        display: block;
+        position: absolute;
+        bottom: -$border-width;
+        left: 0;
+        background-color: transparent;
+    }
+
+    &.is-active {
+        color: $primary;
 
         &::before {
-            content: "";
-            width: 100%;
-            height: $border-width * 2;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: transparent;
-        }
-
-        &.is-active {
-            color: $primary;
-
-            &::before {
-                background-color: $primary;
-            }
+            background-color: $primary;
         }
     }
 }

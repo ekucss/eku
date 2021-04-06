@@ -10,10 +10,6 @@ $selection-background: rgba($primary, 0.2) !default;
     -webkit-tap-highlight-color: transparent;
 }
 
-::selection {
-    background-color: $selection-background;
-}
-
 ::placeholder {
     user-select: none;
 }
