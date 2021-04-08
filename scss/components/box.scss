@@ -3,14 +3,13 @@ $box-radius: $radius-md !default;
 
 $box-hover-shadow: 0 0.2rem 0.8rem rgba($black, 0.06) !default;
 
-$box-active-shadow: 0 0 0 0.2rem rgba($primary, 0.08);
-
 .box {
     @extend %element;
 
     border: $border;
     padding: $box-padding;
     border-radius: $box-radius;
+    background-color: $background;
     transition: color ease $transition-duration, box-shadow ease $transition-duration;
 
     &.is-hoverable,

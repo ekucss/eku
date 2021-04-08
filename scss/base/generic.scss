@@ -62,8 +62,7 @@ a {
     color: inherit;
 
     p &,
-    small &,
-    &.is-link {
+    small & {
         color: $primary;
         cursor: pointer;
 

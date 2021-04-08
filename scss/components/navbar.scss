@@ -6,6 +6,7 @@ $navbar-background: $background !default;
     min-height: $navbar-height;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: $navbar-background;
     padding: 0 $gap;
     border-bottom: $border;
@@ -34,7 +35,6 @@ $navbar-background: $background !default;
     }
 
     @media (min-width: $bg) {
-        align-items: center;
         flex-direction: row;
 
         .navbar-menu,
@@ -77,7 +77,7 @@ $navbar-background: $background !default;
             z-index: 2;
         }
 
-        &:not(.is-active) {
+        &:not(.is-open) {
             .navbar-menu {
                 visibility: hidden;
             }

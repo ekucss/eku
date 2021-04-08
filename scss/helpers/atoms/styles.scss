@@ -1,4 +1,8 @@
-background {
+.background {
+    @at-root .has-background {
+        background-color: $background;
+    }
+
     &-light {
         background-color: $light;
     }
