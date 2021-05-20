@@ -1,0 +1,14 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.show {
+    @include make-snapoints {
+        display: none !important;
+    }
+}
+
+.hide {
+    @include make-breakpoints {
+        display: none !important;
+    }
+}

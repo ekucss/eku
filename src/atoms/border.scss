@@ -1,0 +1,81 @@
+@use "../variables" as *;
+
+.border {
+    border: $border;
+
+    &-top {
+        border-top: $border;
+    }
+
+    &-bottom {
+        border-bottom: $border;
+    }
+
+    &-left {
+        border-left: $border;
+    }
+
+    &-right {
+        border-right: $border;
+    }
+
+    &-collapse {
+        border-collapse: collapse;
+    }
+
+    // colors
+
+    &-primary {
+        border-color: $primary;
+    }
+
+    &-green {
+        border-color: $green;
+    }
+
+    &-red {
+        border-color: $red;
+    }
+
+    &-yellow {
+        border-color: $yellow;
+    }
+
+    &-purple {
+        border-color: $purple;
+    }
+
+    &-white {
+        border-color: $white;
+    }
+
+    &-black {
+        border-color: $black;
+    }
+
+    // scale
+
+    &-light {
+        border-color: $light;
+    }
+
+    &-pearl {
+        border-color: $pearl;
+    }
+
+    &-smoke {
+        border-color: $smoke;
+    }
+
+    &-mono {
+        border-color: $mono;
+    }
+
+    &-gray {
+        border-color: $gray;
+    }
+
+    &-dark {
+        border-color: $dark;
+    }
+}

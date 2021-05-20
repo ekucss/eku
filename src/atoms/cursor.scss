@@ -1,0 +1,22 @@
+.cursor {
+    &-pointer {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &-wait {
+        cursor: wait;
+    }
+
+    &-move {
+        cursor: move;
+    }
+
+    &-zoomin {
+        cursor: zoom-in;
+    }
+
+    &-zommout {
+        cursor: zoom-out;
+    }
+}

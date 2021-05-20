@@ -1,0 +1,19 @@
+@use "../variables" as *;
+
+.elevation {
+    &-1 {
+        box-shadow: $shadow-1;
+    }
+
+    &-2 {
+        box-shadow: $shadow-2;
+    }
+
+    &-3 {
+        box-shadow: $shadow-3;
+    }
+
+    &-4 {
+        box-shadow: $shadow-4;
+    }
+}

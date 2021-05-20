@@ -7,7 +7,7 @@ Eku is a friendly, lightful and highly customizable css library to make modern a
 To use the [eku](https://github.com/ekucss/eku) library, you must link in the `head` section of your HTML page the link below.
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/eku@latest/css/eku.css" />
+<link rel="stylesheet" href="https://unpkg.com/eku" />
 ```
 
 Also, you can use the minified version, but it doesnt have a source map, is only for **production** or optimization purposes.
@@ -22,9 +22,5 @@ If you have a `Node.js` project, you can install it from `npm` or `yarn` using t
 npm i eku
 yarn add eku
 ```
-
-## Themes
-
-This is under development yet, but you can use the [create-eku-theme](https://github.com/adwher/create-eku-theme) initializer to customize the library.
 
 Code by [@adwher](https://github.com/adwher)

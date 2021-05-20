@@ -1,0 +1,22 @@
+@use "../mixins" as *;
+
+.grid {
+    @include make-breakpoints {
+        @for $number from 1 through 7 {
+            &-#{$number} {
+                display: grid;
+                grid-template-columns: repeat(#{$number}, 1fr);
+            }
+        }
+    }
+}
+
+.column {
+    @include make-breakpoints {
+        @for $number from 1 through 7 {
+            &-#{$number} {
+                grid-column: span $number;
+            }
+        }
+    }
+}

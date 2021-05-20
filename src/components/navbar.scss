@@ -1,0 +1,38 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.navbar {
+    width: 100%;
+    min-height: $control-height + ($space-2 * 2);
+    border-bottom: $border;
+    padding: $space-2 $space-3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background-color;
+    position: relative;
+    z-index: 3;
+
+    .navbar-item {
+        @include control-addonable;
+
+        display: inline-flex;
+        align-items: center;
+        padding: $padding;
+        cursor: pointer;
+        border-radius: $radius-2;
+        transition: background-color ease .3s;
+        user-select: none;
+        
+        &:hover,
+        &.is-active {
+            background-color: $pearl;
+        }
+    }
+
+    // ADDONS
+
+    .hoverable {
+        position: initial;
+    }
+}

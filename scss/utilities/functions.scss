@@ -1,6 +1,0 @@
-@function contrast-color($color, $alpha: 0) {
-    @return transparentize(
-        if(lightness($color) < $threshold-color, $white, $black),
-        $alpha
-    );
-}

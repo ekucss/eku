@@ -1,0 +1,61 @@
+@use "../variables" as *;
+
+.background {
+    &-color {
+        background-color: $background-color;
+    }
+
+    &-primary {
+        background-color: $primary;
+    }
+    
+    &-green {
+        background-color: $green;
+    }
+
+    &-red {
+        background-color: $red;
+    }
+
+    &-yellow {
+        background-color: $yellow;
+    }
+
+    &-purple {
+        background-color: $purple;
+    }
+
+    &-white {
+        background-color: $white;
+    }
+
+    &-black {
+        background-color: $black;
+    }
+
+    // scale
+
+    &-light {
+        background-color: $light;
+    }
+
+    &-pearl {
+        background-color: $pearl;
+    }
+
+    &-smoke {
+        background-color: $smoke;
+    }
+
+    &-mono {
+        background-color: $mono;
+    }
+
+    &-gray {
+        background-color: $gray;
+    }
+
+    &-dark {
+        background-color: $dark;
+    }
+}

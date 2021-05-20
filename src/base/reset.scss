@@ -1,0 +1,22 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    position: relative;
+}
+
+button, table, tr, td, th, input, textarea, select {
+    font: inherit;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+}
+
+textarea {
+    resize: vertical;
+}

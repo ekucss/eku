@@ -1,0 +1,57 @@
+@use "../variables" as *;
+
+.color {
+    &-primary {
+        color: $primary;
+    }
+
+    &-green {
+        color: $green;
+    }
+
+    &-red {
+        color: $red;
+    }
+
+    &-yellow {
+        color: $yellow;
+    }
+
+    &-purple {
+        color: $purple;
+    }
+
+    &-white {
+        color: $white;
+    }
+
+    &-black {
+        color: $black;
+    }
+
+    // scale
+
+    &-light {
+        color: $light;
+    }
+
+    &-pearl {
+        color: $pearl;
+    }
+
+    &-smoke {
+        color: $smoke;
+    }
+
+    &-mono {
+        color: $mono;
+    }
+
+    &-gray {
+        color: $gray;
+    }
+
+    &-dark {
+        color: $dark;
+    }
+}

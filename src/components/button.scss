@@ -1,0 +1,95 @@
+@use "sass:color" as *;
+
+@use "../variables" as *;
+@use "../mixins" as *;
+
+button, .button {
+    @include make-control;
+
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    transition: all ease .3s;
+
+    &:hover {
+        background-color: $light;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+
+    &.is-small {
+        min-height: initial;
+        font-size: $size-2;
+        padding: 0.45rem $space-1;
+        border-radius: $radius-1;
+    }
+
+    &.is-spread {
+        justify-content: center;
+    }
+
+    &.is-primary {
+        border-color: rgba(black, 4%);
+        background-color: $primary;
+        color: $white;
+
+        &:hover {
+            background-color: scale($primary, $lightness: -8%);
+        }
+    }
+
+    &.is-static {
+        @include control-disabled;
+        color: $dark;
+    }
+
+    &.is-ghost {
+        background-color: $light;
+        box-shadow: none;
+        border-color: transparent;
+
+        &:hover {
+            background-color: $pearl;
+        }
+    }
+
+    @mixin make-button($theme) {
+        color: $theme;
+        
+        &:hover {
+            background-color: rgba($theme, 5%);
+            border-color: rgba($theme, 20%);
+        }
+    }
+
+    &.is-green {
+        @include make-button($green);
+    }
+
+    &.is-red {
+        @include make-button($red);
+    }
+
+    &.is-yellow {
+        @include make-button($yellow);
+    }
+
+    &.is-purple {
+        @include make-button($purple);
+    }
+
+    &:disabled, &[disabled] {
+        @include control-disabled;
+    }
+
+    // addons
+
+    &.has-loader {
+        &::before {
+            @include make-loader(1rem);
+            content: "";
+        }
+    }
+}

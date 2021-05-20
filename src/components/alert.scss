@@ -1,0 +1,30 @@
+@use "../variables" as *;
+
+.alert {
+    min-height: $control-height;
+    padding: $space-1 $space-2;
+    background-color: $background-color;
+    border: $border;
+    border-radius: $radius-2;
+
+    @mixin make-alert($theme) {
+        border-color: rgba($theme, 15%);
+        background-color: rgba($theme, 10%);
+    }
+
+    &.is-primary {
+        @include make-alert($primary);
+    }
+
+    &.is-green {
+        @include make-alert($green);
+    }
+
+    &.is-red {
+        @include make-alert($red);
+    }
+
+    &.is-yellow {
+        @include make-alert($yellow);
+    }
+}

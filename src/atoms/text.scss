@@ -1,0 +1,61 @@
+@use "../variables" as *;
+
+.text {
+    // font size
+
+    &-1 {
+        font-size: $size-1;
+    }
+
+    &-2 {
+        font-size: $size-2;
+    }
+
+    &-3 {
+        font-size: $size-3;
+    }
+
+    // style
+
+    &-bold {
+        font-weight: $title-weight;
+    }
+
+    &-capcase {
+        text-transform: capitalize;
+    }
+
+    &-lowcase {
+        text-transform: lowercase;
+    }
+
+    &-uppcase {
+        text-transform: uppercase;
+    }
+
+    &-firstcase {
+        text-transform: lowercase;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    &-ellipsis {
+        text-overflow: ellipsis;
+    }
+
+    // align
+
+    &-left {
+        text-align: left;
+    }
+
+    &-center {
+        text-align: center;
+    }
+
+    &-right {
+        text-align: right;
+    }
+}

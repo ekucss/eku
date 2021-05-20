@@ -1,0 +1,89 @@
+$green: #10B981 !default;
+$red: #EF4444 !default;
+$yellow: #FBBF24 !default;
+$purple: #7C3AED !default;
+$black: #111827 !default;
+$white: #F3F4F6 !default;
+
+$gunmetal: #1F2937;
+$teal: #10B981;
+$jazzberry: #9D174D;
+$indigo: #3730A3;
+
+$light: #FCFCFC !default;
+$pearl: #F9FAFB !default;
+$smoke: #F2F4F5 !default;
+$mono: #D1D5DB !default;
+$gray: #9CA3AF !default;
+$dark: #4B5563 !default;
+
+$primary: #2563EB !default;
+
+// body
+
+$background-color: white !default;
+
+// border
+
+$border-color: $smoke !default;
+$border-width: 1px !default;
+
+$border: $border-width solid $border-color !default;
+
+// radius
+
+$radius-1: .3rem !default;
+$radius-2: .4rem !default;
+$radius-3: .6rem !default;
+$radius-4: .8rem !default;
+
+// spaces
+
+$space-1: 0.7rem !default;
+$space-2: 1.0rem !default;
+$space-3: 1.4rem !default;
+$space-4: 2.6rem !default;
+$space-5: 3.4rem !default;
+
+// padding
+
+$padding-vertical: ($space-1 / 1.6) !default;
+$padding-horizontal: $space-1 !default;
+
+$padding: $padding-vertical $padding-horizontal !default;
+
+// text
+
+$size-1: 11px !default;
+$size-2: 12px !default;
+$size-3: 14px !default;
+
+$text-family: "Inter", sans-serif !default;
+$text-weight: 300 !default;
+$text-size: $size-3 !default;
+$text-color: #1F2937 !default;
+
+$title-family: "Inter", sans-serif !default;
+$title-weight: 600 !default;
+
+$mono-family: "JetBrains Mono", monospace !default;
+$mono-weight: 300 !default;
+
+// breakpoint
+
+$breakpoint-sm: 640px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-bg: 1024px !default;
+$breakpoint-xl: 1436px !default;
+
+// shadow
+
+$shadow-1: 0 .1rem .3rem -.1rem rgba($black, 1%) !default;
+$shadow-2: 0 .3rem .5rem -.1rem rgba($black, 3%) !default;
+$shadow-3: 0 .5rem .7rem -.2rem rgba($black, 4%) !default;
+$shadow-4: 0 .6rem .8rem -.2rem rgba($black, 5%) !default;
+
+// control
+
+$control-height: 2.65rem !default;
+$control-shadow: $shadow-1 !default;

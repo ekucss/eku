@@ -1,0 +1,48 @@
+@use "sass:color" as *;
+
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.badge {
+    @include control-addonable(.4rem);
+
+    display: inline-flex;
+    align-items: center;
+    border: $border;
+    background-color: $smoke;
+    font-size: $size-1;
+    padding: .1rem .4rem;
+    border-radius: $radius-1;
+    user-select: none;
+
+    @mixin make-badge($theme) {
+        $background: rgba($theme, 14%);
+        $color: scale($theme, $lightness: -20%);
+
+        background-color: $background;
+        border-color: transparent;
+        color: $color;
+    }
+
+    // colors
+
+    &.is-primary {
+        @include make-badge($primary);
+    }
+
+    &.is-green {
+        @include make-badge($green);
+    }
+
+    &.is-red {
+        @include make-badge($red);
+    }
+
+    &.is-yellow {
+        @include make-badge($yellow);
+    }
+
+    &.is-purple {
+        @include make-badge($purple);
+    }
+}

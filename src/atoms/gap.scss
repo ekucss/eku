@@ -1,0 +1,27 @@
+@use "../variables" as *;
+
+.gap {
+    &-none {
+        gap: 0;
+    }
+
+    &-1 {
+        gap: $space-1;
+    }
+
+    &-2 {
+        gap: $space-2;
+    }
+
+    &-3 {
+        gap: $space-3;
+    }
+
+    &-4 {
+        gap: $space-4;
+    }
+
+    &-5 {
+        gap: $space-5;
+    }
+}

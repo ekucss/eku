@@ -1,0 +1,66 @@
+@use "../variables" as *;
+
+$width-1: 3rem !default;
+$width-2: 8rem !default;
+$width-3: 25rem !default;
+$width-4: 35rem !default;
+$width-5: 65rem !default;
+
+.width {
+    &-spread {
+        width: 100%;
+        flex: 1;
+    }
+
+    &-1 {
+        width: $width-1;
+    }
+
+    &-2 {
+        width: $width-2;
+    }
+    
+    &-3 {
+        width: $width-3;
+    }
+
+    &-4 {
+        width: $width-4;
+    }
+
+    &-5 {
+        width: $width-5;
+    }
+}
+
+.height {
+    &-spread {
+        height: 100%;
+        flex: 1;
+    }
+
+    &-full {
+        height: 100%;
+        min-height: 100vh;
+    }
+
+    &-1 {
+        height: $width-1;
+    }
+
+    &-2 {
+        height: $width-2;
+    }
+
+    &-3 {
+        height: $width-3;
+    }
+
+    &-4 {
+        height: $width-4;
+    }
+
+    &-5 {
+        height: $width-5;
+    }
+}

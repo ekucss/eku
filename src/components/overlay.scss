@@ -1,0 +1,115 @@
+@use "sass:selector" as *;
+
+@use "../variables" as *;
+@use "../mixins" as *;
+
+%overlay {
+    position: absolute;
+    transition: all ease .3s;
+}
+
+%hoverable {
+    @extend %overlay;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hoverable {
+    position: relative;
+
+    &:hover,
+    &:focus-within {
+        %overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.flyout {
+    @extend %hoverable;
+
+    width: 100%;
+    padding: $space-3;
+    top: calc(100% + #{$border-width});
+    left: 0;
+    border-bottom: $border;
+    background-color: $background-color;
+    box-shadow: 0 .4rem .6rem -.1rem rgba($black, 2%);
+    z-index: 2;
+}
+
+.dropdown {
+    @extend %hoverable;
+
+    min-width: 13rem;
+    max-height: 15rem;
+    white-space: nowrap;
+    background-color: $background-color;
+    box-shadow: $shadow-2;
+    top: calc(100% + #{$space-2});
+    right: 0;
+    border: $border;
+    border-radius: $radius-2;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 2;
+
+    &.is-spread {
+        width: 100%;
+        min-width: initial;
+        flex: 1;
+    }
+
+    &-item {
+        @include control-addonable;
+
+        display: flex;
+        align-items: center;
+        padding: $space-1 $space-2;
+
+        @at-root #{unify("a", &)} {
+            cursor: pointer;
+            user-select: none;
+
+            &:hover, &:focus {
+                background-color: $light;
+            }
+        }
+    }
+}
+
+.modal {
+    @extend %overlay;
+
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    border: $border;
+    border-radius: $radius-3;
+    background-color: $background-color;
+    box-shadow: $shadow-3;
+    overflow-x: hidden;
+
+    &-1 {
+        @extend .modal;
+
+        width: 25rem;
+        min-height: 15rem;
+    }
+
+    &-2 {
+        @extend .modal;
+
+        width: 35rem;
+        height: 30rem;
+    }
+
+    &-3 {
+        @extend .modal;
+
+        width: 60rem;
+        height: 35rem;
+    }
+}

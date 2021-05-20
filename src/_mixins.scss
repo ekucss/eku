@@ -1,0 +1,111 @@
+@use "./variables" as *;
+@use "./functions" as *;
+
+@mixin control-disabled() {
+    cursor: default;
+    background-color: $light;
+    border-color: $border-color;
+    color: $gray;
+    pointer-events: none;
+    box-shadow: none;
+}
+
+@mixin control-addonable($gap: $padding-horizontal) {
+    gap: $gap;
+}
+
+@mixin make-control {
+    @extend %control;
+    
+    min-height: $control-height;
+    display: inline-flex;
+    align-items: center;
+    color: $text-color;
+    padding: $padding;
+    background-color: $background-color;
+    border: $border;
+    border-radius: $radius-2;
+    box-shadow: $control-shadow;
+    appearance: none;
+
+    @include control-addonable;
+
+    &.is-spread {
+        width: 100%;
+        flex: 1;
+    }
+}
+
+// loader
+
+@mixin make-loader($width) {
+    @extend %loader !optional;
+
+    $stroke: minmax(.1rem, $width / 8, .5rem);
+
+    display: inline-flex;
+    width: $width;
+    height: $width;
+    border: solid $stroke rgba(black, 5%);
+    border-left-color: currentColor;
+    border-radius: $width;
+    animation: infinite linear loader-animation 1s;
+}
+
+// breakpoint
+
+@mixin make-breakpoints() {
+    &, &-xs {
+        @content;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+        &-sm {
+            @content;
+        }
+    }
+
+    @media (min-width: $breakpoint-md) {
+        &-md {
+            @content;
+        }
+    }
+
+    @media (min-width: $breakpoint-bg) {
+        &-bg {
+            @content;
+        }
+    }
+
+    @media (min-width: $breakpoint-xl) {
+        &-xl {
+            @content;
+        }
+    }
+}
+
+@mixin make-snapoints() {
+    @media (max-width: $breakpoint-sm) {
+        &-sm {
+            @content;
+        }
+    }
+
+    @media (max-width: $breakpoint-md) {
+        &-md {
+            @content;
+        }
+    }
+
+    @media (max-width: $breakpoint-bg) {
+        &-bg {
+            @content;
+        }
+    }
+
+    @media (max-width: $breakpoint-xl) {
+        &-xl {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use "sass:selector" as selector;
+
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.input {
+    @include make-control;
+
+    min-width: 10rem;
+    transition: border-color ease .3s;
+
+    &:focus, &:focus-within {
+        z-index: 1;
+        border-color: $mono;
+    }
+
+    @at-root textarea {
+        height: $control-height * 3;
+        flex: initial !important;
+    }
+
+    @mixin make-input($theme) {
+        border-color: rgba($theme, 40%);
+        background-color: rgba($theme, 2%);
+        color: $theme;
+
+        &::placeholder {
+            color: rgba($theme, 60%);
+        }
+    }
+
+    &.is-red {
+        @include make-input($red);
+    }
+
+    &.is-green {
+        @include make-input($green);
+    }
+
+    &.is-yellow {
+        @include make-input($yellow);
+    }
+
+    &.is-purple {
+        @include make-input($purple);
+    }
+
+    &:disabled, &[disabled] {
+        @include control-disabled;
+    }
+}
+
+.select {
+    @extend .input;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right $padding-horizontal center;
+}

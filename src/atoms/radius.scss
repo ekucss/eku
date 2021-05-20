@@ -1,0 +1,29 @@
+@use "../variables" as *;
+
+.radius {
+    overflow: hidden;
+
+    &-circle {
+        border-radius: 100rem;
+    }
+    
+    &-1 {
+        @extend .radius;
+        border-radius: $radius-1;
+    }
+
+    &-2 {
+        @extend .radius;
+        border-radius: $radius-2;
+    }
+
+    &-3 {
+        @extend .radius;
+        border-radius: $radius-3;
+    }
+
+    &-4 {
+        @extend .radius;
+        border-radius: $radius-4;
+    }
+}

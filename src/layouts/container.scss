@@ -1,0 +1,109 @@
+@use "../variables" as *;
+
+.content,
+.container,
+.wrapper,
+.grouper,
+.organizer,
+.box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    gap: $padding-horizontal;
+    align-items: flex-start;
+
+    %control.is-spread {
+        flex: 1;
+    }
+}
+
+.container {
+    align-items: flex-start;
+    gap: $space-1;
+    flex-direction: column;
+}
+
+.box {
+    flex-direction: column;
+    padding: $space-2 $space-3;
+    gap: $space-2;
+    border: $border;
+    border-radius: $radius-2;
+    background-color: $background-color;
+}
+
+.content {
+    width: 100%;
+    flex-direction: column;
+    padding: $space-3;
+    gap: $space-3;
+    margin: 0 auto;
+
+    &-1 {
+        @extend .content;
+        max-width: 40rem;
+    }
+
+    &-2 {
+        @extend .content;
+        max-width: 60rem;
+    }
+
+    &-3 {
+        @extend .content;
+        max-width: 80rem;
+    }
+}
+
+.grouper {
+    flex-wrap: nowrap;
+
+    %control:not(:only-of-type) {
+        &:not(:first-of-type):not(:last-of-type) {
+            border-radius: 0;
+            margin-left: -$border-width;
+        }
+
+        &:first-of-type {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    
+        &:last-of-type {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: -$border-width;
+        }
+    }
+}
+
+.organizer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    & > :not(:only-child) {
+        &:not(:first-child):not(:last-child) {
+            &, &.grouper > * {
+                border-radius: 0;
+                margin-top: -$border-width;
+            }
+        }
+        
+        &:first-child {
+            &, &.grouper > * {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        
+        &:last-child {
+            &, &.grouper > * {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                margin-top: -$border-width;
+            }
+        }
+    }
+}

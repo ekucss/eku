@@ -1,0 +1,26 @@
+@use "../variables" as *;
+
+form, .form {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: $space-3;
+}
+
+fieldset {
+    @extend .form;
+    border: $border;
+    padding: $space-2 $space-3;
+    border-radius: $radius-2;
+
+    @media (min-width: $breakpoint-bg) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.control {
+    border: $border;
+    border-radius: $radius-2;
+    padding: $space-2 $space-3;
+    cursor: pointer;
+}
