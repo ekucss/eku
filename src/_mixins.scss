@@ -41,12 +41,12 @@
 @mixin make-loader($width) {
     @extend %loader !optional;
 
-    $stroke: minmax(.1rem, $width / 8, .5rem);
+    $stroke: minmax(.1rem, $width / 7, .5rem);
 
     display: inline-flex;
     width: $width;
     height: $width;
-    border: solid $stroke rgba(black, 5%);
+    border: solid $stroke rgba(black, 10%);
     border-left-color: currentColor;
     border-radius: $width;
     animation: infinite linear loader-animation 1s;

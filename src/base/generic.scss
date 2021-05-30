@@ -1,14 +1,11 @@
 @use "../variables" as *;
 
 html, body {
-    font-family: $text-family;
-    font-weight: $text-weight;
-    font-size: $text-size;
+    font: $text-weight $text-size $text-family;
     background-color: $background-color;
-    text-rendering: geometricPrecision;
+    text-rendering: optimizeLegibility;
     color: $text-color;
     line-height: 1.5;
-    text-rendering: optimizeLegibility;
 }
 
 ::placeholder {
@@ -18,10 +15,11 @@ html, body {
 
 a {
     text-decoration: none;
-    color: $text-color;
+    color: currentColor;
 
     p &, small & {
         color: $primary;
+        cursor: pointer;
     }
 }
 
@@ -36,15 +34,6 @@ hr {
     border: none;
     height: $border-width;
     background-color: $border-color;
-}
-
-option {
-    font-weight: $text-weight;
-}
-
-select {
-    cursor: pointer;
-    user-select: none;
 }
 
 code {

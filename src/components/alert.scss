@@ -5,7 +5,6 @@
     padding: $space-1 $space-2;
     background-color: $background-color;
     border: $border;
-    border-radius: $radius-2;
 
     @mixin make-alert($theme) {
         border-color: rgba($theme, 15%);

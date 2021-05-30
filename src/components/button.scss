@@ -19,13 +19,6 @@ button, .button {
         box-shadow: none;
     }
 
-    &.is-small {
-        min-height: initial;
-        font-size: $size-2;
-        padding: 0.45rem $space-1;
-        border-radius: $radius-1;
-    }
-
     &.is-spread {
         justify-content: center;
     }
@@ -54,6 +47,8 @@ button, .button {
             background-color: $pearl;
         }
     }
+
+    // COLORS
 
     @mixin make-button($theme) {
         color: $theme;
@@ -86,10 +81,8 @@ button, .button {
 
     // addons
 
-    &.has-loader {
-        &::before {
-            @include make-loader(1rem);
-            content: "";
-        }
+    &.has-loader::before {
+        @include make-loader(1rem);
+        content: "";
     }
 }
