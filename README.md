@@ -23,4 +23,34 @@ npm i eku
 yarn add eku
 ```
 
+## Theming
+
+You can customize all the variables available using on a `scss` file when you import the library.
+
+```scss
+@use "eku" with (
+    $primary: "#222",
+    $text-family: "Poppins",
+)
+```
+
+> Can i import just atoms? **YES, you can**.
+
+Even you can import all components what you wanna got.
+
+```scss
+// CUSTOMIZE
+
+@use "eku/variables" with (
+    $primary: "#222",
+    $text-family: "Poppins",
+);
+
+// IMPORT THEM!
+
+@use "eku/atoms/all";
+@use "eku/layout/dashboard.scss";
+@use "eku/layout/container.scss";
+```
+
 Code by [@adwher](https://github.com/adwher)

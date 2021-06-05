@@ -15,7 +15,7 @@
 }
 
 @mixin make-control {
-    @extend %control;
+    @extend %control !optional;
     
     min-height: $control-height;
     display: inline-flex;

@@ -1,0 +1,12 @@
+@use "../variables" as *;
+
+.asymmetrical {
+    display: grid;
+    height: 100%;
+    flex: 1;
+    grid-template-columns: 1fr minmax(25rem, min(40%, 40rem));
+
+    .sidebar {
+        border-left: $border;
+    }
+}
