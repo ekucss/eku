@@ -45,6 +45,10 @@
         text-overflow: ellipsis;
     }
 
+    &-wrap {
+        white-space: normal;
+    }
+
     // align
 
     &-left {

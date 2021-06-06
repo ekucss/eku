@@ -1,6 +1,6 @@
 @use "../variables" as *;
 
-.radius {
+.rounded {
     overflow: hidden;
 
     &-circle {
@@ -8,22 +8,22 @@
     }
     
     &-1 {
-        @extend .radius;
+        @extend .rounded;
         border-radius: $radius-1;
     }
 
     &-2 {
-        @extend .radius;
+        @extend .rounded;
         border-radius: $radius-2;
     }
 
     &-3 {
-        @extend .radius;
+        @extend .rounded;
         border-radius: $radius-3;
     }
 
     &-4 {
-        @extend .radius;
+        @extend .rounded;
         border-radius: $radius-4;
     }
 }

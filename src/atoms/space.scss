@@ -23,6 +23,10 @@
         padding: $space-4;
     }
 
+    &-5 {
+        padding: $space-5;
+    }
+
     // areas
 
     &-vertical {
@@ -44,6 +48,11 @@
         &-4 {
             padding-top: $space-4;
             padding-bottom: $space-4;
+        }
+
+        &-5 {
+            padding-top: $space-5;
+            padding-bottom: $space-5;
         }
     }
 
@@ -67,12 +76,15 @@
             padding-left: $space-4;
             padding-right: $space-4;
         }
+
+        &-5 {
+            padding-left: $space-5;
+            padding-right: $space-5;
+        }
     }
 }
 
 .margin {
-    margin: $padding;
-
     &-1 {
         margin: $space-1;
     }
@@ -86,6 +98,10 @@
     }
 
     &-4 {
+        margin: $space-4;
+    }
+
+    &-5 {
         margin: $space-4;
     }
 }

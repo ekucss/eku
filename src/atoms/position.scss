@@ -1,5 +1,33 @@
 @use "../variables" as *;
 
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+
+    &-top {
+        @extend .absolute;
+        top: 0;
+    }
+
+    &-bottom {
+        @extend .absolute;
+        bottom: 0;
+    }
+
+    &-left {
+        @extend .absolute;
+        left: 0;
+    }
+
+    &-right {
+        @extend .absolute;
+        right: 0;
+    }
+}
+
 .sticky {
     position: sticky;
 

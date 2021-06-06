@@ -39,11 +39,6 @@ $width-5: 65rem !default;
         flex: 1;
     }
 
-    &-full {
-        height: 100%;
-        min-height: 100vh;
-    }
-
     &-1 {
         height: $width-1;
     }
