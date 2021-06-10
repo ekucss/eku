@@ -62,9 +62,11 @@ $text-family: "Inter", sans-serif !default;
 $text-weight: 300 !default;
 $text-size: $size-3 !default;
 $text-color: #1F2937 !default;
+$text-height: 1.5 !default;
 
 $title-family: "Inter", sans-serif !default;
 $title-weight: 600 !default;
+$title-height: $text-height !default;
 
 $mono-family: "JetBrains Mono", monospace !default;
 $mono-weight: 300 !default;

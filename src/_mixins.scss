@@ -41,7 +41,7 @@
 @mixin make-loader($width) {
     @extend %loader !optional;
 
-    $stroke: minmax(.1rem, $width / 7, .5rem);
+    $stroke: choose-between(.1rem, $width / 7, .5rem);
 
     display: inline-flex;
     width: $width;

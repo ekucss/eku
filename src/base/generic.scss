@@ -5,7 +5,7 @@ html, body {
     background-color: $background-color;
     text-rendering: optimizeLegibility;
     color: $text-color;
-    line-height: 1.5;
+    line-height: $text-height;
 }
 
 ::placeholder {
@@ -20,6 +20,7 @@ a {
     p &, small & {
         color: $primary;
         cursor: pointer;
+        text-decoration: underline;
     }
 }
 

@@ -1,3 +1,9 @@
-@function minmax($min, $value, $max) {
-    @return if($value > $max, $max, if($value < $min, $min, $value))
+@use "./variables" as *;
+
+@function choose-between($min, $value, $max) {
+    @return if($value > $max, $max, if($value < $min, $min, $value));
+}
+
+@function choose-color($theme) {
+    @return if(lightness($theme) < 60%, $white, $dark);
 }
